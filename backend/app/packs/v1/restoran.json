@@ -1,0 +1,66 @@
+{
+  "pack_id": "restaurant_pack",
+  "sector_id": "restoran",
+  "version": "1.0.0",
+  "display_name": "Restoran",
+  "site_engine_default": "astro",
+  "default_pages": [
+    {
+      "title": "Ana Sayfa",
+      "slug": "",
+      "type": "homepage",
+      "sections": [
+        "hero",
+        "cta",
+        "faq_preview"
+      ]
+    },
+    {
+      "title": "Menü",
+      "slug": "menu",
+      "type": "menu",
+      "sections": [
+        "hero",
+        "menu_grid"
+      ]
+    },
+    {
+      "title": "Galeri",
+      "slug": "galeri",
+      "type": "gallery",
+      "sections": [
+        "hero",
+        "gallery"
+      ]
+    },
+    {
+      "title": "Rezervasyon",
+      "slug": "rezervasyon",
+      "type": "landing",
+      "sections": [
+        "hero",
+        "form",
+        "cta"
+      ]
+    },
+    {
+      "title": "Blog",
+      "slug": "blog",
+      "type": "blog",
+      "sections": [
+        "hero",
+        "blog_list"
+      ]
+    },
+    {
+      "title": "İletişim",
+      "slug": "iletisim",
+      "type": "contact",
+      "sections": [
+        "hero",
+        "form",
+        "map"
+      ]
+    }
+  ]
+}

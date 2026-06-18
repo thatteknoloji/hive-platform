@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import blog from '../../data/blog.json';
+import pagesData from '../../data/pages.json';
+---
+<BaseLayout title="Blog" description="Yerel rehber blog yazıları" canonical={`${pagesData.domain}/blog`}>
+  <h1>Blog</h1>
+  <ul>
+    {(blog || []).map((p) => (
+      <li><a href={`/blog/${p.slug}`}>{p.title}</a></li>
+    ))}
+  </ul>
+</BaseLayout>

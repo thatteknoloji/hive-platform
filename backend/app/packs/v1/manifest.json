@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "sectors": [
+    "otel",
+    "ecommerce",
+    "emlak",
+    "klinik",
+    "veteriner",
+    "restoran",
+    "rentacar",
+    "ilan",
+    "blog",
+    "kurumsal",
+    "ozel"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "pack_id": "hotel_pack",
+  "sector_id": "otel",
+  "version": "1.0.0",
+  "display_name": "Otel",
+  "site_engine_default": "astro",
+  "default_pages": [
+    {
+      "title": "Ana Sayfa",
+      "slug": "",
+      "type": "homepage",
+      "sections": [
+        "hero",
+        "cta",
+        "faq_preview"
+      ]
+    },
+    {
+      "title": "Odalar",
+      "slug": "odalar",
+      "type": "category",
+      "sections": [
+        "hero",
+        "content"
+      ]
+    },
+    {
+      "title": "Galeri",
+      "slug": "galeri",
+      "type": "gallery",
+      "sections": [
+        "hero",
+        "gallery"
+      ]
+    },
+    {
+      "title": "Hakkımızda",
+      "slug": "hakkimizda",
+      "type": "about",
+      "sections": [
+        "hero",
+        "content"
+      ]
+    },
+    {
+      "title": "Blog",
+      "slug": "blog",
+      "type": "blog",
+      "sections": [
+        "hero",
+        "blog_list"
+      ]
+    },
+    {
+      "title": "İletişim",
+      "slug": "iletisim",
+      "type": "contact",
+      "sections": [
+        "hero",
+        "form",
+        "map"
+      ]
+    },
+    {
+      "title": "SSS",
+      "slug": "sss",
+      "type": "faq",
+      "sections": [
+        "hero",
+        "faq"
+      ]
+    }
+  ]
+}

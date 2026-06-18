@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  schema?: object | object[];
+  breadcrumbs?: { label: string; href?: string }[];
+}
+const { title, description = '', canonical = '', schema, breadcrumbs = [] } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, '') || '';
+const canonicalUrl = canonical || (site + Astro.url.pathname);
+const ogImage = site ? `${site}/og-default.svg` : '';
+---
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  {description && <meta name="description" content={description} />}
+  <link rel="canonical" href={canonicalUrl} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  {description && <meta property="og:description" content={description} />}
+  <meta property="og:url" content={canonicalUrl} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  <meta name="twitter:card" content="summary" />
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  )}
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a href="/">Ana Sayfa</a>
+        <a href="/hakkimizda">Hakkında</a>
+        <a href="/iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    {breadcrumbs.length > 0 && (
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        {breadcrumbs.map((crumb, i) => (
+          <span>
+            {i > 0 && ' › '}
+            {crumb.href ? <a href={crumb.href}>{crumb.label}</a> : crumb.label}
+          </span>
+        ))}
+      </nav>
+    )}
+    <slot />
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>© {new Date().getFullYear()} — SEO uyumlu statik site (HIVE Astro Factory)</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,310 @@
+{
+  "result": {
+    "domain": "test.com",
+    "overview": {
+      "backlinks": 50493,
+      "referring_domains": 2043,
+      "domain_rating": 93,
+      "url_rating": 73,
+      "follow_backlinks": 21205,
+      "nofollow_backlinks": 9087,
+      "edu_backlinks": 93,
+      "gov_backlinks": 23
+    },
+    "backlinks_list": [
+      {
+        "anchor": "anchor text 0",
+        "domain_rating": 63,
+        "title": "Page Title 0 - test.com",
+        "url_from": "https://www.referring-0.com/page/cfcd20",
+        "url_to": "https://www.test.com/page-0",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 1",
+        "domain_rating": 76,
+        "title": "Page Title 1 - test.com",
+        "url_from": "https://www.referring-1.com/page/c4ca42",
+        "url_to": "https://www.test.com/page-1",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 2",
+        "domain_rating": 89,
+        "title": "Page Title 2 - test.com",
+        "url_from": "https://www.referring-2.com/page/c81e72",
+        "url_to": "https://www.test.com/page-2",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 3",
+        "domain_rating": 12,
+        "title": "Page Title 3 - test.com",
+        "url_from": "https://www.referring-3.com/page/eccbc8",
+        "url_to": "https://www.test.com/page-3",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 4",
+        "domain_rating": 25,
+        "title": "Page Title 4 - test.com",
+        "url_from": "https://www.referring-4.com/page/a87ff6",
+        "url_to": "https://www.test.com/page-4",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 5",
+        "domain_rating": 38,
+        "title": "Page Title 5 - test.com",
+        "url_from": "https://www.referring-5.com/page/e4da3b",
+        "url_to": "https://www.test.com/page-5",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 6",
+        "domain_rating": 51,
+        "title": "Page Title 6 - test.com",
+        "url_from": "https://www.referring-6.com/page/167909",
+        "url_to": "https://www.test.com/page-6",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 7",
+        "domain_rating": 64,
+        "title": "Page Title 7 - test.com",
+        "url_from": "https://www.referring-7.com/page/8f14e4",
+        "url_to": "https://www.test.com/page-7",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 8",
+        "domain_rating": 77,
+        "title": "Page Title 8 - test.com",
+        "url_from": "https://www.referring-8.com/page/c9f0f8",
+        "url_to": "https://www.test.com/page-8",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 9",
+        "domain_rating": 90,
+        "title": "Page Title 9 - test.com",
+        "url_from": "https://www.referring-9.com/page/45c48c",
+        "url_to": "https://www.test.com/page-9",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 10",
+        "domain_rating": 13,
+        "title": "Page Title 10 - test.com",
+        "url_from": "https://www.referring-10.com/page/d3d944",
+        "url_to": "https://www.test.com/page-10",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 11",
+        "domain_rating": 26,
+        "title": "Page Title 11 - test.com",
+        "url_from": "https://www.referring-11.com/page/6512bd",
+        "url_to": "https://www.test.com/page-11",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 12",
+        "domain_rating": 39,
+        "title": "Page Title 12 - test.com",
+        "url_from": "https://www.referring-12.com/page/c20ad4",
+        "url_to": "https://www.test.com/page-12",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 13",
+        "domain_rating": 52,
+        "title": "Page Title 13 - test.com",
+        "url_from": "https://www.referring-13.com/page/c51ce4",
+        "url_to": "https://www.test.com/page-13",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 14",
+        "domain_rating": 65,
+        "title": "Page Title 14 - test.com",
+        "url_from": "https://www.referring-14.com/page/aab323",
+        "url_to": "https://www.test.com/page-14",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 15",
+        "domain_rating": 78,
+        "title": "Page Title 15 - test.com",
+        "url_from": "https://www.referring-15.com/page/9bf31c",
+        "url_to": "https://www.test.com/page-15",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 16",
+        "domain_rating": 91,
+        "title": "Page Title 16 - test.com",
+        "url_from": "https://www.referring-16.com/page/c74d97",
+        "url_to": "https://www.test.com/page-16",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 17",
+        "domain_rating": 14,
+        "title": "Page Title 17 - test.com",
+        "url_from": "https://www.referring-17.com/page/70efdf",
+        "url_to": "https://www.test.com/page-17",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 18",
+        "domain_rating": 27,
+        "title": "Page Title 18 - test.com",
+        "url_from": "https://www.referring-18.com/page/6f4922",
+        "url_to": "https://www.test.com/page-18",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      },
+      {
+        "anchor": "anchor text 19",
+        "domain_rating": 40,
+        "title": "Page Title 19 - test.com",
+        "url_from": "https://www.referring-19.com/page/1f0e3d",
+        "url_to": "https://www.test.com/page-19",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2026-04-24"
+      }
+    ],
+    "referring_domains_list": [
+      {
+        "domain": "ref-domain-0.com",
+        "domain_rating": 63,
+        "backlinks": 503,
+        "ip": "28.120.161.22"
+      },
+      {
+        "domain": "ref-domain-1.com",
+        "domain_rating": 70,
+        "backlinks": 496,
+        "ip": "166.252.229.113"
+      },
+      {
+        "domain": "ref-domain-2.com",
+        "domain_rating": 77,
+        "backlinks": 489,
+        "ip": "179.20.105.156"
+      },
+      {
+        "domain": "ref-domain-3.com",
+        "domain_rating": 84,
+        "backlinks": 482,
+        "ip": "216.69.62.176"
+      },
+      {
+        "domain": "ref-domain-4.com",
+        "domain_rating": 91,
+        "backlinks": 475,
+        "ip": "11.117.130.71"
+      },
+      {
+        "domain": "ref-domain-5.com",
+        "domain_rating": 98,
+        "backlinks": 468,
+        "ip": "129.42.122.159"
+      },
+      {
+        "domain": "ref-domain-6.com",
+        "domain_rating": 15,
+        "backlinks": 461,
+        "ip": "188.166.199.142"
+      },
+      {
+        "domain": "ref-domain-7.com",
+        "domain_rating": 22,
+        "backlinks": 454,
+        "ip": "167.112.123.161"
+      },
+      {
+        "domain": "ref-domain-8.com",
+        "domain_rating": 29,
+        "backlinks": 447,
+        "ip": "216.21.11.221"
+      },
+      {
+        "domain": "ref-domain-9.com",
+        "domain_rating": 36,
+        "backlinks": 440,
+        "ip": "90.215.165.183"
+      },
+      {
+        "domain": "ref-domain-10.com",
+        "domain_rating": 43,
+        "backlinks": 433,
+        "ip": "68.105.176.53"
+      },
+      {
+        "domain": "ref-domain-11.com",
+        "domain_rating": 50,
+        "backlinks": 426,
+        "ip": "177.190.78.88"
+      },
+      {
+        "domain": "ref-domain-12.com",
+        "domain_rating": 57,
+        "backlinks": 419,
+        "ip": "181.220.46.144"
+      },
+      {
+        "domain": "ref-domain-13.com",
+        "domain_rating": 64,
+        "backlinks": 412,
+        "ip": "64.254.59.212"
+      },
+      {
+        "domain": "ref-domain-14.com",
+        "domain_rating": 71,
+        "backlinks": 405,
+        "ip": "210.241.87.47"
+      }
+    ]
+  },
+  "expiry": "2026-06-07T11:34:35.013282"
+}

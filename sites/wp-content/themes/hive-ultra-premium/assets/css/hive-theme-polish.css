@@ -1,0 +1,442 @@
+/**
+ * Hive Ultra — Çift tema polish + eşit ilan satırları
+ * Sadece hover / mobil kaydırma odağında öne çıkar.
+ */
+
+:root {
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-medium: rgba(255, 255, 255, 0.14);
+    --shadow-elevated: 0 14px 36px rgba(0, 0, 0, 0.45);
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --surface-elevated: #222222;
+    --input-bg: rgba(255, 255, 255, 0.06);
+    --overlay-backdrop: rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="light"] {
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-medium: rgba(0, 0, 0, 0.12);
+    --shadow-elevated: 0 12px 28px rgba(0, 0, 0, 0.12);
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --surface-elevated: #ffffff;
+    --input-bg: rgba(0, 0, 0, 0.04);
+    --overlay-backdrop: rgba(0, 0, 0, 0.35);
+}
+
+/* ── İlan kartları: varsayılan eşit düzlem ── */
+.profile-card,
+.category-poster,
+.erotic-story-slide-card {
+    z-index: 1 !important;
+    transform: none !important;
+    box-shadow: var(--shadow-soft) !important;
+    border: 1px solid var(--border-subtle);
+}
+
+.profile-card-image-wrap,
+.profile-card-image,
+.profile-grid-thumb-image,
+.profile-row-image {
+    background: var(--color-card-hover);
+}
+
+.profile-card-badge,
+.profile-grid-thumb-vip {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-muted);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: none;
+}
+
+[data-theme="light"] .profile-card-badge,
+[data-theme="light"] .profile-grid-thumb-vip {
+    background: rgba(0, 0, 0, 0.06);
+    color: #6b5a2e;
+}
+
+/* Masaüstü: showcase-focus görsel etki YOK (sadece hover) */
+@media (hover: hover) {
+    .profile-card.showcase-focus,
+    .category-poster.showcase-focus,
+    .erotic-story-slide-card.showcase-focus {
+        transform: none !important;
+        z-index: 1 !important;
+        box-shadow: var(--shadow-soft) !important;
+    }
+
+    .profile-card.showcase-focus .profile-card-image-wrap img,
+    .profile-card.showcase-focus .profile-card-image img,
+    .category-poster.showcase-focus .category-poster-image img {
+        transform: none;
+    }
+
+    .profile-card.showcase-focus .card-telegram-btn {
+        opacity: 0;
+    }
+}
+
+/* Hover veya klavye odağı — tek ilan öne çıkar */
+@media (hover: hover) {
+    .profile-card:hover,
+    .profile-card:focus-within {
+        transform: scale(1.07) translateY(-8px) !important;
+        z-index: 12 !important;
+        box-shadow: var(--shadow-elevated) !important;
+        border-color: var(--border-medium);
+    }
+
+    .profile-card:hover .profile-card-image-wrap img,
+    .profile-card:hover .profile-card-image img,
+    .profile-card:focus-within .profile-card-image-wrap img,
+    .profile-card:focus-within .profile-card-image img {
+        transform: scale(1.04);
+    }
+
+    .profile-card:hover .card-telegram-btn,
+    .profile-card:focus-within .card-telegram-btn {
+        opacity: 1;
+    }
+
+    .category-poster:hover,
+    .category-poster:focus-within {
+        transform: scale(1.1) translateY(-10px) !important;
+        z-index: 12 !important;
+    }
+
+    .home-feed .slide-section--cols-6 .profile-card:hover,
+    .home-feed .slide-section--cols-6 .profile-card:focus-within {
+        transform: scale(1.05) translateY(-4px) !important;
+        box-shadow: var(--shadow-elevated) !important;
+    }
+}
+
+/* Dokunmatik / kaydırma — sıra ona gelince (showcase-focus) */
+@media (hover: none) {
+    .profile-card.showcase-focus,
+    .category-poster.showcase-focus,
+    .erotic-story-slide-card.showcase-focus {
+        transform: scale(1.06) translateY(-6px) !important;
+        z-index: 12 !important;
+        box-shadow: var(--shadow-elevated) !important;
+        border-color: var(--border-medium);
+    }
+
+    .profile-card.showcase-focus .profile-card-image-wrap img,
+    .profile-card.showcase-focus .profile-card-image img {
+        transform: scale(1.04);
+    }
+
+    .profile-card.showcase-focus .card-telegram-btn {
+        opacity: 1;
+    }
+
+    .home-feed .slide-section--cols-6 .profile-card.showcase-focus {
+        transform: scale(1.04) translateY(-3px) !important;
+    }
+}
+
+.slide-container,
+.category-poster-scroll {
+    overflow-y: visible;
+}
+
+.slide-track {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    align-items: stretch;
+}
+
+/* ── Arşiv grid thumb — eşit, hover’da hafif ── */
+.profile-grid-thumb-link {
+    border: 1px solid var(--border-subtle);
+    box-shadow: none;
+    transform: none;
+}
+
+.profile-grid-thumb-link:hover,
+.profile-grid-thumb-link:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-elevated);
+    border-color: var(--border-medium);
+    z-index: 2;
+}
+
+/* ── İlan satırları — hiçbiri önde değil ── */
+.profile-row {
+    border: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: none;
+    transform: none;
+    background: var(--color-card-bg);
+}
+
+.profile-row:hover,
+.profile-row:focus-within {
+    background: var(--color-card-hover);
+    transform: none;
+    border-color: var(--border-medium);
+    box-shadow: var(--shadow-soft);
+    z-index: 1;
+}
+
+.profiles-list {
+    gap: 0.75rem;
+}
+
+.profile-row-title a {
+    color: var(--color-white);
+}
+
+[data-theme="light"] .profile-row-title a {
+    color: #1a1a1a;
+}
+
+/* ── Açık tema — modül kapsamı ── */
+[data-theme="light"] .profile-card,
+[data-theme="light"] .profile-grid-thumb-link,
+[data-theme="light"] .profile-row,
+[data-theme="light"] .category-hub-card,
+[data-theme="light"] .gece-hayati-card,
+[data-theme="light"] .erotic-story-card {
+    background: var(--color-card-bg);
+    border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .profile-card-title,
+[data-theme="light"] .category-poster-name {
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .category-poster-image {
+    box-shadow: var(--shadow-soft);
+}
+
+[data-theme="light"] .category-poster-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 55%);
+}
+
+[data-theme="light"] .slide-title,
+[data-theme="light"] .section-header h1 {
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .hive-unified-search-form,
+[data-theme="light"] .search-form input[type="search"],
+[data-theme="light"] .hive-cat-search {
+    background: var(--input-bg);
+    border-color: var(--border-subtle);
+    color: var(--color-text);
+}
+
+[data-theme="light"] .hive-unified-search-dropdown {
+    background: #fff;
+    border-color: var(--border-subtle);
+    box-shadow: var(--shadow-elevated);
+}
+
+[data-theme="light"] .hive-search-result-item a:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .hive-cat-drawer {
+    background: #faf7f2;
+    border-left-color: var(--border-subtle);
+}
+
+[data-theme="light"] .hive-cat-drawer-header,
+[data-theme="light"] .hive-cat-group-toggle {
+    border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .hive-cat-drawer-backdrop {
+    background: var(--overlay-backdrop);
+}
+
+[data-theme="light"] .hive-cat-menu-btn {
+    background: rgba(196, 30, 90, 0.08);
+    border-color: rgba(196, 30, 90, 0.25);
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .mini-badge {
+    background: rgba(196, 30, 90, 0.1);
+    color: var(--color-accent);
+}
+
+[data-theme="light"] .btn-outline {
+    border-color: var(--border-medium);
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .pagination .page-numbers {
+    background: #fff;
+    border: 1px solid var(--border-subtle);
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .pagination .page-numbers.current {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+}
+
+[data-theme="light"] .story-item-ring {
+    border-color: var(--color-accent);
+}
+
+[data-theme="light"] .hive-story-modal-panel {
+    background: #fff;
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .hive-age-gate-panel {
+    background: #fff;
+    color: #1a1a1a;
+    border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .hive-age-gate-backdrop {
+    background: var(--overlay-backdrop);
+}
+
+[data-theme="light"] .single-profile-meta,
+[data-theme="light"] .profile-single-table,
+[data-theme="light"] .erotic-story-map {
+    background: #fff;
+    border: 1px solid var(--border-subtle);
+}
+
+[data-theme="light"] .gece-hayati-content {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .gece-hayati-single-tax .gece-tax {
+    background: rgba(0, 0, 0, 0.05);
+    color: #3d3832;
+}
+
+[data-theme="light"] .hive-seo-footer-summary,
+[data-theme="light"] .archive-description,
+[data-theme="light"] .profile-row-meta,
+[data-theme="light"] .profile-row-location {
+    color: var(--color-text-muted);
+}
+
+[data-theme="light"] .no-results {
+    color: var(--color-text);
+}
+
+[data-theme="light"] .site-footer {
+    background: var(--color-footer-bg);
+    color: var(--color-text);
+}
+
+[data-theme="light"] .footer-widget .widget-title {
+    color: #1a1a1a;
+}
+
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+    background: #fff;
+    border-color: var(--border-subtle);
+    color: #1a1a1a;
+}
+
+/* Koyu tema — tutarlı yüzeyler */
+[data-theme="dark"] .profile-card,
+[data-theme="dark"] .profile-row,
+[data-theme="dark"] .profile-grid-thumb-link,
+:not([data-theme]) .profile-card,
+:not([data-theme]) .profile-row,
+:not([data-theme]) .profile-grid-thumb-link {
+    background: var(--color-card-bg);
+}
+
+[data-theme="light"] .hero-search .hive-unified-search-form {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+/* Açık tema — hero video görünür kalsın */
+[data-theme="light"] .hero--video {
+    background: #e8e0d4;
+}
+
+[data-theme="light"] .hero-video {
+    opacity: 1;
+    filter: saturate(1.2) contrast(1.08) brightness(1.05);
+}
+
+[data-theme="light"] .hero--video .hero-overlay {
+    background:
+        radial-gradient(ellipse at 30% 25%, rgba(196, 30, 90, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 70% 75%, rgba(212, 160, 23, 0.1) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(255, 252, 248, 0.35) 0%, rgba(255, 250, 245, 0.72) 100%);
+}
+
+[data-theme="light"] .hero[style*="background-image"] .hero-overlay {
+    background:
+        linear-gradient(180deg, rgba(255, 252, 248, 0.45) 0%, rgba(255, 250, 245, 0.78) 100%),
+        radial-gradient(ellipse at center, rgba(196, 30, 90, 0.08) 0%, transparent 65%);
+}
+
+/* Kategori landing — tam içerik + öne çıkan ilanlar */
+.category-landing-content {
+    max-width: 820px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    line-height: 1.75;
+    text-align: left;
+}
+
+.category-landing-content h2 {
+    font-size: 1.35rem;
+    margin: 1.75rem 0 0.75rem;
+    color: var(--color-secondary);
+}
+
+.category-landing-content h3 {
+    font-size: 1.1rem;
+    margin: 1.25rem 0 0.5rem;
+    color: var(--color-text);
+}
+
+.category-landing-content .hive-faq {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.category-featured-profiles {
+    margin-bottom: 2rem;
+}
+
+.category-featured-title,
+.category-all-profiles-title {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+.category-featured-grid {
+    margin-bottom: 0.5rem;
+}
+
+[data-theme="light"] .category-landing-content {
+    background: #fff;
+    border-color: var(--border-subtle);
+    color: var(--color-text);
+}
+
+[data-theme="light"] .category-landing-content h2 {
+    color: var(--color-accent);
+}
+
+[data-theme="light"] .category-landing-content h3 {
+    color: #1a1a1a;
+}

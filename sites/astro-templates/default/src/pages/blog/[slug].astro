@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import blog from '../../data/blog.json';
+import pagesData from '../../data/pages.json';
+
+export function getStaticPaths() {
+  return (blog || []).map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const site = pagesData.domain?.replace(/\/$/, '') || '';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.title,
+  description: post.description,
+  author: { '@type': 'Organization', name: pagesData.site_name },
+  url: `${site}/blog/${post.slug}`,
+};
+const breadcrumbs = [
+  { label: 'Ana Sayfa', href: '/' },
+  { label: 'Blog', href: '/blog' },
+  { label: post.title },
+];
+---
+<BaseLayout
+  title={post.title}
+  description={post.description}
+  canonical={`${site}/blog/${post.slug}`}
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+  <article set:html={post.content_html} />
+</BaseLayout>

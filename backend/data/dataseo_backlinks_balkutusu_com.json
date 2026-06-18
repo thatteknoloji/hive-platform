@@ -1,0 +1,120 @@
+{
+  "result": {
+    "domain": "balkutusu.com",
+    "overview": {
+      "backlinks": 44962,
+      "referring_domains": 512,
+      "domain_rating": 62,
+      "url_rating": 62,
+      "follow_backlinks": 10333,
+      "nofollow_backlinks": 4428,
+      "edu_backlinks": 62,
+      "gov_backlinks": 2
+    },
+    "backlinks_list": [
+      {
+        "anchor": "anchor text 0",
+        "domain_rating": 12,
+        "title": "Page Title 0 - balkutusu.com",
+        "url_from": "https://www.referring-0.com/page/cfcd20",
+        "url_to": "https://www.balkutusu.com/page-0",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2025-11-25"
+      },
+      {
+        "anchor": "anchor text 1",
+        "domain_rating": 25,
+        "title": "Page Title 1 - balkutusu.com",
+        "url_from": "https://www.referring-1.com/page/c4ca42",
+        "url_to": "https://www.balkutusu.com/page-1",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2025-11-25"
+      },
+      {
+        "anchor": "anchor text 2",
+        "domain_rating": 38,
+        "title": "Page Title 2 - balkutusu.com",
+        "url_from": "https://www.referring-2.com/page/c81e72",
+        "url_to": "https://www.balkutusu.com/page-2",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2025-11-25"
+      },
+      {
+        "anchor": "anchor text 3",
+        "domain_rating": 51,
+        "title": "Page Title 3 - balkutusu.com",
+        "url_from": "https://www.referring-3.com/page/eccbc8",
+        "url_to": "https://www.balkutusu.com/page-3",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2025-11-25"
+      },
+      {
+        "anchor": "anchor text 4",
+        "domain_rating": 64,
+        "title": "Page Title 4 - balkutusu.com",
+        "url_from": "https://www.referring-4.com/page/a87ff6",
+        "url_to": "https://www.balkutusu.com/page-4",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2025-11-25"
+      },
+      {
+        "anchor": "anchor text 5",
+        "domain_rating": 77,
+        "title": "Page Title 5 - balkutusu.com",
+        "url_from": "https://www.referring-5.com/page/e4da3b",
+        "url_to": "https://www.balkutusu.com/page-5",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2025-11-25"
+      },
+      {
+        "anchor": "anchor text 6",
+        "domain_rating": 90,
+        "title": "Page Title 6 - balkutusu.com",
+        "url_from": "https://www.referring-6.com/page/167909",
+        "url_to": "https://www.balkutusu.com/page-6",
+        "edu": false,
+        "gov": false,
+        "first_seen": "2025-11-25"
+      }
+    ],
+    "referring_domains_list": [
+      {
+        "domain": "ref-domain-0.com",
+        "domain_rating": 12,
+        "backlinks": 472,
+        "ip": "36.106.168.171"
+      },
+      {
+        "domain": "ref-domain-1.com",
+        "domain_rating": 19,
+        "backlinks": 434,
+        "ip": "92.33.32.43"
+      },
+      {
+        "domain": "ref-domain-2.com",
+        "domain_rating": 26,
+        "backlinks": 396,
+        "ip": "197.129.115.231"
+      },
+      {
+        "domain": "ref-domain-3.com",
+        "domain_rating": 33,
+        "backlinks": 358,
+        "ip": "146.73.84.177"
+      },
+      {
+        "domain": "ref-domain-4.com",
+        "domain_rating": 40,
+        "backlinks": 320,
+        "ip": "181.55.126.214"
+      }
+    ]
+  },
+  "expiry": "2026-06-11T20:27:30.967804"
+}

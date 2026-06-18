@@ -1,0 +1,62 @@
+.DS_Store
+
+.env
+.env.*
+*.log
+
+.tmp-hash-venv/
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+frontend/build/
+
+backend/browser_profiles/
+backend/app/generated_sites/
+backend/app/public_sites/
+backend/app/publish_artifacts/
+
+*_state.json
+wp_sessions.json
+tumblr_tokens.json
+
+reports/
+uploads/
+
+*.zip
+*.tar
+*.gz
+
+video/
+
+# IDE / local agents
+.cursor/
+.agents/
+.hive/
+.vscode/
+
+# Local generated / old work dirs
+2li3lu/
+generated-sites/
+
+# Temp files
+tmp-*.php
+tmp-*.js
+tmp-*.css
+tmp-*.sh
+tmp-*.txt
+
+# Secrets / local helpers
+sshpass.rb
+
+# Embedded repos / external tools
+backend/mcp-servers/reddirect-src/
+third_party/dataseo-mcp/
+third_party/open-seo/
+third_party/seointel/
+third_party/serpbear/

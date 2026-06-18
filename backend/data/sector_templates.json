@@ -1,0 +1,94 @@
+{
+  "escort": {
+    "ad": "Escort / Companion",
+    "hizmetler": [
+      "anal escort", "oral escort", "vip escort", "otel escort",
+      "plaj escort", "gece escort", "24 saat escort", "masaj escort",
+      "bayan arkadaş", "partner escort", "çift escort", "trans escort",
+      "lisanslı escort", "yabancı escort", "genç escort", "olgun escort",
+      "ekonomik escort", "class escort", "lüks escort", "üniversiteli escort"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_sokak_hizmet", "mahalle_cadde_hizmet", "hizmet_mahalle_ana", "cadde_hizmet", "sokak_hizmet"]
+  },
+  "gece_hayati": {
+    "ad": "Gece Hayatı",
+    "hizmetler": [
+      "gece kulübü", "bar", "canlı müzik", "eğlence mekanı",
+      "rooftop bar", "beach club", "disco", "pub",
+      "kokteyl bar", "gece eğlencesi", "after party", "dj performansı"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet", "hizmet_mahalle_ana"]
+  },
+  "otel_turizm": {
+    "ad": "Otel & Turizm",
+    "hizmetler": [
+      "otel", "butik otel", "apart otel", "pansiyon",
+      "tatil paketi", "günlük kiralık", "deniz manzaralı otel",
+      "all inclusive", "yaz tatili", "hafta sonu kaçamağı", "transfer hizmeti"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet", "hizmet_mahalle_ana"]
+  },
+  "restoran": {
+    "ad": "Restoran & Yeme-İçme",
+    "hizmetler": [
+      "restoran", "deniz ürünleri", "kebap", "kahvaltı",
+      "fine dining", "sokak lezzeti", "vegan restoran", "balık restoranı",
+      "meze", "tatlıcı", "kafe", "brunch"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet"]
+  },
+  "saglik": {
+    "ad": "Sağlık",
+    "hizmetler": [
+      "diş kliniği", "estetik merkezi", "fizik tedavi", "saç ekimi",
+      "göz merkezi", "check-up", "sağlık turizmi", "dermatoloji",
+      "ortopedi", "kadın doğum", "check up paketi", "laboratuvar"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet", "hizmet_mahalle_ana"]
+  },
+  "emlak": {
+    "ad": "Emlak",
+    "hizmetler": [
+      "satılık daire", "kiralık daire", "villa", "arsa",
+      "emlak danışmanı", "yazlık", "deniz manzaralı konut",
+      "yatırımlık daire", "proje", "konut kredisi", "gayrimenkul"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet"]
+  },
+  "seo_dijital": {
+    "ad": "SEO & Dijital Pazarlama",
+    "hizmetler": [
+      "seo hizmeti", "dijital pazarlama", "google ads", "sosyal medya yönetimi",
+      "web tasarım", "e-ticaret seo", "yerel seo", "içerik pazarlama",
+      "backlink", "teknik seo", "reklam yönetimi", "marka yönetimi"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "hizmet_mahalle_ana", "cadde_sokak_hizmet"]
+  },
+  "hukuk": {
+    "ad": "Hukuk",
+    "hizmetler": [
+      "avukat", "boşanma avukatı", "ceza avukatı", "icra avukatı",
+      "iş hukuku", "gayrimenkul avukatı", "hukuk bürosu", "arabuluculuk",
+      "miras avukatı", "tazminat davası", "sözleşme hukuku", "aile hukuku"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet"]
+  },
+  "egitim": {
+    "ad": "Eğitim",
+    "hizmetler": [
+      "özel ders", "dil kursu", "online eğitim", "sertifika programı",
+      "üniversite hazırlık", "mesleki eğitim", "akademi", "koçluk",
+      "yaz okulu", "robotik eğitim", "kodlama kursu", "matematik dersi"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet"]
+  },
+  "oto": {
+    "ad": "Otomotiv",
+    "hizmetler": [
+      "oto galeri", "ikinci el araba", "kiralık araç", "oto servis",
+      "lastik değişimi", "detaylı temizlik", "oto ekspertiz", "yedek parça",
+      "oto yıkama", "cam filmi", "boya koruma", "araç kiralama"
+    ],
+    "kaliplar": ["mahalle_hizmet", "cadde_hizmet", "mahalle_cadde_hizmet"]
+  }
+}

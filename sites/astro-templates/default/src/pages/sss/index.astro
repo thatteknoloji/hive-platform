@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import faqs from '../../data/faqs.json';
+import pagesData from '../../data/pages.json';
+---
+<BaseLayout title="Sık Sorulan Sorular" description="SSS rehber sayfaları" canonical={`${pagesData.domain}/sss`}>
+  <h1>Sık Sorulan Sorular</h1>
+  <ul>
+    {(faqs || []).map((f) => (
+      <li><a href={`/sss/${f.slug}`}>{f.title}</a></li>
+    ))}
+  </ul>
+</BaseLayout>

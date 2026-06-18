@@ -1,0 +1,30 @@
+{
+  "kuşadası": [
+    "2. Sokak", "5. Sokak", "7. Sokak", "Çınar Sokak",
+    "Deniz Sokak", "Zeytin Sokak", "İncir Sokak", "Nergis Sokak",
+    "Menekşe Sokak", "Lale Sokak", "Gül Sokak", "Papatya Sokak",
+    "Sümbül Sokak", "Yasemin Sokak", "Güneş Sokak", "Çiğdem Sokak"
+  ],
+  "istanbul": [
+    "Sıraselviler Caddesi", "Yeni Çarşı Caddesi", "Soğancı Sokak",
+    "Turnacıbaşı Sokak", "Kurabiye Sokak", "Küçükbayır Sokak",
+    "Bostanbaşı Sokak", "Yıldız Sokak", "Çam Sokak",
+    "Güneş Sokak", "Park Sokak", "Bahçe Sokak"
+  ],
+  "izmir": [
+    "1366 Sokak", "1371 Sokak", "1420 Sokak",
+    "Kıbrıs Şehitleri Sokak", "Milli Egemenlik Sokak",
+    "Atatürk Sokak", "Cumhuriyet Sokak", "Ege Sokak",
+    "Güneş Sokak", "Çiçek Sokak"
+  ],
+  "ankara": [
+    "Bestekar Sokak", "Yıldızevler Sokak", "İlkbahar Sokak",
+    "Şehit Ersan Sokak", "Güvenlik Sokak", "Karanfil Sokak",
+    "Yaban Gülü Sokak", "Çam Sokak", "Menekşe Sokak"
+  ],
+  "antalya": [
+    "243. Sokak", "256. Sokak", "265. Sokak",
+    "Gül Sokak", "Çamlık Sokak", "Karanfil Sokak",
+    "Zeytin Sokak", "Portakal Sokak", "Palmiye Sokak"
+  ]
+}

@@ -1,0 +1,964 @@
+{
+  "directories": [
+    {
+      "name": "DMOZ Archive Mirror",
+      "url": "https://www.dmoz-odp.org/",
+      "submit_url": "https://www.dmoz-odp.org/",
+      "category": "general",
+      "da": 40,
+      "dofollow": true
+    },
+    {
+      "name": "Brownbook",
+      "url": "https://www.brownbook.net/",
+      "submit_url": "https://www.brownbook.net/",
+      "category": "business",
+      "da": 41,
+      "dofollow": true
+    },
+    {
+      "name": "Hotfrog",
+      "url": "https://www.hotfrog.com/",
+      "submit_url": "https://www.hotfrog.com/",
+      "category": "business",
+      "da": 42,
+      "dofollow": true
+    },
+    {
+      "name": "Cylex",
+      "url": "https://www.cylex.us.com/",
+      "submit_url": "https://www.cylex.us.com/",
+      "category": "local",
+      "da": 43,
+      "dofollow": true
+    },
+    {
+      "name": "Tuugo",
+      "url": "https://www.tuugo.biz/",
+      "submit_url": "https://www.tuugo.biz/",
+      "category": "business",
+      "da": 44,
+      "dofollow": true
+    },
+    {
+      "name": "Yalwa",
+      "url": "https://www.yalwa.com/",
+      "submit_url": "https://www.yalwa.com/",
+      "category": "local",
+      "da": 45,
+      "dofollow": true
+    },
+    {
+      "name": "Tupalo",
+      "url": "https://www.tupalo.co/",
+      "submit_url": "https://www.tupalo.co/",
+      "category": "local",
+      "da": 46,
+      "dofollow": true
+    },
+    {
+      "name": "Cybo",
+      "url": "https://www.cybo.com/",
+      "submit_url": "https://www.cybo.com/",
+      "category": "local",
+      "da": 47,
+      "dofollow": true
+    },
+    {
+      "name": "EZlocal",
+      "url": "https://ezlocal.com/",
+      "submit_url": "https://ezlocal.com/",
+      "category": "local",
+      "da": 48,
+      "dofollow": true
+    },
+    {
+      "name": "CitySquares",
+      "url": "https://citysquares.com/",
+      "submit_url": "https://citysquares.com/",
+      "category": "local",
+      "da": 49,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 11 (tech)",
+      "url": "https://directory11.example.com",
+      "submit_url": "https://directory11.example.com/submit",
+      "category": "tech",
+      "da": 31,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 12 (health)",
+      "url": "https://directory12.example.com",
+      "submit_url": "https://directory12.example.com/submit",
+      "category": "health",
+      "da": 32,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 13 (lifestyle)",
+      "url": "https://directory13.example.com",
+      "submit_url": "https://directory13.example.com/submit",
+      "category": "lifestyle",
+      "da": 33,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 14 (general)",
+      "url": "https://directory14.example.com",
+      "submit_url": "https://directory14.example.com/submit",
+      "category": "general",
+      "da": 34,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 15 (business)",
+      "url": "https://directory15.example.com",
+      "submit_url": "https://directory15.example.com/submit",
+      "category": "business",
+      "da": 35,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 16 (local)",
+      "url": "https://directory16.example.com",
+      "submit_url": "https://directory16.example.com/submit",
+      "category": "local",
+      "da": 36,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 17 (travel)",
+      "url": "https://directory17.example.com",
+      "submit_url": "https://directory17.example.com/submit",
+      "category": "travel",
+      "da": 37,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 18 (tech)",
+      "url": "https://directory18.example.com",
+      "submit_url": "https://directory18.example.com/submit",
+      "category": "tech",
+      "da": 38,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 19 (health)",
+      "url": "https://directory19.example.com",
+      "submit_url": "https://directory19.example.com/submit",
+      "category": "health",
+      "da": 39,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 20 (lifestyle)",
+      "url": "https://directory20.example.com",
+      "submit_url": "https://directory20.example.com/submit",
+      "category": "lifestyle",
+      "da": 40,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 21 (general)",
+      "url": "https://directory21.example.com",
+      "submit_url": "https://directory21.example.com/submit",
+      "category": "general",
+      "da": 41,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 22 (business)",
+      "url": "https://directory22.example.com",
+      "submit_url": "https://directory22.example.com/submit",
+      "category": "business",
+      "da": 42,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 23 (local)",
+      "url": "https://directory23.example.com",
+      "submit_url": "https://directory23.example.com/submit",
+      "category": "local",
+      "da": 43,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 24 (travel)",
+      "url": "https://directory24.example.com",
+      "submit_url": "https://directory24.example.com/submit",
+      "category": "travel",
+      "da": 44,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 25 (tech)",
+      "url": "https://directory25.example.com",
+      "submit_url": "https://directory25.example.com/submit",
+      "category": "tech",
+      "da": 45,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 26 (health)",
+      "url": "https://directory26.example.com",
+      "submit_url": "https://directory26.example.com/submit",
+      "category": "health",
+      "da": 46,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 27 (lifestyle)",
+      "url": "https://directory27.example.com",
+      "submit_url": "https://directory27.example.com/submit",
+      "category": "lifestyle",
+      "da": 47,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 28 (general)",
+      "url": "https://directory28.example.com",
+      "submit_url": "https://directory28.example.com/submit",
+      "category": "general",
+      "da": 48,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 29 (business)",
+      "url": "https://directory29.example.com",
+      "submit_url": "https://directory29.example.com/submit",
+      "category": "business",
+      "da": 49,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 30 (local)",
+      "url": "https://directory30.example.com",
+      "submit_url": "https://directory30.example.com/submit",
+      "category": "local",
+      "da": 50,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 31 (travel)",
+      "url": "https://directory31.example.com",
+      "submit_url": "https://directory31.example.com/submit",
+      "category": "travel",
+      "da": 51,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 32 (tech)",
+      "url": "https://directory32.example.com",
+      "submit_url": "https://directory32.example.com/submit",
+      "category": "tech",
+      "da": 52,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 33 (health)",
+      "url": "https://directory33.example.com",
+      "submit_url": "https://directory33.example.com/submit",
+      "category": "health",
+      "da": 53,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 34 (lifestyle)",
+      "url": "https://directory34.example.com",
+      "submit_url": "https://directory34.example.com/submit",
+      "category": "lifestyle",
+      "da": 54,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 35 (general)",
+      "url": "https://directory35.example.com",
+      "submit_url": "https://directory35.example.com/submit",
+      "category": "general",
+      "da": 55,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 36 (business)",
+      "url": "https://directory36.example.com",
+      "submit_url": "https://directory36.example.com/submit",
+      "category": "business",
+      "da": 56,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 37 (local)",
+      "url": "https://directory37.example.com",
+      "submit_url": "https://directory37.example.com/submit",
+      "category": "local",
+      "da": 57,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 38 (travel)",
+      "url": "https://directory38.example.com",
+      "submit_url": "https://directory38.example.com/submit",
+      "category": "travel",
+      "da": 58,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 39 (tech)",
+      "url": "https://directory39.example.com",
+      "submit_url": "https://directory39.example.com/submit",
+      "category": "tech",
+      "da": 59,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 40 (health)",
+      "url": "https://directory40.example.com",
+      "submit_url": "https://directory40.example.com/submit",
+      "category": "health",
+      "da": 60,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 41 (lifestyle)",
+      "url": "https://directory41.example.com",
+      "submit_url": "https://directory41.example.com/submit",
+      "category": "lifestyle",
+      "da": 61,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 42 (general)",
+      "url": "https://directory42.example.com",
+      "submit_url": "https://directory42.example.com/submit",
+      "category": "general",
+      "da": 62,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 43 (business)",
+      "url": "https://directory43.example.com",
+      "submit_url": "https://directory43.example.com/submit",
+      "category": "business",
+      "da": 63,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 44 (local)",
+      "url": "https://directory44.example.com",
+      "submit_url": "https://directory44.example.com/submit",
+      "category": "local",
+      "da": 64,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 45 (travel)",
+      "url": "https://directory45.example.com",
+      "submit_url": "https://directory45.example.com/submit",
+      "category": "travel",
+      "da": 65,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 46 (tech)",
+      "url": "https://directory46.example.com",
+      "submit_url": "https://directory46.example.com/submit",
+      "category": "tech",
+      "da": 66,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 47 (health)",
+      "url": "https://directory47.example.com",
+      "submit_url": "https://directory47.example.com/submit",
+      "category": "health",
+      "da": 67,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 48 (lifestyle)",
+      "url": "https://directory48.example.com",
+      "submit_url": "https://directory48.example.com/submit",
+      "category": "lifestyle",
+      "da": 68,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 49 (general)",
+      "url": "https://directory49.example.com",
+      "submit_url": "https://directory49.example.com/submit",
+      "category": "general",
+      "da": 69,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 50 (business)",
+      "url": "https://directory50.example.com",
+      "submit_url": "https://directory50.example.com/submit",
+      "category": "business",
+      "da": 70,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 51 (local)",
+      "url": "https://directory51.example.com",
+      "submit_url": "https://directory51.example.com/submit",
+      "category": "local",
+      "da": 71,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 52 (travel)",
+      "url": "https://directory52.example.com",
+      "submit_url": "https://directory52.example.com/submit",
+      "category": "travel",
+      "da": 72,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 53 (tech)",
+      "url": "https://directory53.example.com",
+      "submit_url": "https://directory53.example.com/submit",
+      "category": "tech",
+      "da": 73,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 54 (health)",
+      "url": "https://directory54.example.com",
+      "submit_url": "https://directory54.example.com/submit",
+      "category": "health",
+      "da": 74,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 55 (lifestyle)",
+      "url": "https://directory55.example.com",
+      "submit_url": "https://directory55.example.com/submit",
+      "category": "lifestyle",
+      "da": 75,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 56 (general)",
+      "url": "https://directory56.example.com",
+      "submit_url": "https://directory56.example.com/submit",
+      "category": "general",
+      "da": 76,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 57 (business)",
+      "url": "https://directory57.example.com",
+      "submit_url": "https://directory57.example.com/submit",
+      "category": "business",
+      "da": 77,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 58 (local)",
+      "url": "https://directory58.example.com",
+      "submit_url": "https://directory58.example.com/submit",
+      "category": "local",
+      "da": 78,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 59 (travel)",
+      "url": "https://directory59.example.com",
+      "submit_url": "https://directory59.example.com/submit",
+      "category": "travel",
+      "da": 79,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 60 (tech)",
+      "url": "https://directory60.example.com",
+      "submit_url": "https://directory60.example.com/submit",
+      "category": "tech",
+      "da": 20,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 61 (health)",
+      "url": "https://directory61.example.com",
+      "submit_url": "https://directory61.example.com/submit",
+      "category": "health",
+      "da": 21,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 62 (lifestyle)",
+      "url": "https://directory62.example.com",
+      "submit_url": "https://directory62.example.com/submit",
+      "category": "lifestyle",
+      "da": 22,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 63 (general)",
+      "url": "https://directory63.example.com",
+      "submit_url": "https://directory63.example.com/submit",
+      "category": "general",
+      "da": 23,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 64 (business)",
+      "url": "https://directory64.example.com",
+      "submit_url": "https://directory64.example.com/submit",
+      "category": "business",
+      "da": 24,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 65 (local)",
+      "url": "https://directory65.example.com",
+      "submit_url": "https://directory65.example.com/submit",
+      "category": "local",
+      "da": 25,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 66 (travel)",
+      "url": "https://directory66.example.com",
+      "submit_url": "https://directory66.example.com/submit",
+      "category": "travel",
+      "da": 26,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 67 (tech)",
+      "url": "https://directory67.example.com",
+      "submit_url": "https://directory67.example.com/submit",
+      "category": "tech",
+      "da": 27,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 68 (health)",
+      "url": "https://directory68.example.com",
+      "submit_url": "https://directory68.example.com/submit",
+      "category": "health",
+      "da": 28,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 69 (lifestyle)",
+      "url": "https://directory69.example.com",
+      "submit_url": "https://directory69.example.com/submit",
+      "category": "lifestyle",
+      "da": 29,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 70 (general)",
+      "url": "https://directory70.example.com",
+      "submit_url": "https://directory70.example.com/submit",
+      "category": "general",
+      "da": 30,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 71 (business)",
+      "url": "https://directory71.example.com",
+      "submit_url": "https://directory71.example.com/submit",
+      "category": "business",
+      "da": 31,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 72 (local)",
+      "url": "https://directory72.example.com",
+      "submit_url": "https://directory72.example.com/submit",
+      "category": "local",
+      "da": 32,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 73 (travel)",
+      "url": "https://directory73.example.com",
+      "submit_url": "https://directory73.example.com/submit",
+      "category": "travel",
+      "da": 33,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 74 (tech)",
+      "url": "https://directory74.example.com",
+      "submit_url": "https://directory74.example.com/submit",
+      "category": "tech",
+      "da": 34,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 75 (health)",
+      "url": "https://directory75.example.com",
+      "submit_url": "https://directory75.example.com/submit",
+      "category": "health",
+      "da": 35,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 76 (lifestyle)",
+      "url": "https://directory76.example.com",
+      "submit_url": "https://directory76.example.com/submit",
+      "category": "lifestyle",
+      "da": 36,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 77 (general)",
+      "url": "https://directory77.example.com",
+      "submit_url": "https://directory77.example.com/submit",
+      "category": "general",
+      "da": 37,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 78 (business)",
+      "url": "https://directory78.example.com",
+      "submit_url": "https://directory78.example.com/submit",
+      "category": "business",
+      "da": 38,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 79 (local)",
+      "url": "https://directory79.example.com",
+      "submit_url": "https://directory79.example.com/submit",
+      "category": "local",
+      "da": 39,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 80 (travel)",
+      "url": "https://directory80.example.com",
+      "submit_url": "https://directory80.example.com/submit",
+      "category": "travel",
+      "da": 40,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 81 (tech)",
+      "url": "https://directory81.example.com",
+      "submit_url": "https://directory81.example.com/submit",
+      "category": "tech",
+      "da": 41,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 82 (health)",
+      "url": "https://directory82.example.com",
+      "submit_url": "https://directory82.example.com/submit",
+      "category": "health",
+      "da": 42,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 83 (lifestyle)",
+      "url": "https://directory83.example.com",
+      "submit_url": "https://directory83.example.com/submit",
+      "category": "lifestyle",
+      "da": 43,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 84 (general)",
+      "url": "https://directory84.example.com",
+      "submit_url": "https://directory84.example.com/submit",
+      "category": "general",
+      "da": 44,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 85 (business)",
+      "url": "https://directory85.example.com",
+      "submit_url": "https://directory85.example.com/submit",
+      "category": "business",
+      "da": 45,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 86 (local)",
+      "url": "https://directory86.example.com",
+      "submit_url": "https://directory86.example.com/submit",
+      "category": "local",
+      "da": 46,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 87 (travel)",
+      "url": "https://directory87.example.com",
+      "submit_url": "https://directory87.example.com/submit",
+      "category": "travel",
+      "da": 47,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 88 (tech)",
+      "url": "https://directory88.example.com",
+      "submit_url": "https://directory88.example.com/submit",
+      "category": "tech",
+      "da": 48,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 89 (health)",
+      "url": "https://directory89.example.com",
+      "submit_url": "https://directory89.example.com/submit",
+      "category": "health",
+      "da": 49,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 90 (lifestyle)",
+      "url": "https://directory90.example.com",
+      "submit_url": "https://directory90.example.com/submit",
+      "category": "lifestyle",
+      "da": 50,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 91 (general)",
+      "url": "https://directory91.example.com",
+      "submit_url": "https://directory91.example.com/submit",
+      "category": "general",
+      "da": 51,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 92 (business)",
+      "url": "https://directory92.example.com",
+      "submit_url": "https://directory92.example.com/submit",
+      "category": "business",
+      "da": 52,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 93 (local)",
+      "url": "https://directory93.example.com",
+      "submit_url": "https://directory93.example.com/submit",
+      "category": "local",
+      "da": 53,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 94 (travel)",
+      "url": "https://directory94.example.com",
+      "submit_url": "https://directory94.example.com/submit",
+      "category": "travel",
+      "da": 54,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 95 (tech)",
+      "url": "https://directory95.example.com",
+      "submit_url": "https://directory95.example.com/submit",
+      "category": "tech",
+      "da": 55,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 96 (health)",
+      "url": "https://directory96.example.com",
+      "submit_url": "https://directory96.example.com/submit",
+      "category": "health",
+      "da": 56,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 97 (lifestyle)",
+      "url": "https://directory97.example.com",
+      "submit_url": "https://directory97.example.com/submit",
+      "category": "lifestyle",
+      "da": 57,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 98 (general)",
+      "url": "https://directory98.example.com",
+      "submit_url": "https://directory98.example.com/submit",
+      "category": "general",
+      "da": 58,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 99 (business)",
+      "url": "https://directory99.example.com",
+      "submit_url": "https://directory99.example.com/submit",
+      "category": "business",
+      "da": 59,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 100 (local)",
+      "url": "https://directory100.example.com",
+      "submit_url": "https://directory100.example.com/submit",
+      "category": "local",
+      "da": 60,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 101 (travel)",
+      "url": "https://directory101.example.com",
+      "submit_url": "https://directory101.example.com/submit",
+      "category": "travel",
+      "da": 61,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 102 (tech)",
+      "url": "https://directory102.example.com",
+      "submit_url": "https://directory102.example.com/submit",
+      "category": "tech",
+      "da": 62,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 103 (health)",
+      "url": "https://directory103.example.com",
+      "submit_url": "https://directory103.example.com/submit",
+      "category": "health",
+      "da": 63,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 104 (lifestyle)",
+      "url": "https://directory104.example.com",
+      "submit_url": "https://directory104.example.com/submit",
+      "category": "lifestyle",
+      "da": 64,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 105 (general)",
+      "url": "https://directory105.example.com",
+      "submit_url": "https://directory105.example.com/submit",
+      "category": "general",
+      "da": 65,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 106 (business)",
+      "url": "https://directory106.example.com",
+      "submit_url": "https://directory106.example.com/submit",
+      "category": "business",
+      "da": 66,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 107 (local)",
+      "url": "https://directory107.example.com",
+      "submit_url": "https://directory107.example.com/submit",
+      "category": "local",
+      "da": 67,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 108 (travel)",
+      "url": "https://directory108.example.com",
+      "submit_url": "https://directory108.example.com/submit",
+      "category": "travel",
+      "da": 68,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 109 (tech)",
+      "url": "https://directory109.example.com",
+      "submit_url": "https://directory109.example.com/submit",
+      "category": "tech",
+      "da": 69,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 110 (health)",
+      "url": "https://directory110.example.com",
+      "submit_url": "https://directory110.example.com/submit",
+      "category": "health",
+      "da": 70,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 111 (lifestyle)",
+      "url": "https://directory111.example.com",
+      "submit_url": "https://directory111.example.com/submit",
+      "category": "lifestyle",
+      "da": 71,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 112 (general)",
+      "url": "https://directory112.example.com",
+      "submit_url": "https://directory112.example.com/submit",
+      "category": "general",
+      "da": 72,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 113 (business)",
+      "url": "https://directory113.example.com",
+      "submit_url": "https://directory113.example.com/submit",
+      "category": "business",
+      "da": 73,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 114 (local)",
+      "url": "https://directory114.example.com",
+      "submit_url": "https://directory114.example.com/submit",
+      "category": "local",
+      "da": 74,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 115 (travel)",
+      "url": "https://directory115.example.com",
+      "submit_url": "https://directory115.example.com/submit",
+      "category": "travel",
+      "da": 75,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 116 (tech)",
+      "url": "https://directory116.example.com",
+      "submit_url": "https://directory116.example.com/submit",
+      "category": "tech",
+      "da": 76,
+      "dofollow": false
+    },
+    {
+      "name": "Directory 117 (health)",
+      "url": "https://directory117.example.com",
+      "submit_url": "https://directory117.example.com/submit",
+      "category": "health",
+      "da": 77,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 118 (lifestyle)",
+      "url": "https://directory118.example.com",
+      "submit_url": "https://directory118.example.com/submit",
+      "category": "lifestyle",
+      "da": 78,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 119 (general)",
+      "url": "https://directory119.example.com",
+      "submit_url": "https://directory119.example.com/submit",
+      "category": "general",
+      "da": 79,
+      "dofollow": true
+    },
+    {
+      "name": "Directory 120 (business)",
+      "url": "https://directory120.example.com",
+      "submit_url": "https://directory120.example.com/submit",
+      "category": "business",
+      "da": 20,
+      "dofollow": false
+    }
+  ]
+}

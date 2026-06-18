@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" role="img" aria-label="Bal Kutusu">
+  <defs>
+    <linearGradient id="bk-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5c842"/>
+      <stop offset="100%" stop-color="#d4a017"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="10" width="28" height="28" rx="6" fill="url(#bk-gold)"/>
+  <path d="M8 18h16v2H8zm0 5h12v2H8zm0 5h14v2H8z" fill="#5c3d1e" opacity="0.85"/>
+  <text x="38" y="22" font-family="Poppins, Arial, sans-serif" font-size="17" font-weight="700" fill="currentColor">Bal</text>
+  <text x="38" y="40" font-family="Poppins, Arial, sans-serif" font-size="17" font-weight="700" fill="#d4a017">Kutusu</text>
+</svg>

@@ -1,0 +1,14 @@
+# HIVE local SearXNG — JSON API Talon V2 için açık
+use_default_settings: true
+
+server:
+  secret_key: "hive-local-searxng-dev-key-change-in-prod"
+  limiter: false
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "tr-TR"
+  formats:
+    - html
+    - json

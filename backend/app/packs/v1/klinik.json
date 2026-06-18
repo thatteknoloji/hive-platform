@@ -1,0 +1,65 @@
+{
+  "pack_id": "clinic_pack",
+  "sector_id": "klinik",
+  "version": "1.0.0",
+  "display_name": "Klinik",
+  "site_engine_default": "astro",
+  "default_pages": [
+    {
+      "title": "Ana Sayfa",
+      "slug": "",
+      "type": "homepage",
+      "sections": [
+        "hero",
+        "cta",
+        "faq_preview"
+      ]
+    },
+    {
+      "title": "Hizmetler",
+      "slug": "hizmetler",
+      "type": "service",
+      "sections": [
+        "hero",
+        "content"
+      ]
+    },
+    {
+      "title": "Doktorlar",
+      "slug": "doktorlar",
+      "type": "team",
+      "sections": [
+        "hero",
+        "team_grid"
+      ]
+    },
+    {
+      "title": "Blog",
+      "slug": "blog",
+      "type": "blog",
+      "sections": [
+        "hero",
+        "blog_list"
+      ]
+    },
+    {
+      "title": "SSS",
+      "slug": "sss",
+      "type": "faq",
+      "sections": [
+        "hero",
+        "faq"
+      ]
+    },
+    {
+      "title": "İletişim",
+      "slug": "iletisim",
+      "type": "contact",
+      "sections": [
+        "hero",
+        "form",
+        "map"
+      ]
+    }
+  ]
+}

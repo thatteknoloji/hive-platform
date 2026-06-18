@@ -1,0 +1,64 @@
+{
+  "pack_id": "ecommerce_pack",
+  "sector_id": "ecommerce",
+  "version": "1.0.0",
+  "display_name": "E-Ticaret",
+  "site_engine_default": "astro",
+  "default_pages": [
+    {
+      "title": "Ana Sayfa",
+      "slug": "",
+      "type": "homepage",
+      "sections": [
+        "hero",
+        "cta",
+        "faq_preview"
+      ]
+    },
+    {
+      "title": "Kategoriler",
+      "slug": "kategoriler",
+      "type": "category",
+      "sections": [
+        "hero",
+        "category_grid"
+      ]
+    },
+    {
+      "title": "Ürünler",
+      "slug": "urunler",
+      "type": "product",
+      "sections": [
+        "hero",
+        "product_grid"
+      ]
+    },
+    {
+      "title": "Blog",
+      "slug": "blog",
+      "type": "blog",
+      "sections": [
+        "hero",
+        "blog_list"
+      ]
+    },
+    {
+      "title": "SSS",
+      "slug": "sss",
+      "type": "faq",
+      "sections": [
+        "hero",
+        "faq"
+      ]
+    },
+    {
+      "title": "İletişim",
+      "slug": "iletisim",
+      "type": "contact",
+      "sections": [
+        "hero",
+        "form"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import faqs from '../../data/faqs.json';
+import pagesData from '../../data/pages.json';
+
+export function getStaticPaths() {
+  return (faqs || []).map((faq) => ({
+    params: { slug: faq.slug },
+    props: { faq },
+  }));
+}
+
+const { faq } = Astro.props;
+const site = pagesData.domain?.replace(/\/$/, '') || '';
+const schema = faq.schema || {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  name: faq.title,
+  description: faq.description,
+};
+const breadcrumbs = [
+  { label: 'Ana Sayfa', href: '/' },
+  { label: 'SSS', href: '/sss' },
+  { label: faq.title },
+];
+---
+<BaseLayout
+  title={faq.title}
+  description={faq.description}
+  canonical={`${site}/sss/${faq.slug}`}
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+  <article set:html={faq.content_html} />
+</BaseLayout>

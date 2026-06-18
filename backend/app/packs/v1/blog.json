@@ -1,0 +1,55 @@
+{
+  "pack_id": "blog_pack",
+  "sector_id": "blog",
+  "version": "1.0.0",
+  "display_name": "Blog",
+  "site_engine_default": "astro",
+  "default_pages": [
+    {
+      "title": "Ana Sayfa",
+      "slug": "",
+      "type": "homepage",
+      "sections": [
+        "hero",
+        "cta",
+        "faq_preview"
+      ]
+    },
+    {
+      "title": "Yazılar",
+      "slug": "yazilar",
+      "type": "blog",
+      "sections": [
+        "hero",
+        "blog_list"
+      ]
+    },
+    {
+      "title": "Kategoriler",
+      "slug": "kategoriler",
+      "type": "category",
+      "sections": [
+        "hero",
+        "category_grid"
+      ]
+    },
+    {
+      "title": "Hakkında",
+      "slug": "hakkinda",
+      "type": "about",
+      "sections": [
+        "hero",
+        "content"
+      ]
+    },
+    {
+      "title": "İletişim",
+      "slug": "iletisim",
+      "type": "contact",
+      "sections": [
+        "hero",
+        "form"
+      ]
+    }
+  ]
+}

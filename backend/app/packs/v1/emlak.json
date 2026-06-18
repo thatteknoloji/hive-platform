@@ -1,0 +1,65 @@
+{
+  "pack_id": "real_estate_pack",
+  "sector_id": "emlak",
+  "version": "1.0.0",
+  "display_name": "Emlak",
+  "site_engine_default": "astro",
+  "default_pages": [
+    {
+      "title": "Ana Sayfa",
+      "slug": "",
+      "type": "homepage",
+      "sections": [
+        "hero",
+        "cta",
+        "faq_preview"
+      ]
+    },
+    {
+      "title": "İlanlar",
+      "slug": "ilanlar",
+      "type": "listing",
+      "sections": [
+        "hero",
+        "listing_grid"
+      ]
+    },
+    {
+      "title": "Satılık",
+      "slug": "satilik",
+      "type": "category",
+      "sections": [
+        "hero",
+        "listing_grid"
+      ]
+    },
+    {
+      "title": "Kiralık",
+      "slug": "kiralik",
+      "type": "category",
+      "sections": [
+        "hero",
+        "listing_grid"
+      ]
+    },
+    {
+      "title": "Blog",
+      "slug": "blog",
+      "type": "blog",
+      "sections": [
+        "hero",
+        "blog_list"
+      ]
+    },
+    {
+      "title": "İletişim",
+      "slug": "iletisim",
+      "type": "contact",
+      "sections": [
+        "hero",
+        "form",
+        "map"
+      ]
+    }
+  ]
+}

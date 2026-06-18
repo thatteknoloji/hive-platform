@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" role="img" aria-label="Profil görseli">
+  <rect width="480" height="360" fill="#1a1a1a"/>
+  <circle cx="240" cy="140" r="52" fill="#2a2a2a"/>
+  <ellipse cx="240" cy="290" rx="90" ry="60" fill="#2a2a2a"/>
+  <text x="240" y="340" text-anchor="middle" fill="#d4a017" font-family="Poppins, sans-serif" font-size="14" font-weight="600">Bal Kutusu</text>
+</svg>

@@ -1,0 +1,10 @@
+[
+  {
+    "servis": "huggingface",
+    "key": "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "kaynak_url": "https://example.com/exposed-0.txt",
+    "buluntu_tipi": "dork",
+    "entropi": 3.7,
+    "risk": "yuksek"
+  }
+]

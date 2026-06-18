@@ -1,0 +1,31 @@
+{
+  "kuşadası": [
+    "Atatürk Bulvarı", "İstiklal Caddesi", "Liman Caddesi",
+    "Barbaros Hayrettin Paşa Caddesi", "Kibele Caddesi",
+    "Yavansu Caddesi", "Süleyman Demirel Bulvarı",
+    "Turgut Özal Bulvarı", "İnönü Caddesi", "Sakarya Caddesi",
+    "Gazi Bulvarı", "Menderes Caddesi", "Sağlık Caddesi"
+  ],
+  "istanbul": [
+    "İstiklal Caddesi", "Bağdat Caddesi", "Büyükdere Caddesi",
+    "Abdi İpekçi Caddesi", "Barbaros Bulvarı", "E-5 Karayolu",
+    "Tem Otoyolu", "Vatan Caddesi", "Millet Caddesi",
+    "Halaskargazi Caddesi", "Rumeli Caddesi"
+  ],
+  "izmir": [
+    "Kordon", "Gazi Bulvarı", "Mustafa Kemal Sahil Bulvarı",
+    "Ankara Caddesi", "Fevzipaşa Bulvarı", "Şehit Nevres Bulvarı",
+    "Cumhuriyet Bulvarı", "İnönü Caddesi", "Ege Caddesi"
+  ],
+  "ankara": [
+    "Atatürk Bulvarı", "İzmir Caddesi", "Tunalı Hilmi Caddesi",
+    "Gazi Mustafa Kemal Bulvarı", "Eskişehir Yolu",
+    "Konya Yolu", "Fatih Sultan Mehmet Bulvarı",
+    "Milli Müdafaa Caddesi", "Akay Caddesi"
+  ],
+  "antalya": [
+    "Lara Caddesi", "Konyaaltı Caddesi", "Atatürk Bulvarı",
+    "100. Yıl Bulvarı", "Serik Caddesi", "Meltem Caddesi",
+    "Akdeniz Bulvarı", "Fener Caddesi", "Bülent Ecevit Bulvarı"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "hive",
+  "version": "3.0.0",
+  "private": true,
+  "description": "HIVE SEO Panel — tek komutla başlat",
+  "scripts": {
+    "start": "bash scripts/start-hive.sh",
+    "stop": "bash scripts/stop-hive.sh",
+    "check": "bash scripts/check-hive.sh",
+    "test": "cd backend && ./venv/bin/python -m pytest tests/ -q",
+    "test:talon": "cd backend && ./venv/bin/python -m pytest tests/test_talon_v2.py tests/test_talon.py -q",
+    "backend": "bash scripts/clean-macos-env.sh bash -c 'cd backend && ./venv/bin/python run.py'",
+    "frontend": "bash scripts/clean-macos-env.sh bash -c 'cd frontend && npm start'",
+    "build": "cd frontend && npm run build",
+    "docker:seo": "docker compose -f docker-compose.seo-tools.yml up -d",
+    "docker:searxng": "docker compose -f docker-compose.seo-tools.yml up -d searxng",
+    "docker:crw": "docker compose -f docker-compose.seo-tools.yml up -d crw",
+    "docker:stop": "docker compose -f docker-compose.seo-tools.yml down"
+  }
+}

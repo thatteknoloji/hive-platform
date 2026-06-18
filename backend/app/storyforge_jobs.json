@@ -1,0 +1,36 @@
+{
+  "2e649975-2a1": {
+    "id": "2e649975-2a1",
+    "type": "url_batch",
+    "status": "completed",
+    "total": 1,
+    "done": 1,
+    "published": 0,
+    "failed": 1,
+    "auto_publish": true,
+    "category_slug": "gece-hikaye",
+    "results": [
+      {
+        "index": 1,
+        "url": "https://www.literotica.com",
+        "error": "Sayfa alınamadı: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+      }
+    ],
+    "created_at": "2026-06-10T17:53:46.124146+00:00",
+    "updated_at": "2026-06-10T17:53:53.451738+00:00"
+  },
+  "9e3e57a0-474": {
+    "id": "9e3e57a0-474",
+    "type": "generate",
+    "status": "running",
+    "total": 10,
+    "done": 0,
+    "published": 0,
+    "failed": 0,
+    "auto_publish": true,
+    "category_slug": "gece-hikaye",
+    "results": [],
+    "created_at": "2026-06-10T17:56:22.071611+00:00",
+    "updated_at": "2026-06-10T17:56:22.071628+00:00"
+  }
+}

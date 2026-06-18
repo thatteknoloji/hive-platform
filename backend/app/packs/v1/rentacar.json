@@ -1,0 +1,64 @@
+{
+  "pack_id": "rentacar_pack",
+  "sector_id": "rentacar",
+  "version": "1.0.0",
+  "display_name": "Rent A Car",
+  "site_engine_default": "astro",
+  "default_pages": [
+    {
+      "title": "Ana Sayfa",
+      "slug": "",
+      "type": "homepage",
+      "sections": [
+        "hero",
+        "cta",
+        "faq_preview"
+      ]
+    },
+    {
+      "title": "Araçlar",
+      "slug": "araclar",
+      "type": "category",
+      "sections": [
+        "hero",
+        "product_grid"
+      ]
+    },
+    {
+      "title": "Fiyatlar",
+      "slug": "fiyatlar",
+      "type": "pricing",
+      "sections": [
+        "hero",
+        "pricing_table"
+      ]
+    },
+    {
+      "title": "SSS",
+      "slug": "sss",
+      "type": "faq",
+      "sections": [
+        "hero",
+        "faq"
+      ]
+    },
+    {
+      "title": "Blog",
+      "slug": "blog",
+      "type": "blog",
+      "sections": [
+        "hero",
+        "blog_list"
+      ]
+    },
+    {
+      "title": "İletişim",
+      "slug": "iletisim",
+      "type": "contact",
+      "sections": [
+        "hero",
+        "form"
+      ]
+    }
+  ]
+}

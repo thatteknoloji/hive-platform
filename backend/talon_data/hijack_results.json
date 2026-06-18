@@ -1,0 +1,242 @@
+[
+  {
+    "domain": "ornek.com",
+    "tespit_edilen_kirik": 117,
+    "calinan_backlink": 19,
+    "ortalama_dr": 61,
+    "calinan_linkler": [
+      {
+        "kaynak": "news.com.tr/article/86869",
+        "tip": "haber",
+        "dr": 63,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "blog.org/article/85426",
+        "tip": "blog",
+        "dr": 43,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "forum.com/article/92232",
+        "tip": "forum",
+        "dr": 33,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "wikipedia.org/article/61967",
+        "tip": "kaynak",
+        "dr": 88,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "gov.tr/article/81379",
+        "tip": "resmi",
+        "dr": 83,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "blog.org/article/93334",
+        "tip": "blog",
+        "dr": 43,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "edu.tr/article/38347",
+        "tip": "eğitim",
+        "dr": 78,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "news.com.tr/article/2749",
+        "tip": "haber",
+        "dr": 63,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "blog.org/article/9599",
+        "tip": "blog",
+        "dr": 43,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "wikipedia.org/article/82747",
+        "tip": "kaynak",
+        "dr": 88,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      }
+    ],
+    "kaynak": "simulasyon",
+    "uyari": null
+  },
+  {
+    "domain": "ornek.com",
+    "tespit_edilen_kirik": 20,
+    "calinan_backlink": 13,
+    "ortalama_dr": 53,
+    "calinan_linkler": [
+      {
+        "kaynak": "blog.org/article/86869",
+        "tip": "blog",
+        "dr": 40,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "forum.com/article/85426",
+        "tip": "forum",
+        "dr": 30,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "wikipedia.org/article/92232",
+        "tip": "kaynak",
+        "dr": 85,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "gov.tr/article/61967",
+        "tip": "resmi",
+        "dr": 80,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "edu.tr/article/81379",
+        "tip": "eğitim",
+        "dr": 75,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "forum.com/article/93334",
+        "tip": "forum",
+        "dr": 30,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "news.com.tr/article/38347",
+        "tip": "haber",
+        "dr": 60,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "blog.org/article/2749",
+        "tip": "blog",
+        "dr": 40,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "forum.com/article/9599",
+        "tip": "forum",
+        "dr": 30,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "gov.tr/article/82747",
+        "tip": "resmi",
+        "dr": 80,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      }
+    ],
+    "kaynak": "simulasyon",
+    "uyari": null
+  },
+  {
+    "domain": "ornek.com",
+    "tespit_edilen_kirik": 199,
+    "calinan_backlink": 19,
+    "ortalama_dr": 65,
+    "calinan_linkler": [
+      {
+        "kaynak": "forum.com/article/86869",
+        "tip": "forum",
+        "dr": 31,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "wikipedia.org/article/85426",
+        "tip": "kaynak",
+        "dr": 86,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "gov.tr/article/92232",
+        "tip": "resmi",
+        "dr": 81,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "edu.tr/article/61967",
+        "tip": "eğitim",
+        "dr": 76,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "news.com.tr/article/81379",
+        "tip": "haber",
+        "dr": 61,
+        "anchor": "buraya göz atın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "wikipedia.org/article/93334",
+        "tip": "kaynak",
+        "dr": 86,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "blog.org/article/38347",
+        "tip": "blog",
+        "dr": 41,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "forum.com/article/2749",
+        "tip": "forum",
+        "dr": 31,
+        "anchor": "tıklayın",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "wikipedia.org/article/9599",
+        "tip": "kaynak",
+        "dr": 86,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      },
+      {
+        "kaynak": "edu.tr/article/82747",
+        "tip": "eğitim",
+        "dr": 76,
+        "anchor": "daha fazla bilgi",
+        "durum": "çalındı"
+      }
+    ],
+    "kaynak": "simulasyon",
+    "uyari": null
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "kuşadası": [
+    "Kadınlar Denizi", "Yılancı Burnu", "Güvercinada", "Davutlar",
+    "Kuşadası Merkez", "Türkmen Mahallesi", "Cumhuriyet Mahallesi",
+    "Hacıfeyzullah Mahallesi", "Camiatik Mahallesi", "Karaova",
+    "Güzelçamlı", "Çamlık", "Yavansu", "Soğucak", "Kirazlı",
+    "Uzun Plaj", "Pamucak Sahili", "Kuştur"
+  ],
+  "istanbul": [
+    "Taksim", "Beşiktaş", "Kadıköy", "Levent", "Etiler",
+    "Nişantaşı", "Bebek", "Ortaköy", "Sarıyer", "Beyoğlu",
+    "Şişli", "Mecidiyeköy", "Ataşehir", "Maltepe", "Kartal"
+  ],
+  "izmir": [
+    "Alsancak", "Karşıyaka", "Bornova", "Konak", "Çeşme",
+    "Urla", "Foça", "Buca", "Balçova", "Gaziemir",
+    "Karabağlar", "Narlıdere", "Menderes", "Torbalı"
+  ],
+  "ankara": [
+    "Kızılay", "Çankaya", "Kavaklıdere", "Bahçelievler",
+    "Yenimahalle", "Keçiören", "Mamak", "Sincan",
+    "Etimesgut", "Gölbaşı", "Polatlı", "Beypazarı"
+  ],
+  "antalya": [
+    "Kaleiçi", "Lara", "Konyaaltı", "Alanya", "Manavgat",
+    "Belek", "Kemer", "Side", "Çamyuva", "Tekirova",
+    "Kundu", "Muratpaşa", "Kepez"
+  ]
+}

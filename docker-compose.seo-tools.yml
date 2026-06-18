@@ -1,0 +1,79 @@
+version: "3.9"
+
+# Opsiyonel SEO araçları — ana HIVE paneli bunları in-process kullanır (port 4001).
+# Docker servisleri izole test / microservice dağıtımı içindir.
+# SearXNG Talon V2 SERP provider'ı için önerilir.
+
+x-mock-base: &mock-base
+  image: python:3.11-slim
+  working_dir: /app
+  volumes:
+    - ./backend:/app
+  restart: unless-stopped
+  command: >
+    sh -c "pip install -q fastapi uvicorn pydantic requests beautifulsoup4 &&
+           PYTHONPATH=/app uvicorn mock_service:app --host 0.0.0.0 --port 8000"
+
+services:
+  openseo:
+    <<: *mock-base
+    container_name: hive_openseo
+    environment:
+      - HIVE_MOCK_SERVICE=openseo
+    ports:
+      - "8100:8000"
+
+  serpbear:
+    <<: *mock-base
+    container_name: hive_serpbear
+    environment:
+      - HIVE_MOCK_SERVICE=serpbear
+    ports:
+      - "8200:8000"
+
+  seointel:
+    <<: *mock-base
+    container_name: hive_seointel
+    environment:
+      - HIVE_MOCK_SERVICE=seointel
+    ports:
+      - "8300:8000"
+
+  dataseo:
+    <<: *mock-base
+    container_name: hive_dataseo
+    environment:
+      - HIVE_MOCK_SERVICE=dataseo
+    ports:
+      - "8400:8000"
+
+  seoagent:
+    <<: *mock-base
+    container_name: hive_seoagent
+    environment:
+      - HIVE_MOCK_SERVICE=seoagent
+    ports:
+      - "8500:8000"
+
+  # Talon V2 SERP — SEARXNG_URL=http://localhost:8080
+  searxng:
+    image: searxng/searxng:latest
+    container_name: hive_searxng
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./infra/searxng:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=http://localhost:8081/
+    restart: unless-stopped
+
+  # StoryForge V3 — fastCRW scraper (CRW_URL=http://localhost:3000)
+  # Alternatif: docker run -d --name crw -p 3000:3000 ghcr.io/us/crw:latest
+  crw:
+    image: ghcr.io/us/crw:latest
+    container_name: hive_crw
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes: {}

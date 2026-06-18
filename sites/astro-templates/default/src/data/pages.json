@@ -1,0 +1,12 @@
+{
+  "site_name": "HIVE Astro Site",
+  "domain": "https://example.com",
+  "main_site_url": "https://www.balkutusu.com",
+  "language": "tr",
+  "home": {
+    "title": "Ana Sayfa",
+    "description": "",
+    "content_html": "<h1>Hoş geldiniz</h1>"
+  },
+  "geo": []
+}

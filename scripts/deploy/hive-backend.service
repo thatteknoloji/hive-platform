@@ -1,0 +1,19 @@
+[Unit]
+Description=HIVE Panel Backend (FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+User=hive
+Group=hive
+WorkingDirectory=/opt/hive/backend
+EnvironmentFile=/opt/hive/backend/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/hive/backend/venv/bin/python run.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/opt/hive/logs/backend.log
+StandardError=append:/opt/hive/logs/backend.log
+
+[Install]
+WantedBy=multi-user.target

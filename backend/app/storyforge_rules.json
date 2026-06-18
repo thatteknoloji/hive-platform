@@ -1,0 +1,38 @@
+{
+  "city": "Kuşadası",
+  "district": "Aydın",
+  "locations": [
+    "Kadınlar Denizi",
+    "Yılancı Burnu",
+    "Atatürk Bulvarı",
+    "Liman Caddesi",
+    "Güvercinada",
+    "Davutlar",
+    "Kuşadası Marina",
+    "Kuşadası Merkez",
+    "Türkmen"
+  ],
+  "character_names": [
+    "Elif",
+    "Selin",
+    "Deniz",
+    "Ayşe",
+    "Merve",
+    "Ceren",
+    "Buse",
+    "Ece"
+  ],
+  "keywords": [
+    "escort",
+    "gece hayatı",
+    "kuşadası"
+  ],
+  "custom_rules": "Mekanları Kuşadası gerçek lokasyonlarıyla değiştir. Türkçe doğal dil kullan. Abartılı vaat yok. Uydurma telefon/adres verme. SEO uyumlu başlık ve GEO sinyalleri ekle. Son paragrafta site linki geçsin.",
+  "title_template": "{location} {keyword} Hikayesi – Kuşadası",
+  "min_words": 500,
+  "max_words": 1800,
+  "seo_title_max": 60,
+  "auto_category": true,
+  "site_url": "https://www.balkutusu.com",
+  "geo_inject": true
+}

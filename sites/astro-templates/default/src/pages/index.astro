@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import pagesData from '../data/pages.json';
+
+const home = pagesData.home;
+const title = home?.title || pagesData.site_name;
+const description = home?.description || '';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: pagesData.site_name,
+  url: pagesData.domain,
+};
+---
+<BaseLayout title={title} description={description} canonical={pagesData.domain} schema={schema}>
+  <article set:html={home?.content_html || `<h1>${title}</h1>`} />
+  {pagesData.geo?.length > 0 && (
+    <section>
+      <h2>Rehber Sayfaları</h2>
+      <ul>
+        {pagesData.geo.map((p) => (
+          <li><a href={`/geo/${p.slug}`}>{p.title}</a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+  <section>
+    <h2>SSS & Blog</h2>
+    <p><a href="/sss">Tüm SSS sayfaları</a> · <a href="/blog">Blog yazıları</a></p>
+  </section>
+</BaseLayout>

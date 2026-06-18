@@ -1,0 +1,76 @@
+{
+  "keywords": [
+    {
+      "kelime": "seo",
+      "domain": "",
+      "sehir": "",
+      "pozisyon": 47,
+      "onceki_pozisyon": 40,
+      "trend": "düşüyor",
+      "timestamp": "2026-06-06T11:34:34.703137"
+    },
+    {
+      "kelime": "seo",
+      "domain": "",
+      "sehir": "",
+      "pozisyon": 47,
+      "onceki_pozisyon": 40,
+      "trend": "düşüyor",
+      "timestamp": "2026-06-06T11:36:29.791634"
+    },
+    {
+      "kelime": "test",
+      "domain": "",
+      "sehir": "",
+      "pozisyon": 75,
+      "onceki_pozisyon": 74,
+      "trend": "düşüyor",
+      "timestamp": "2026-06-06T13:12:23.446787"
+    },
+    {
+      "kelime": "test",
+      "domain": "",
+      "sehir": "",
+      "pozisyon": 82,
+      "onceki_pozisyon": 81,
+      "trend": "düşüyor",
+      "timestamp": "2026-06-06T13:53:03.234185"
+    },
+    {
+      "kelime": "kuşadası escort",
+      "domain": "",
+      "sehir": "",
+      "pozisyon": 23,
+      "onceki_pozisyon": 23,
+      "trend": "sabit",
+      "timestamp": "2026-06-12T20:39:51.870971"
+    }
+  ],
+  "history": [
+    {
+      "kelime": "seo",
+      "pozisyon": 47,
+      "timestamp": "2026-06-06T11:34:34.703139"
+    },
+    {
+      "kelime": "seo",
+      "pozisyon": 47,
+      "timestamp": "2026-06-06T11:36:29.791637"
+    },
+    {
+      "kelime": "test",
+      "pozisyon": 75,
+      "timestamp": "2026-06-06T13:12:23.446797"
+    },
+    {
+      "kelime": "test",
+      "pozisyon": 82,
+      "timestamp": "2026-06-06T13:53:03.234225"
+    },
+    {
+      "kelime": "kuşadası escort",
+      "pozisyon": 23,
+      "timestamp": "2026-06-12T20:39:51.870978"
+    }
+  ]
+}

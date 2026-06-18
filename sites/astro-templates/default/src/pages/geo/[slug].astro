@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import pagesData from '../../data/pages.json';
+
+export function getStaticPaths() {
+  return (pagesData.geo || []).map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const site = pagesData.domain?.replace(/\/$/, '') || '';
+const schema = page.schema || {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: page.title,
+  description: page.description,
+  url: `${site}/geo/${page.slug}`,
+};
+const breadcrumbs = [
+  { label: 'Ana Sayfa', href: '/' },
+  { label: page.title },
+];
+---
+<BaseLayout
+  title={page.title}
+  description={page.description}
+  canonical={`${site}/geo/${page.slug}`}
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+  <article set:html={page.content_html} />
+</BaseLayout>
