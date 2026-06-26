@@ -8,6 +8,8 @@ from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
 
 from app import panel_identity
+from app.moduller import project_engine as pe
+from app.moduller.project_context import get_active_project_id, set_active_project as set_active_ctx
 
 router = APIRouter(prefix="/api")
 
@@ -184,78 +186,73 @@ def list_projects(request: Request):
     allowed = set(user.get("allowed_projects") or [])
     items = panel_identity.list_projects()
     if "*" not in allowed and allowed:
-        items = [p for p in items if p.get("project_id") in allowed]
-    return {"items": items, "active_project_id": panel_identity.get_active_project_id()}
+        items = [p for p in items if p.get("project_id") in allowed or p.get("id") in allowed]
+    return {"items": items, "active_project_id": get_active_project_id()}
 
 
 @router.post("/projects")
 def create_project(body: ProjectCreateBody, request: Request):
     _require(request, "projects", "create")
-    state = panel_identity.bootstrap()
-    project_id = body.name.lower().strip().replace(" ", "-")
-    project_id = "".join(ch for ch in project_id if ch.isalnum() or ch in "-_") or f"project-{uuid.uuid4().hex[:6]}"
-    if any(p.get("project_id") == project_id for p in state["projects"]):
-        project_id = f"{project_id}-{uuid.uuid4().hex[:4]}"
-    state["projects"].append(
-        {
-            "project_id": project_id,
-            "name": body.name,
-            "domain": body.domain,
-            "type": body.type,
-            "status": body.status,
-            "settings": body.settings or {},
-            "created_at": _now(),
-            "updated_at": _now(),
-        }
+    sector = (body.type or "custom").strip()
+    status = body.status if body.status in pe.VALID_STATUSES else "draft"
+    result = pe.create_project(
+        name=body.name,
+        sector=sector,
+        domain=body.domain,
+        status=status,
     )
-    panel_identity._write(state)  # noqa: SLF001
-    return {"success": True, "project_id": project_id}
+    if not result.get("success"):
+        raise HTTPException(status_code=400, detail=result.get("message") or result.get("error"))
+    project = result["project"]
+    return {"success": True, "project_id": project["id"], "project": project}
 
 
 @router.get("/projects/{project_id}")
 def get_project(project_id: str, request: Request):
     _require(request, "projects", "view")
-    state = panel_identity.bootstrap()
-    item = next((p for p in state["projects"] if p.get("project_id") == project_id), None)
-    if not item:
+    result = pe.get_project(project_id)
+    if not result:
         raise HTTPException(status_code=404, detail="Project not found")
-    return item
+    return result["project"]
 
 
 @router.patch("/projects/{project_id}")
 def patch_project(project_id: str, body: ProjectUpdateBody, request: Request):
     _require(request, "projects", "edit")
-    state = panel_identity.bootstrap()
-    item = next((p for p in state["projects"] if p.get("project_id") == project_id), None)
-    if not item:
-        raise HTTPException(status_code=404, detail="Project not found")
-    for field in ("name", "domain", "type", "status"):
-        val = getattr(body, field)
-        if val is not None:
-            item[field] = val
+    fields: dict[str, Any] = {}
+    if body.name is not None:
+        fields["name"] = body.name
+    if body.domain is not None:
+        fields["domain"] = body.domain
+    if body.type is not None:
+        fields["sector"] = body.type
+    if body.status is not None:
+        fields["status"] = body.status
     if body.settings is not None:
-        item["settings"] = body.settings
-    item["updated_at"] = _now()
-    panel_identity._write(state)  # noqa: SLF001
-    return {"success": True}
+        fields["metadata"] = body.settings
+    result = pe.update_project(project_id, fields)
+    if not result.get("success"):
+        raise HTTPException(status_code=404, detail="Project not found")
+    return {"success": True, "project": result.get("project")}
 
 
 @router.delete("/projects/{project_id}")
 def delete_project(project_id: str, request: Request):
     _require(request, "projects", "delete")
+    result = pe.delete_project(project_id)
+    if not result.get("success"):
+        raise HTTPException(status_code=404, detail="Project not found")
     state = panel_identity.bootstrap()
-    before = len(state["projects"])
-    state["projects"] = [p for p in state["projects"] if p.get("project_id") != project_id]
     if state.get("active_project_id") == project_id:
-        state["active_project_id"] = "balkutusu"
-    panel_identity._write(state)  # noqa: SLF001
-    return {"success": len(state["projects"]) < before}
+        state["active_project_id"] = ""
+        panel_identity._write(state)  # noqa: SLF001
+    return {"success": True}
 
 
 @router.post("/projects/{project_id}/set-active")
-def set_active_project(project_id: str, request: Request):
+def set_active_project_route(project_id: str, request: Request):
     _require(request, "projects", "edit")
-    ok = panel_identity.set_active_project(project_id)
-    if not ok:
-        raise HTTPException(status_code=404, detail="Project not found")
-    return {"success": True, "active_project_id": project_id}
+    result = set_active_ctx(project_id)
+    if not result.get("success"):
+        raise HTTPException(status_code=404, detail=result.get("error") or "Project not found")
+    return {"success": True, "active_project_id": result.get("active_project_id", project_id)}

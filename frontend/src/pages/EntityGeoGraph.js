@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 const TABS = [
   { id: "build", label: "Build Graph" },
@@ -29,7 +31,7 @@ export default function EntityGeoGraph() {
   const [seedKeyword, setSeedKeyword] = useState("kuşadası gece hayatı");
   const [location, setLocation] = useState("Kuşadası");
   const [domain, setDomain] = useState("");
-  const [mainSiteUrl, setMainSiteUrl] = useState("https://www.balkutusu.com");
+  const [mainSiteUrl, setMainSiteUrl] = useProjectSiteField();
   const [analyzeUrl, setAnalyzeUrl] = useState("");
   const [graph, setGraph] = useState(null);
   const [geoResult, setGeoResult] = useState(null);

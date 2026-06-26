@@ -1099,9 +1099,36 @@ def build_next_best_actions(sources: dict[str, Any], alerts: list[dict], setting
     return merged[:max_actions]
 
 
+def _empty_dashboard_payload() -> dict[str, Any]:
+    return {
+        "success": True,
+        "empty": True,
+        "message": "Aktif proje seçilmedi — Projects ekranından bir proje seçin.",
+        "generated_at": _now(),
+        "system_health": 0,
+        "health_components": [],
+        "critical_alerts": [],
+        "today_mission": {"items": [], "summary": ""},
+        "weekly_mission": {"items": [], "summary": ""},
+        "next_best_actions": [],
+        "active_threats": [],
+        "growth_opportunities": [],
+        "authority_status": {},
+        "factory_status": {},
+        "recent_events": [],
+    }
+
+
 def build_dashboard(*, record_open: bool = True, full: bool = False) -> dict[str, Any]:
     if record_open:
         _maybe_record_opened()
+
+    try:
+        from app.moduller.project_context import get_active_project_id
+        if not get_active_project_id():
+            return _empty_dashboard_payload()
+    except Exception:
+        pass
 
     settings = get_settings()
     if not settings.get("enabled", True):

@@ -94,7 +94,7 @@ def _run_campaign(campaign_id: str, hedef_url: str, keyword: str, site_url: str,
     )
 
 
-def start_campaign(hedef_url: str = "", keyword: str = "", site_url: str = "https://www.balkutusu.com", adet: int = 10) -> dict[str, Any]:
+def start_campaign(hedef_url: str = "", keyword: str = "", site_url: str = "", adet: int = 10) -> dict[str, Any]:
     if not keyword:
         return {"status": "hata", "hata": "Anahtar kelime gerekli"}
     campaign_id = f"ls_{modul_hash(simdi()) % 1000000:06d}"

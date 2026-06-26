@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 const TABS = [
   { id: "networks", label: "Networks" },
@@ -27,9 +29,10 @@ export default function NetworkReplicator() {
   const [message, setMessage] = useState("");
   const [blueprint, setBlueprint] = useState(null);
 
-  const [mainDomain, setMainDomain] = useState("balkutusu.com");
-  const [cloneForm, setCloneForm] = useState({ source_project_id: "", target_domain: "balkutusu.net", target_site_name: "Balkutusu Net" });
-  const [manyDomains, setManyDomains] = useState("balkutusu.net\nbalkutusu.org\nbalkutusu.info\nbalkutusu.blog\nbalkutusu.online");
+  const [mainDomain, setMainDomain] = useProjectDomainField();
+  const [mainSiteUrl] = useProjectSiteField();
+  const [cloneForm, setCloneForm] = useState({ source_project_id: "", target_domain: "", target_site_name: "" });
+  const [manyDomains, setManyDomains] = useState("");
   const [rewriteProject, setRewriteProject] = useState("");
   const [rewriteMode, setRewriteMode] = useState("balanced");
   const [rethemeProject, setRethemeProject] = useState("");
@@ -344,7 +347,7 @@ export default function NetworkReplicator() {
                 const res = await API.post("/api/network-replicator/generate-variant", {
                   ...variantForm,
                   network_id: activeNet?.network_id || "",
-                  main_site_url: "https://www.balkutusu.com",
+                  main_site_url: mainSiteUrl || "",
                 });
                 setMessage(`Variant: ${res.data.project_id || "OK"}`);
               } catch (e) {

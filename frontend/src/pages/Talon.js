@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import { buildSSSPrefill, saveSSSPrefill } from "../utils/sssPrefill";
 
 
@@ -32,7 +34,7 @@ export default function Talon({ onNavigateToSSS, embedded = false, settingsPulse
   const [mesaj, setMesaj] = useState("");
   const [sektor, setSektor] = useState("escort");
   const [sektorler, setSektorler] = useState([]);
-  const [domain, setDomain] = useState("balkutusu.com");
+  const [domain, setDomain] = useProjectDomainField();
   const [rakipDomain, setRakipDomain] = useState("");
   const [trendSonuc, setTrendSonuc] = useState(null);
   const [gapSonuc, setGapSonuc] = useState(null);
@@ -658,7 +660,7 @@ export default function Talon({ onNavigateToSSS, embedded = false, settingsPulse
           </div>
           <div className="form-grup" style={{ flex: 1, minWidth: 160 }}>
             <label>Domain (Rank Tracker)</label>
-            <input type="text" value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="balkutusu.com" />
+            <input type="text" value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="example.com" />
           </div>
           <div className="form-grup" style={{ flex: 1, minWidth: 160 }}>
             <label>Rakip Domain (Gap)</label>

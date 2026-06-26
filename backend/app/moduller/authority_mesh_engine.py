@@ -58,7 +58,7 @@ DEFAULT_MESH_COUNTS: dict[str, int] = {
 
 DEFAULT_SETTINGS: dict[str, Any] = {
     "enabled": True,
-    "default_money_site": "https://www.balkutusu.com",
+    "default_money_site": "",
     "default_network_id": "",
     "max_exact_match_anchor_ratio": 0.15,
     "max_links_per_content": 2,
@@ -245,7 +245,7 @@ def generate_link_policy(
     settings = get_settings()
     kw = keyword.strip()
     money = money_site.strip() or settings.get("default_money_site", "")
-    brand = "Balkutusu"
+    brand = ""
     m = re.search(r"https?://(?:www\.)?([^/]+)", money)
     if m:
         brand = m.group(1).split(".")[0].capitalize()

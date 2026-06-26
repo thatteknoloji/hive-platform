@@ -32,7 +32,7 @@ ASTRO_STATE = Path(__file__).resolve().parent.parent / "astro_factory_state.json
 SEO_GATE_STATE = Path(__file__).resolve().parent.parent / "seo_quality_gate_state.json"
 RANK_STATE = Path(__file__).resolve().parent.parent / "rank_index_watcher_state.json"
 
-USER_AGENT = "HIVE-EntityGeoGraph/1.0 (+https://balkutusu.com)"
+USER_AGENT = "HIVE-EntityGeoGraph/1.0 (+https://hive.local)"
 URL_TIMEOUT = 15
 NOMINATIM_DELAY_SEC = 1.1
 
@@ -356,7 +356,7 @@ def build_project_graph(
     domain: str = "",
     seed_keyword: str = "",
     location: str = "",
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
 ) -> dict[str, Any]:
     project_id = _safe_project_id(project_id)
     proj = _get_project(project_id)
@@ -367,7 +367,7 @@ def build_project_graph(
     seed_keyword = (seed_keyword or proj.get("seed_keyword") or "").strip()
     location = (location or proj.get("location") or "Kuşadası").strip()
     domain = (domain or proj.get("domain") or "").strip()
-    main_site_url = (main_site_url or proj.get("main_site_url") or "https://www.balkutusu.com").strip()
+    main_site_url = (main_site_url or proj.get("main_site_url") or "").strip()
 
     files = _load_project_files(slug)
     pages = _collect_pages_from_data(files["pages_data"], files["faqs_data"], files["blog_data"])

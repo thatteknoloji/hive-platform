@@ -334,7 +334,7 @@ def _build_rewrite_prompt(
 - Hikaye 18+ yetişkinlere yöneliktir, uygun dili kullan
 {length_rule}
 - Çıktı HTML <p> paragrafları ile gelsin
-- Son paragrafta {r.get('site_url') or 'https://www.balkutusu.com'} kaynağına doğal referans ver{custom_block}{title_line}
+- Son paragrafta {r.get('site_url') or ''} kaynağına doğal referans ver{custom_block}{title_line}
 
 Orijinal Hikaye:
 {original_text}

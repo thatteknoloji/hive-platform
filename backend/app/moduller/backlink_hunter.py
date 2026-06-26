@@ -214,7 +214,7 @@ def health() -> dict[str, Any]:
 
 def opportunities(
     competitors: list[str] | None = None,
-    our_domain: str = "balkutusu.com",
+    our_domain: str = "",
     limit: int = 50,
     provider: str | None = None,
 ) -> dict[str, Any]:

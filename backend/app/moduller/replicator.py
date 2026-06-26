@@ -32,14 +32,14 @@ def _env(key: str, default: str = "") -> str:
 
 class SiteReplicator:
     def __init__(self) -> None:
-        self.source_domain = _env("REPLICATOR_TARGET", "balkutusu.com").replace("https://", "").replace("http://", "").strip("/")
+        self.source_domain = _env("REPLICATOR_TARGET", "").replace("https://", "").replace("http://", "").strip("/")
         self.vps_ip = _env("VPS_IP", _env("VPS_HOST", "13.140.138.135"))
         self.vps_host = _env("VPS_HOST", "13.140.138.135")
         self.vps_user = _env("VPS_SSH_USER", "root")
         self.vps_pass = _env("VPS_SSH_PASS", "")
         self.cf_token = _env("CLOUDFLARE_API_TOKEN", "")
         self.cf_zone_id = _env("CLOUDFLARE_ZONE_ID", "")
-        self.cert_email = _env("REPLICATOR_EMAIL", "admin@balkutusu.com")
+        self.cert_email = _env("REPLICATOR_EMAIL", "")
         self.results: list[dict[str, Any]] = []
         self.is_running = False
         self._load_state()

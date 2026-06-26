@@ -719,7 +719,9 @@ def _ensure_job_plan(job_id: str, main_site_url: str = "") -> dict[str, Any] | N
         return job
     if not job.get("signals"):
         return job
-    url = (main_site_url or job.get("main_site_url") or "https://www.balkutusu.com").strip()
+    url = (main_site_url or job.get("main_site_url") or "").strip()
+    if not url:
+        return None
     generate_plan(job_id, url)
     return _get_job(job_id)
 
@@ -1058,7 +1060,7 @@ def publish_all_to_wordpress(
     rank_results: list[dict[str, Any]] = []
     try:
         from app.moduller.rank_index_watcher import track_keyword
-        domain = urlparse(main_site_url).netloc or "balkutusu.com"
+        domain = urlparse(main_site_url).netloc or ""
         for page in all_created[:20]:
             kw = page.get("title", "")
             if kw:
@@ -1243,7 +1245,7 @@ def run_quality_gate(job_id: str) -> dict[str, Any]:
     from app.moduller.seo_quality_gate import seo_quality_gate
 
     signals = job.get("signals") or {}
-    main_site_url = job.get("main_site_url", "https://www.balkutusu.com")
+    main_site_url = job.get("main_site_url", "")
     results: list[dict[str, Any]] = []
     deploy_allowed = True
 
@@ -1270,7 +1272,7 @@ def run_quality_gate(job_id: str) -> dict[str, Any]:
         })
 
     entity_push = _push_to_entity_graph(signals, job_id)
-    rank_prep = _prepare_rank_watcher_keywords(job["plan"], urlparse(main_site_url).netloc or "balkutusu.com")
+    rank_prep = _prepare_rank_watcher_keywords(job["plan"], urlparse(main_site_url).netloc or "")
 
     gate_report = {"pages": results, "deploy_allowed": deploy_allowed, "entity_graph": entity_push, "rank_watcher_keywords": rank_prep}
     _update_job(job_id, status="gated", quality_gate=gate_report, deploy_allowed=deploy_allowed)

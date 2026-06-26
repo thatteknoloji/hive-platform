@@ -3446,7 +3446,7 @@ class AstroFactoryCreateBody(BaseModel):
     location: str = "Kuşadası"
     niche: str = "Yerel rehber"
     language: str = "tr"
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
     source_site: str = ""
     deploy_target: str = "cloudflare_pages"
     slug: str = ""
@@ -4244,14 +4244,14 @@ class SiteReplicatorCloneBody(BaseModel):
     theme_variation: bool = True
     auto_build: bool = True
     auto_deploy: bool = False
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
 
 
 class SiteReplicatorVariantBody(BaseModel):
     base_project_id: str = ""
     domain_role: str = "faq_center"
     target_domain: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
 
 
 class SiteReplicatorBlueprintBody(BaseModel):
@@ -4262,7 +4262,7 @@ class SiteReplicatorTemplateBody(BaseModel):
     blueprint_id: str = ""
     target_domain: str = ""
     site_name: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
     auto_build: bool = False
 
 
@@ -4414,7 +4414,7 @@ class NetworkReplicatorCloneBody(BaseModel):
     target_site_name: str = ""
     network_id: str = ""
     role: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
 
 
 class NetworkReplicatorCloneManyBody(BaseModel):
@@ -4425,7 +4425,7 @@ class NetworkReplicatorCloneManyBody(BaseModel):
     retheme_style: str = "modern"
     auto_build: bool = True
     auto_deploy: bool = False
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
 
 
 class NetworkReplicatorRewriteBody(BaseModel):
@@ -4448,7 +4448,7 @@ class NetworkReplicatorVariantBody(BaseModel):
     site_name: str = ""
     role: str = "brand_hub"
     network_id: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
     auto_build: bool = False
 
 
@@ -4610,7 +4610,7 @@ def network_replicator_export(req: NetworkReplicatorExportBody):
 class SEOQualityGateAnalyzeProjectBody(BaseModel):
     project_id: str = ""
     target_keyword: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
     strict_mode: bool = True
 
 class SEOQualityGateAnalyzeUrlBody(BaseModel):
@@ -4911,7 +4911,7 @@ class EntityGeoGraphBuildBody(BaseModel):
     domain: str = ""
     seed_keyword: str = ""
     location: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
 
 
 class EntityGeoGraphProjectBody(BaseModel):
@@ -5002,7 +5002,7 @@ class PlaceSEOPipelineJobBody(BaseModel):
 
 class PlaceSEOPipelinePlanBody(BaseModel):
     job_id: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
 
 
 class PlaceSEOPipelineDryRunBody(BaseModel):
@@ -5028,7 +5028,7 @@ class PlaceSEOPipelineParseBody(BaseModel):
 class EntityDetailSelectTier1Body(BaseModel):
     source_job_id: str = ""
     job_id: str = ""
-    main_site_url: str = "https://www.balkutusu.com"
+    main_site_url: str = ""
     threshold: int = 70
     manual_selections: dict[str, bool] = Field(default_factory=dict)
 
@@ -5362,7 +5362,7 @@ async def place_seo_upload(file: UploadFile = File(...)):
 @app.post("/api/place-seo/upload-batch")
 async def place_seo_upload_batch(
     files: list[UploadFile] = File(...),
-    main_site_url: str = Form("https://www.balkutusu.com"),
+    main_site_url: str = Form(""),
     auto_pipeline: bool = Form(True),
 ):
     from app.moduller.place_seo_pipeline import place_seo_pipeline
@@ -7908,7 +7908,7 @@ class CampaignExportBody(BaseModel):
 
 class CampaignDatasetCreateBody(BaseModel):
     dataset_id: str = ""
-    target_domain: str = "https://www.balkutusu.com"
+    target_domain: str = ""
     campaign_type: str = "full_domination"
     goal: str = "ranking"
     market: str = ""
@@ -8998,7 +8998,7 @@ def blogger_delete_post(post_id: str, blog_id: str = ""):
 # ==================== BACKLINK SUITE ====================
 class BacklinkHunterBody(BaseModel):
     competitors: list[str] = []
-    our_domain: str = "balkutusu.com"
+    our_domain: str = ""
     limit: int = 50
     provider: str = ""  # auto | free | dataforseo
 
@@ -9006,13 +9006,13 @@ class BacklinkHunterBody(BaseModel):
 class LinkSprayerBody(BaseModel):
     hedef_url: str = ""
     keyword: str = ""
-    site_url: str = "https://www.balkutusu.com"
+    site_url: str = ""
     adet: int = 10
 
 
 class DirectoryBody(BaseModel):
-    site_url: str = "https://www.balkutusu.com"
-    site_name: str = "Balkutusu"
+    site_url: str = ""
+    site_name: str = ""
     limit: int = 20
 
 
@@ -9174,9 +9174,9 @@ def backlink_suite_run_all(req: CompetitorHijackerBody):
     domain = getattr(req, "domain", "") or "example.com"
     results = {
         "competitor": analyze_competitor(domain, True, 50),
-        "hunter": opportunities([domain], "balkutusu.com", 30),
+        "hunter": opportunities([domain], domain, 30),
         "internal_links": suggest_links(),
-        "linksprayer": start_campaign("", "seo", "https://www.balkutusu.com", 5),
+        "linksprayer": start_campaign("", "seo", "", 5),
         "directory": submit_bulk(limit=10),
         "seo_agent": generate_and_publish("SEO Rehberi", "seo", publish=False),
         "dashboard": dashboard(),

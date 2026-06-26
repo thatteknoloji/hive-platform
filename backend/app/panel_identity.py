@@ -96,29 +96,11 @@ def bootstrap() -> dict[str, Any]:
     changed = False
     now = _now()
 
-    if not any(p.get("project_id") == "balkutusu" for p in state["projects"]):
-        state["projects"].append(
-            {
-                "project_id": "balkutusu",
-                "name": "Bal Kutusu",
-                "domain": "https://www.balkutusu.com",
-                "type": "listing",
-                "status": "active",
-                "settings": {
-                    "target_city": "",
-                    "target_keywords": [],
-                    "brand_name": "Bal Kutusu",
-                    "language": "tr",
-                },
-                "created_at": now,
-                "updated_at": now,
-            }
-        )
+    from app.moduller.legacy_project_migration import migrate_panel_identity_state, migrate_all_state_files
+    state, migrated = migrate_panel_identity_state(state)
+    if migrated:
         changed = True
-
-    if not state.get("active_project_id"):
-        state["active_project_id"] = "balkutusu"
-        changed = True
+    migrate_all_state_files(STATE_FILE.parent)
 
     default_email = (os.environ.get("HIVE_DEFAULT_ADMIN_EMAIL") or os.environ.get("HIVE_ADMIN_EMAIL") or "").strip().lower()
     default_password = (os.environ.get("HIVE_DEFAULT_ADMIN_PASSWORD") or "").strip()
@@ -255,18 +237,27 @@ def _audit(event: str, email: str) -> None:
 
 
 def list_projects() -> list[dict[str, Any]]:
-    return bootstrap()["projects"]
+    from app.moduller.project_context import list_projects_for_panel
+    return list_projects_for_panel()
 
 
 def get_active_project_id() -> str:
-    return bootstrap().get("active_project_id", "balkutusu")
+    from app.moduller.legacy_project_migration import strip_legacy_active_project_id
+    return strip_legacy_active_project_id(bootstrap().get("active_project_id", ""))
 
 
 def set_active_project(project_id: str) -> bool:
+    from app.moduller import project_engine as pe
+
+    pid = (project_id or "").strip()
     state = bootstrap()
-    if not any(p.get("project_id") == project_id for p in state["projects"]):
+    if not pid:
+        state["active_project_id"] = ""
+        _write(state)
+        return True
+    if not pe.get_project(pid):
         return False
-    state["active_project_id"] = project_id
+    state["active_project_id"] = pid
     _write(state)
     return True
 

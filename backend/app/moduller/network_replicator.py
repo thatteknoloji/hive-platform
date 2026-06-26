@@ -247,7 +247,7 @@ def clone_site(
     *,
     network_id: str = "",
     role: str = "",
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
 ) -> dict[str, Any]:
     from app.moduller.site_replicator import clone_owned_site
     host = _domain_host(target_domain)
@@ -363,7 +363,7 @@ def clone_to_many(
     retheme_style: str = "modern",
     auto_build: bool = True,
     auto_deploy: bool = False,
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
 ) -> dict[str, Any]:
     jid = _job_id()
     results: list[dict[str, Any]] = []
@@ -445,7 +445,7 @@ def generate_variant(
     *,
     role: str = "brand_hub",
     network_id: str = "",
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
     auto_build: bool = False,
 ) -> dict[str, Any]:
     st = _load_state()

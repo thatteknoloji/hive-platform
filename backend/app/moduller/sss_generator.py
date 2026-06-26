@@ -59,7 +59,7 @@ MIN_FAQ_COUNT = 20
 MIN_ANSWER_WORDS = 50
 MAX_ANSWER_WORDS = 120
 MIN_HTML_CHARS = 3000
-DEFAULT_SITE = "https://www.balkutusu.com"
+DEFAULT_SITE = ""
 
 
 def _slugify(text: str) -> str:
@@ -105,7 +105,9 @@ def _build_default_internal_links(
     keyword: str,
     site: str = DEFAULT_SITE,
 ) -> list[dict[str, str]]:
-    site = (site or DEFAULT_SITE).rstrip("/")
+    site = (site or DEFAULT_SITE).strip().rstrip("/")
+    if not site:
+        return {"success": False, "error": "site_url_required"}
     dslug = _slugify(district)
     kslug = _slugify(keyword)
     return [

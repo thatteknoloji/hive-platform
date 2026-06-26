@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   HiveShell,
   HiveAlert,
@@ -269,10 +271,10 @@ export default function CrawlGapEngine() {
       <HivePanel>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "flex-end" }}>
           <HiveField label="Proje ID">
-            <HiveInput value={projectId} onChange={(e) => setProjectId(e.target.value)} placeholder="proj-balkutusu" />
+            <HiveInput value={projectId} onChange={(e) => setProjectId(e.target.value)} placeholder="prj-..." />
           </HiveField>
           <HiveField label="Own Domain">
-            <HiveInput value={ownDomain} onChange={(e) => setOwnDomain(e.target.value)} placeholder="https://balkutusu.com" />
+            <HiveInput value={ownDomain} onChange={(e) => setOwnDomain(e.target.value)} placeholder="https://example.com" />
           </HiveField>
           <HiveField label="Rakipler (virgülle)">
             <HiveInput value={competitors} onChange={(e) => setCompetitors(e.target.value)} placeholder="rakip1.com, rakip2.com" />

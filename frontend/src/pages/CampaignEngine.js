@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   HiveShell,
   HiveAlert,
@@ -89,7 +91,7 @@ export default function CampaignEngine() {
   const [datasets, setDatasets] = useState([]);
   const [selectedDatasetId, setSelectedDatasetId] = useState("");
   const [dsKeyword, setDsKeyword] = useState("kuşadası gece hayatı");
-  const [dsDomain, setDsDomain] = useState("https://www.balkutusu.com");
+  const [dsDomain, setDsDomain] = useProjectSiteField();
   const [dsMarket, setDsMarket] = useState("kusadasi");
   const [dsCampaignType, setDsCampaignType] = useState("full_domination");
 

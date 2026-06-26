@@ -288,7 +288,7 @@ export default function SerpDefenseEngine({ preselectedProjectId = "" }) {
 
       <HiveContextBar>
         <HiveField label="Proje ID">
-          <HiveInput value={projectId} onChange={(e) => setProjectId(e.target.value)} placeholder="proj-balkutusu" />
+          <HiveInput value={projectId} onChange={(e) => setProjectId(e.target.value)} placeholder="prj-..." />
         </HiveField>
         <HiveField label="Keyword">
           <HiveInput value={keyword} onChange={(e) => setKeyword(e.target.value)} placeholder="kuşadası gece hayatı" />

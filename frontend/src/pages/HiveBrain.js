@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   HiveShell,
   HiveAlert,
@@ -245,7 +247,7 @@ export default function HiveBrain({ onNavigate }) {
         <HivePanel>
           <div className="hm-form-row">
             <HiveField label="Domain">
-              <HiveInput value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="balkutusu.com" />
+              <HiveInput value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="example.com" />
             </HiveField>
             <HiveBtn onClick={loadDomain} disabled={loading || !domain}>Yükle</HiveBtn>
           </div>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   HiveShell,
   HiveAlert,
@@ -29,7 +31,7 @@ function apiError(e) {
 export default function RankTracker() {
   const [tab, setTab] = useState("track");
   const [kelime, setKelime] = useState("");
-  const [domain, setDomain] = useState("balkutusu.com");
+  const [domain, setDomain] = useProjectDomainField();
   const [sehir, setSehir] = useState("kuşadası");
   const [kelimeList, setKelimeList] = useState("");
   const [exportFormat, setExportFormat] = useState("csv");
@@ -180,7 +182,7 @@ export default function RankTracker() {
               <HiveInput value={kelime} onChange={(e) => setKelime(e.target.value)} placeholder="kuşadası gece hayatı" />
             </HiveField>
             <HiveField label="Domain (DataForSEO için)">
-              <HiveInput value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="balkutusu.com" />
+              <HiveInput value={domain} onChange={(e) => setDomain(e.target.value)} placeholder="example.com" />
             </HiveField>
             <HiveField label="Şehir">
               <HiveInput value={sehir} onChange={(e) => setSehir(e.target.value)} placeholder="kuşadası" />

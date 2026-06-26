@@ -329,7 +329,7 @@ def validate_publish_allowed(listing: dict[str, Any], *, after_gate: bool = Fals
     return listing
 
 
-def build_schema_jsonld(listing: dict[str, Any], domain: str = "https://www.balkutusu.com") -> dict[str, Any]:
+def build_schema_jsonld(listing: dict[str, Any], domain: str = "") -> dict[str, Any]:
     listing = apply_media_defaults(listing)
     stype = listing.get("schema_type") or "LocalBusiness"
     graph: list[dict[str, Any]] = []
@@ -365,7 +365,7 @@ def build_schema_jsonld(listing: dict[str, Any], domain: str = "https://www.balk
     return {"@context": "https://schema.org", "@graph": graph}
 
 
-def generate_seo_for_listing(listing: dict[str, Any], domain: str = "https://www.balkutusu.com") -> dict[str, Any]:
+def generate_seo_for_listing(listing: dict[str, Any], domain: str = "") -> dict[str, Any]:
     title = (listing.get("title") or "").strip()
     city = listing.get("city") or listing.get("district") or ""
     target = listing.get("target_keyword") or f"{city} {title}".strip()
@@ -451,8 +451,8 @@ def run_quality_gate(listing: dict[str, Any]) -> dict[str, Any]:
             page,
             target_keyword=listing.get("target_keyword", ""),
             location=listing.get("city", "") or listing.get("district", ""),
-            domain=urlparse(listing.get("canonical", "")).netloc or "balkutusu.com",
-            main_site="https://www.balkutusu.com",
+            domain=urlparse(listing.get("canonical", "")).netloc or "",
+            main_site=(listing.get("main_site_url") or listing.get("main_site") or "").strip(),
             strict_mode=True,
         )
         seo_score = _dimension_score(issues, SEO_CATEGORIES)

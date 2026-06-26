@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, Suspense } from "react";
+import React, { useState, useEffect, useCallback, useMemo, Suspense } from "react";
 import API from "./api";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import {
@@ -730,6 +730,10 @@ function App({ onLogout, user }) {
   const [sssImportHint, setSssImportHint] = useState(null);
   const [projects, setProjects] = useState([]);
   const [activeProjectId, setActiveProjectId] = useState("");
+  const activeProjectLabel = useMemo(() => {
+    const p = projects.find((x) => (x.project_id || x.id) === activeProjectId);
+    return p?.name || (activeProjectId ? activeProjectId : "Proje seçilmedi");
+  }, [projects, activeProjectId]);
   const palette = useCommandPalette();
   const paletteContextRef = React.useRef(null);
   const getPaletteContext = useCallback(() => paletteContextRef.current, []);
@@ -808,9 +812,19 @@ function App({ onLogout, user }) {
   }, []);
 
   useEffect(() => {
-    API.get("/api/projects")
+    API.get("/api/v3/projects", { params: { limit: 200 } })
       .then((res) => {
-        setProjects(res.data?.items || []);
+        const items = (res.data?.projects || []).map((p) => ({
+          project_id: p.id,
+          id: p.id,
+          name: p.name,
+          domain: p.domain || "",
+          status: p.status,
+        }));
+        setProjects(items);
+        return API.get("/api/v3/projects/active");
+      })
+      .then((res) => {
         setActiveProjectId(res.data?.active_project_id || "");
       })
       .catch(() => {});
@@ -1098,10 +1112,11 @@ function App({ onLogout, user }) {
           onLogout={onLogout}
           userEmail={user?.email}
           projects={projects}
-          activeProjectName={activeProjectId}
+          activeProjectName={activeProjectLabel}
           onProjectChange={async (projectId) => {
-            await API.post(`/api/projects/${projectId}/set-active`);
+            await API.post(`/api/v3/projects/${projectId}/set-active`);
             setActiveProjectId(projectId);
+            window.dispatchEvent(new CustomEvent("hive-active-project-changed"));
           }}
         />
         <HivePageFrame pageKey={gosterge}>

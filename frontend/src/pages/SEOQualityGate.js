@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 const STATUS_STYLE = {
   pass: { label: "PASS", color: "#4ade80" },
@@ -26,7 +28,7 @@ export default function SEOQualityGate({ preselectedProjectId = "" }) {
   const [reports, setReports] = useState([]);
   const [projectId, setProjectId] = useState(preselectedProjectId || "");
   const [targetKeyword, setTargetKeyword] = useState("");
-  const [mainSiteUrl, setMainSiteUrl] = useState("https://www.balkutusu.com");
+  const [mainSiteUrl, setMainSiteUrl] = useProjectSiteField();
   const [strictMode, setStrictMode] = useState(true);
   const [analyzeUrl, setAnalyzeUrl] = useState("");
   const [loading, setLoading] = useState(false);

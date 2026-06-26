@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   ResponsiveContainer,
   AreaChart,
@@ -12,7 +14,7 @@ import {
 } from "recharts";
 
 export default function AnalyticsHub() {
-  const [url, setUrl] = useState("https://balkutusu.com");
+  const [url, setUrl] = useProjectSiteField();
   const [loading, setLoading] = useState({});
   const [hata, setHata] = useState("");
   const [basari, setBasari] = useState("");
@@ -307,9 +309,9 @@ export default function AnalyticsHub() {
         <ol style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "var(--text2)", paddingLeft: "1.2rem" }}>
           <li>
             <a href="https://analytics.google.com/" target="_blank" rel="noreferrer">analytics.google.com</a>
-            {" "}→ Yönetici → Mülk oluştur → <strong>balkutusu.com</strong>
+            {" "}→ Yönetici → Mülk oluştur → <strong>proje domain</strong>
           </li>
-          <li>Veri akışı → Web → URL: <code>https://balkutusu.com</code></li>
+          <li>Veri akışı → Web → URL: <code>https://example.com</code></li>
           <li><strong>Measurement ID</strong> kopyala (ör. <code>G-J1DKY19WRL</code>)</li>
           <li>Aşağıya yapıştır → <strong>Siteye Bağla</strong> (WordPress temasına gtag ekler)</li>
         </ol>
@@ -521,7 +523,7 @@ export default function AnalyticsHub() {
       <h3>Simülasyon Raporları (eski modül)</h3>
       <div className="form-grup">
         <label>Site URL</label>
-        <input value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://balkutusu.com" />
+        <input value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://example.com" />
       </div>
       <div className="btn-group">
         <button className="btn btn-primary" onClick={handleRapor} disabled={loading.rapor}>

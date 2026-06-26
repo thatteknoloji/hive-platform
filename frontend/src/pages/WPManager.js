@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 
 const TABS = [
@@ -32,7 +34,12 @@ export default function WPManager() {
   const [tab, setTab] = useState("posts");
   const [connected, setConnected] = useState(false);
   const [connInfo, setConnInfo] = useState(null);
-  const [login, setLogin] = useState({ url: "https://balkutusu.com", username: "", password: "" });
+  const [loginUrl, setLoginUrl] = useProjectSiteField();
+  const [login, setLogin] = useState({ url: "", username: "", password: "" });
+
+  useEffect(() => {
+    if (loginUrl) setLogin((prev) => ({ ...prev, url: prev.url || loginUrl }));
+  }, [loginUrl]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -365,14 +372,14 @@ export default function WPManager() {
     <div className="wp-manager">
       <h2 style={{ marginTop: 0 }}>🌐 WordPress Yöneticisi</h2>
       <p style={{ color: "var(--text2)", fontSize: "0.9rem" }}>
-        balkutusu.com — yazı, sayfa, profil, kategori, medya, multisite tam yönetim
+        WordPress — yazı, sayfa, profil, kategori, medya, multisite tam yönetim
       </p>
 
       {!connected ? (
         <div className="wp-login-box">
           <div className="form-grup">
             <label>WordPress URL</label>
-            <input value={login.url} onChange={(e) => setLogin({ ...login, url: e.target.value })} placeholder="https://balkutusu.com" />
+            <input value={login.url} onChange={(e) => setLogin({ ...login, url: e.target.value })} placeholder="https://example.com" />
           </div>
           <div className="form-grup">
             <label>Kullanıcı adı</label>

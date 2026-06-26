@@ -130,6 +130,24 @@ def list_projects_v3(
     return pe.list_projects(status=status, sector=sector, search=search, limit=limit, offset=offset)
 
 
+@router.get("/projects/active")
+def get_active_project_v3(request: Request):
+    _require(request, "projects", "view")
+    from app.moduller import project_context
+    return project_context.get_active_project_payload()
+
+
+@router.post("/projects/{project_id}/set-active")
+def set_active_project_v3(project_id: str, request: Request):
+    _require(request, "projects", "edit")
+    from app.moduller import project_context
+    result = project_context.set_active_project(project_id)
+    if not result.get("success"):
+        code = 404 if result.get("error") == "not_found" else 400
+        raise HTTPException(status_code=code, detail=result.get("error") or "set_failed")
+    return result
+
+
 @router.post("/projects")
 def create_project_v3(body: ProjectCreateBody, request: Request):
     _require(request, "projects", "create")

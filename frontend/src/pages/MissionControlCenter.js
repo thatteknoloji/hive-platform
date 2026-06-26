@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
-import { HiveShell, HiveAlert } from "../components/HiveModuleUI";
+import { useActiveProject } from "../context/ActiveProjectContext";
+import { HiveShell, HiveAlert, HiveBtn } from "../components/HiveModuleUI";
 import { HiveWarRoom } from "../components/HiveWarRoom";
 import { HiveStickyActionBar } from "../components/HiveStickyActionBar";
 import { NextBestActionsPanel } from "../components/HiveOSComponents";
@@ -11,6 +12,7 @@ const API_PREFIX = "/api/mission-control";
 const POLL_MS = 90000;
 
 export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
+  const { activeProjectId, loading: projectLoading } = useActiveProject();
   const [dash, setDash] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -21,6 +23,12 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
   }, [onNavigate]);
 
   const refresh = useCallback(async (silent = false, full = false) => {
+    if (!activeProjectId) {
+      setDash({ empty: true, message: "Aktif proje seçilmedi — üst menüden veya Projects ekranından proje seçin." });
+      setLoading(false);
+      setError("");
+      return;
+    }
     if (!silent) setLoading(true);
     setError("");
     try {
@@ -32,9 +40,9 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
     } finally {
       if (!silent) setLoading(false);
     }
-  }, []);
+  }, [activeProjectId]);
 
-  useEffect(() => { refresh(false); }, [refresh]);
+  useEffect(() => { refresh(false); }, [refresh, activeProjectId]);
 
   useEffect(() => {
     if (dash) {
@@ -78,6 +86,15 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
 
   return (
     <div className="hive-module hive-os-command-center hive-war-room-shell">
+      {!projectLoading && !activeProjectId ? (
+        <HiveShell title="Mission Control" subtitle="Aktif proje yok">
+          <HiveAlert type="info">
+            Dashboard görmek için üst menüden bir proje seçin veya Projects ekranından yeni proje oluşturun.
+          </HiveAlert>
+          <HiveBtn onClick={() => onNavigate?.("projects")}>Projects&apos;e git</HiveBtn>
+        </HiveShell>
+      ) : (
+        <>
       <HiveWarRoom
         dash={dash}
         loading={loading}
@@ -113,6 +130,8 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
           { id: "refresh", label: "Refresh", onClick: () => refresh() },
         ]}
       />
+        </>
+      )}
     </div>
   );
 }

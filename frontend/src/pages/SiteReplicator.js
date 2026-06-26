@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 const STEPS = [
   { id: "clone", label: "Owned Site Clone" },
@@ -11,9 +13,9 @@ const STEPS = [
 ];
 
 const DOMAIN_ROLES = [
-  { id: "faq_center", label: "SSS Merkezi (balkutusu.info)" },
-  { id: "blog_center", label: "Blog Rehberi (balkutusu.net)" },
-  { id: "entity_center", label: "Entity Bilgi (balkutusu.org)" },
+  { id: "faq_center", label: "SSS Merkezi" },
+  { id: "blog_center", label: "Blog Rehberi" },
+  { id: "entity_center", label: "Entity Bilgi Merkezi" },
   { id: "geo_support", label: "GEO Destek" },
   { id: "brand_support", label: "Marka Destek" },
 ];
@@ -36,7 +38,7 @@ export default function SiteReplicator() {
 
   const [cloneForm, setCloneForm] = useState({
     source_project_id: "",
-    target_domain: "balkutusu.net",
+    target_domain: "",
     target_site_name: "Balkutusu Rehber",
     content_strategy: "rewrite_all",
     theme_variation: true,
@@ -46,8 +48,8 @@ export default function SiteReplicator() {
   const [variantForm, setVariantForm] = useState({
     base_project_id: "",
     domain_role: "faq_center",
-    target_domain: "balkutusu.info",
-    main_site_url: "https://www.balkutusu.com",
+    target_domain: "",
+    main_site_url: "",
   });
   const [competitorUrl, setCompetitorUrl] = useState("");
   const [templateForm, setTemplateForm] = useState({
@@ -123,7 +125,7 @@ export default function SiteReplicator() {
     try {
       const res = await API.post("/api/site-replicator/generate-original-template", {
         ...templateForm,
-        main_site_url: "https://www.balkutusu.com",
+        main_site_url: "",
       });
       setLastJob(res.data.job);
       setDeployProjectId(res.data.summary?.project_id || "");

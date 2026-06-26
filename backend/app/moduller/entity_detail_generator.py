@@ -305,7 +305,7 @@ def _word_count(html: str) -> int:
 
 
 def _build_schemas(entity: dict[str, Any], main_site_url: str, faq_items: list[dict[str, str]]) -> dict[str, Any]:
-    domain = main_site_url.rstrip("/") or "https://www.balkutusu.com"
+    domain = main_site_url.rstrip("/") or ""
     slug = entity.get("slug", "")
     page_url = f"{domain}/{slug.strip('/')}/"
     name = entity.get("name", "")
@@ -366,7 +366,7 @@ def _llm_generate_entity_content(entity: dict[str, Any], graph_ctx: dict[str, An
     cat = entity.get("category") or "mekan"
     related = ", ".join(graph_ctx.get("related_locations") or []) or "Kuşadası merkez, Marina, Kadınlar Denizi"
     topics = ", ".join(graph_ctx.get("topic_clusters") or []) or f"{cat} rehberi"
-    domain = urlparse(main_site_url).netloc or "balkutusu.com"
+    domain = urlparse(main_site_url).netloc or ""
 
     prompt = (
         f"Kuşadası entity rehber sayfası yaz. Mekan: {name}\n"
@@ -515,7 +515,7 @@ def select_tier1(
     source_job_id: str,
     *,
     job_id: str = "",
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
     threshold: int = TIER1_THRESHOLD,
     manual_selections: dict[str, bool] | None = None,
 ) -> dict[str, Any]:
@@ -591,7 +591,7 @@ def generate_pages(
     if not job:
         return {"success": False, "error": "Job bulunamadı"}
 
-    url = (main_site_url or job.get("main_site_url") or "https://www.balkutusu.com").strip()
+    url = (main_site_url or job.get("main_site_url") or "").strip()
     entities = job.get("entities") or []
     targets = [e for e in entities if e.get("tier1_selected")]
     if entity_ids:
@@ -659,7 +659,7 @@ def generate_pages(
 
         try:
             from app.moduller.rank_index_watcher import track_keyword
-            domain = urlparse(url).netloc or "balkutusu.com"
+            domain = urlparse(url).netloc or ""
             for kw in (ent.get("target_keywords") or [])[:3]:
                 track_keyword(kw.lower(), domain, save=True)
         except Exception as exc:

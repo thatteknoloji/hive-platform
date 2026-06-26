@@ -2,11 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import API from "../api";
 
 
-const PLACEHOLDER = `balkutusu.com.tr
-balkutusu.net
-balkutusu.org
-balkutusu.xyz
-balkutusu.site`;
+const PLACEHOLDER = `site-a.example.com
+site-b.example.net
+site-c.example.org`;
 
 function statusLabel(result) {
   if (result.status === "completed") return "✅ Yönlendirildi";
@@ -23,7 +21,7 @@ export default function Replicator() {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState([]);
   const [statusMessage, setStatusMessage] = useState("");
-  const [target, setTarget] = useState("balkutusu.com");
+  const [target, setTarget] = useProjectDomainField();
   const pollRef = useRef(null);
 
   const fetchStatus = async () => {

@@ -17,12 +17,12 @@ function TumblrManager() {
     city: "Kuşadası",
     district: "",
     extra_keywords: "escort, gece hayatı, rehber",
-    site_url: "https://www.balkutusu.com",
-    blog_name: "balkutusucom.tumblr.com",
+    site_url: "",
+    blog_name: "",
   });
 
   const [manualForm, setManualForm] = useState({
-    blog_name: "balkutusucom.tumblr.com",
+    blog_name: "",
     title: "",
     content: "",
     tags: "",

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   HiveShell,
   HiveAlert,
@@ -91,7 +93,7 @@ export default function AuthorityMeshEngine({ onNavigate }) {
   const [exportPath, setExportPath] = useState("");
 
   const [keyword, setKeyword] = useState("");
-  const [moneySite, setMoneySite] = useState("https://www.balkutusu.com");
+  const [moneySite, setMoneySite] = useProjectSiteField();
   const [selectedPlanId, setSelectedPlanId] = useState("");
   const [lastPlan, setLastPlan] = useState(null);
 
@@ -99,7 +101,7 @@ export default function AuthorityMeshEngine({ onNavigate }) {
   const [gsTitle, setGsTitle] = useState("");
   const [gsSlug, setGsSlug] = useState("");
   const [gsKeyword, setGsKeyword] = useState("");
-  const [gsMoney, setGsMoney] = useState("https://www.balkutusu.com");
+  const [gsMoney, setGsMoney] = useProjectSiteField();
   const [gsPagesJson, setGsPagesJson] = useState("[]");
   const [gsHealth, setGsHealth] = useState(null);
   const [gsTasks, setGsTasks] = useState([]);
@@ -111,7 +113,7 @@ export default function AuthorityMeshEngine({ onNavigate }) {
   const [ghRepoName, setGhRepoName] = useState("");
   const [ghTitle, setGhTitle] = useState("");
   const [ghKeyword, setGhKeyword] = useState("");
-  const [ghMoney, setGhMoney] = useState("https://www.balkutusu.com");
+  const [ghMoney, setGhMoney] = useProjectSiteField();
   const [ghRole, setGhRole] = useState("geo_hub");
   const [ghPagesJson, setGhPagesJson] = useState("[]");
   const [ghSelectedSiteId, setGhSelectedSiteId] = useState("");

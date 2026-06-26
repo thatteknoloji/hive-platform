@@ -303,7 +303,7 @@ def clone_owned_site(
     theme_variation: bool = True,
     auto_build: bool = True,
     auto_deploy: bool = False,
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
 ) -> dict[str, Any]:
     job = _create_job("clone_owned_site", {
         "source_project_id": source_project_id,
@@ -389,7 +389,7 @@ def create_domain_variant(
     base_project_id: str,
     domain_role: str,
     target_domain: str,
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
 ) -> dict[str, Any]:
     role = DOMAIN_ROLES.get(domain_role)
     if not role:
@@ -448,9 +448,9 @@ def create_domain_variant(
             "target_project_id": new_id,
             "target_domain": domain,
             "examples": {
-                "faq_center": "balkutusu.info → SSS merkezi",
-                "blog_center": "balkutusu.net → Blog rehberi",
-                "entity_center": "balkutusu.org → Entity bilgi merkezi",
+                "faq_center": "SSS merkezi",
+                "blog_center": "Blog rehberi",
+                "entity_center": "Entity bilgi merkezi",
             }.get(domain_role, domain_role),
             "quality_gate": gate,
         }
@@ -616,7 +616,7 @@ def generate_original_template(
     blueprint_id: str,
     target_domain: str,
     site_name: str,
-    main_site_url: str = "https://www.balkutusu.com",
+    main_site_url: str = "",
     *,
     auto_build: bool = False,
 ) -> dict[str, Any]:

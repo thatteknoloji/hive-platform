@@ -184,7 +184,7 @@ export default function DomainManager() {
               onChange={(e) =>
                 setConnection({ ...connection, url: e.target.value })
               }
-              placeholder="https://balkutusu.com"
+              placeholder="https://example.com"
             />
           </div>
           <div className="form-group">
@@ -319,7 +319,7 @@ export default function DomainManager() {
           <textarea
             value={bulkSites}
             onChange={(e) => setBulkSites(e.target.value)}
-            placeholder={`vip-model.balkutusu.com, VIP Model, admin@balkutusu.com\nanal.balkutusu.com, Anal Escort\noral.balkutusu.com, Oral Masaj`}
+            placeholder={`sub.example.com, Site Adı, admin@example.com\nsub2.example.com, İkinci Site`}
             rows={8}
           />
           <button onClick={handleBulkCreate} disabled={loading || !bulkSites.trim()}>
@@ -338,7 +338,7 @@ export default function DomainManager() {
                 onChange={(e) =>
                   setNewSite({ ...newSite, domain: e.target.value })
                 }
-                placeholder="vip-model.balkutusu.com"
+                placeholder="sub.example.com"
               />
             </div>
             <div className="form-group">
@@ -362,7 +362,7 @@ export default function DomainManager() {
                 onChange={(e) =>
                   setNewSite({ ...newSite, email: e.target.value })
                 }
-                placeholder="admin@balkutusu.com"
+                placeholder="admin@example.com"
               />
             </div>
             <div className="form-group">

@@ -9,7 +9,7 @@ from urllib.parse import urljoin, urlparse, urlunparse
 import requests
 from bs4 import BeautifulSoup
 
-USER_AGENT = "HIVE-Scraper/1.0 (+https://balkutusu.com; SEO research bot)"
+USER_AGENT = "HIVE-Scraper/1.0 (+https://hive.local; SEO research bot)"
 FETCH_TIMEOUT = 20
 MAX_HTML_BYTES = 500_000
 

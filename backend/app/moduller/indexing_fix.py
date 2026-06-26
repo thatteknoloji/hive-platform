@@ -27,9 +27,9 @@ from app.moduller.storyforge_categories import normalize_seo_slug
 
 logger = logging.getLogger("hive.indexing_fix")
 
-DEFAULT_SITE = "https://www.balkutusu.com"
-DEFAULT_DOMAIN = "balkutusu.com"
-INDEXNOW_KEY = "hive-indexnow-balkutusu"
+DEFAULT_SITE = ""
+DEFAULT_DOMAIN = ""
+INDEXNOW_KEY = config.get("INDEXNOW_KEY", "hive-indexnow")
 REPORTS_DIR = Path(__file__).resolve().parent.parent.parent / "reports"
 
 URL_TYPE_PATTERNS: list[tuple[str, str]] = [
@@ -53,13 +53,11 @@ PROFILE_QUERY_SLUGS = ("luna", "bella", "aylin")
 
 def _site_url() -> str:
     raw = (config.get("GSC_SITE_URL") or config.get("WP_URL") or DEFAULT_SITE).strip()
+    if not raw:
+        return ""
     if not raw.startswith("http"):
         raw = f"https://{raw}"
-    raw = raw.rstrip("/")
-    # Canonical: www (GA4/GSC tutarlılığı)
-    if "balkutusu.com" in raw and "www." not in raw:
-        raw = raw.replace("://balkutusu.com", "://www.balkutusu.com")
-    return raw
+    return raw.rstrip("/")
 
 
 def _domain_from_url(url: str) -> str:
@@ -643,10 +641,17 @@ def run_balkutusu_index_recovery(
     *,
     apply_htaccess: bool = False,
     analyze_quality: bool = True,
+    project_id: str = "",
 ) -> dict[str, Any]:
     """URL envanteri → redirect map → rapor. İçerik silmez."""
-    site = site or _site_url()
-    _emit_brain("balkutusu_index_recovery_started", result={"site": site})
+    from app.moduller.project_context import get_active_project_id, resolve_site_url
+
+    site = (site or resolve_site_url(project_id) or _site_url()).strip()
+    if not site:
+        return {"success": False, "error": "site_required", "message": "Aktif proje veya site URL gerekli"}
+    pid = (project_id or get_active_project_id() or "index-recovery").strip()
+    domain = urlparse(site).netloc or site.replace("https://", "").replace("http://", "").split("/")[0]
+    _emit_brain("index_recovery_started", result={"site": site, "project_id": pid})
 
     inv_res = build_url_inventory(site)
     inventory = inv_res.get("inventory") or []
@@ -676,14 +681,14 @@ def run_balkutusu_index_recovery(
     rank_result: dict[str, Any] = {}
     try:
         from app.moduller.rank_index_watcher import register_project, track_keyword
-        pid = "balkutusu-index-recovery"
-        register_project(pid, "www.balkutusu.com", source="index_recovery")
+        pid_rw = f"{pid}-index-recovery"
+        register_project(pid_rw, domain, source="index_recovery")
         for kw in (
             "kuşadası escort", "kusadasi escort", "kuşadası escort bayan",
             "kuşadası gece hayatı", "kuşadası gece rehberi",
         ):
-            track_keyword(kw, "www.balkutusu.com", project_id=pid)
-        rank_result = {"success": True, "project_id": pid, "keywords": 5}
+            track_keyword(kw, domain, project_id=pid_rw)
+        rank_result = {"success": True, "project_id": pid_rw, "keywords": 5}
     except Exception as exc:
         rank_result = {"success": False, "error": str(exc)}
 
@@ -692,8 +697,8 @@ def run_balkutusu_index_recovery(
     try:
         from app.moduller.campaign_engine import create_campaign
         c = create_campaign(
-            name="Balkutusu Index Recovery",
-            target_keyword="kuşadası escort",
+            name=f"Index Recovery — {domain}",
+            target_keyword="",
             target_domain=site,
             goal="ranking",
             priority="high",
@@ -704,7 +709,7 @@ def run_balkutusu_index_recovery(
         campaign_result = {"success": False, "error": str(exc)}
 
     redirect_path = _save_json_report(
-        "balkutusu-url-cleanup-redirect-map.json",
+        "index-recovery-redirect-map.json",
         {"generated_at": _now_iso(), "site": site, "redirects": redirects, "count": len(redirects)},
     )
 

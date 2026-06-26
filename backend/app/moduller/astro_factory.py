@@ -201,7 +201,7 @@ def _generate_landing_content(keyword: str, location: str, niche: str, source_si
 
 
 def _main_site(project: dict[str, Any]) -> str:
-    return (project.get("main_site_url") or project.get("source_site") or "https://www.balkutusu.com").strip()
+    return (project.get("main_site_url") or project.get("source_site") or "").strip()
 
 
 def _generate_blog_content(topic: str, location: str, source_site: str) -> dict[str, Any]:
@@ -272,7 +272,7 @@ def create_project(payload: dict[str, Any]) -> dict[str, Any]:
     project_path = _project_path(slug)
     domain = _normalize_domain(raw_domain) or f"https://{slug}.com"
     main_site = (
-        payload.get("main_site_url") or payload.get("source_site") or "https://www.balkutusu.com"
+        payload.get("main_site_url") or payload.get("source_site") or ""
     ).strip()
 
     project = {

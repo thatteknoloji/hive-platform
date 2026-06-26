@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   HiveShell,
   HiveAlert,
@@ -63,7 +65,7 @@ export default function AuthorityFactory() {
   const [exportPath, setExportPath] = useState("");
 
   const [keyword, setKeyword] = useState("");
-  const [moneySite, setMoneySite] = useState("https://www.balkutusu.com");
+  const [moneySite, setMoneySite] = useProjectSiteField();
   const [batchName, setBatchName] = useState("");
   const [source, setSource] = useState("manual");
   const [autoProcess, setAutoProcess] = useState(false);

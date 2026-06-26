@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 const STEPS = [
   { id: "upload", num: 1, label: "Dosya Yükle" },
@@ -145,7 +147,7 @@ export default function PlaceSEOPipeline() {
   const [jobs, setJobs] = useState([]);
   const [jobId, setJobId] = useState("");
   const [job, setJob] = useState(null);
-  const [mainSiteUrl, setMainSiteUrl] = useState("https://www.balkutusu.com");
+  const [mainSiteUrl, setMainSiteUrl] = useProjectSiteField();
   const [pendingFiles, setPendingFiles] = useState([]);
   const [dragOver, setDragOver] = useState(false);
   const [loading, setLoading] = useState(false);

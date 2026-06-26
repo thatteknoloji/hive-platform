@@ -84,8 +84,8 @@ def _submit_batch(job_id: str, site_url: str, site_name: str, dirs: list[dict]) 
 
 
 def submit_bulk(
-    site_url: str = "https://www.balkutusu.com",
-    site_name: str = "Balkutusu",
+    site_url: str = "",
+    site_name: str = "",
     limit: int = 20,
 ) -> dict[str, Any]:
     dirs = load_directories()[:limit]

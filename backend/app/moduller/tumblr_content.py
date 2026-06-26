@@ -116,6 +116,8 @@ def _fallback_content(
     title = f"{topic} — {loc} rehberi"[:60]
     place_txt = ", ".join(places[:4])
     faq = (ctx.get("faq_ideas") or ["Nerede bulunur?", "Ne zaman gidilir?"])[0]
+    from urllib.parse import urlparse
+    site_label = urlparse(site_url).netloc or site_url or "ana site"
 
     content = f"""<p>{loc} bölgesinde <strong>{topic}</strong> arayanlar için hazırlanan bu rehber, yerel GEO sinyalleri ve güncel arama niyetlerine göre derlendi. {city} ve çevresinde plan yaparken semt bazlı düşünmek önemlidir.</p>
 <h2>{topic} ve {city} bölgesi</h2>
@@ -126,7 +128,7 @@ def _fallback_content(
 <li>Yoğun sezonda erken planlama yapın.</li>
 <li>Güvenilir kaynaklardan bilgi alın; acele karar vermeyin.</li>
 </ul>
-<p>Daha fazla yerel içerik ve güncel rehberler için <a href="{site_url}">balkutusu.com</a> ana portalını ziyaret edebilirsiniz.</p>"""
+<p>Daha fazla yerel içerik ve güncel rehberler için <a href="{site_url}">{site_label}</a> ana portalını ziyaret edebilirsiniz.</p>"""
 
     return {
         "title": title,
@@ -150,7 +152,7 @@ def generate_tumblr_content(
 
     city = (city or "Kuşadası").strip()
     district = (district or "").strip()
-    site_url = (site_url or config.get("WP_URL") or "https://www.balkutusu.com").strip().rstrip("/")
+    site_url = (site_url or config.get("WP_URL") or "").strip().rstrip("/")
     extra = [k.strip() for k in (extra_keywords or []) if k and str(k).strip()]
 
     ctx = _talon_context(topic, city)
@@ -182,7 +184,9 @@ SSS fikirleri: {"; ".join(ctx.get("faq_ideas") or [])}
                 "generated_at": simdi(),
             }
             if site_url not in result["content"]:
-                result["content"] += f'\n<p><a href="{site_url}">balkutusu.com</a></p>'
+                from urllib.parse import urlparse
+                label = urlparse(site_url).netloc or "ana site"
+                result["content"] += f'\n<p><a href="{site_url}">{label}</a></p>'
             return result
 
     fb = _fallback_content(topic, city, district, site_url, ctx, extra)

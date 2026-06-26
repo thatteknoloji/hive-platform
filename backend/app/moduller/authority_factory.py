@@ -99,7 +99,7 @@ DEFAULT_SETTINGS: dict[str, Any] = {
     "max_items_per_batch": 25,
     "max_exact_anchor_ratio": 0.15,
     "duplicate_block": True,
-    "default_money_site": "https://www.balkutusu.com",
+    "default_money_site": "",
     "default_network_id": "",
     "auto_track_rank_watcher": True,
     "auto_register_support_network": True,

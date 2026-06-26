@@ -111,7 +111,7 @@ STORY_SELECTORS = [
     "main",
 ]
 
-USER_AGENT = "Mozilla/5.0 (compatible; HIVE-StoryForge/2.0; +https://balkutusu.com)"
+USER_AGENT = "Mozilla/5.0 (compatible; HIVE-StoryForge/2.0; +https://hive.local)"
 
 # Bağlaç / edat / zamir — içerik kelime sayımında hariç
 _TURKISH_STOP_WORDS = frozenset({
@@ -135,7 +135,7 @@ class StoryForgeV2:
     def __init__(self) -> None:
         llm_router.ensure_ollama_running()
         self.ollama_model = llm_router.resolve_ollama_model()
-        self.wp_url = _env("WP_URL", "https://balkutusu.com")
+        self.wp_url = _env("WP_URL", "")
         self._pending: dict[str, dict[str, Any]] = {}
         self._jobs: dict[str, dict[str, Any]] = {}
         self._photos: list[dict[str, Any]] = []
@@ -675,7 +675,7 @@ class StoryForgeV2:
         city = r.get("city") or "Kuşadası"
         custom = r.get("custom_rules") or ""
         src_wc = source_min_words or self._word_count(original_text)
-        site = (r.get("site_url") or "https://www.balkutusu.com").rstrip("/")
+        site = (r.get("site_url") or "").rstrip("/")
         geo_block = self._fetch_geo_context(r) if r.get("geo_inject", True) else ""
         if src_wc >= 80:
             length_rules = (
@@ -768,7 +768,7 @@ Genişletilmiş TAM hikaye (HTML <p>, min {target} anlamlı kelime):"""
         locs = r.get("locations") or KUSADASI_LOCATIONS
         kw = (r.get("keywords") or ["escort"])[0]
         loc = locs[hash(source_title + content) % len(locs)]
-        site = (r.get("site_url") or "https://www.balkutusu.com").rstrip("/")
+        site = (r.get("site_url") or "").rstrip("/")
         pads = [
             f"{city} {loc} çevresinde akşam ilerledikçe sokakların ritmi değişiyordu; ışıklar marinadan içeri doğru uzanan yürüyüş yolunda titreşiyordu.",
             f"Sohbetimiz samimi bir tona büründüğünde {kw} deneyiminin bu şehirde ne kadar özel olabileceğini hissettim; her cümle Kuşadası'nın gece hayatına bir kapı aralıyordu.",
@@ -857,7 +857,7 @@ Genişletilmiş TAM hikaye (HTML <p>, min {target} anlamlı kelime):"""
         r = rules or load_rules()
         locs = r.get("locations") or KUSADASI_LOCATIONS
         city = r.get("city") or "Kuşadası"
-        site = (r.get("site_url") or "https://www.balkutusu.com").rstrip("/")
+        site = (r.get("site_url") or "").rstrip("/")
         kw = (r.get("keywords") or ["escort"])[0]
         loc = locs[hash(source_title) % len(locs)]
         opener = (
@@ -868,10 +868,12 @@ Genişletilmiş TAM hikaye (HTML <p>, min {target} anlamlı kelime):"""
         if not chunks:
             chunks = [original_text[:800]]
         body = opener + "".join(f"<p>{c}</p>" for c in chunks[:12])
+        from urllib.parse import urlparse
+        site_label = urlparse(site).netloc or site or "ana site"
         body += (
             f"<p>Gece {loc} çevresinde sona ererken {city} {kw} deneyimini "
             f"uzun süre unutamayacağım. Daha fazlası için "
-            f'<a href="{site}">balkutusu.com</a>.</p>'
+            f'<a href="{site}">{site_label}</a>.</p>'
         )
         return body
 

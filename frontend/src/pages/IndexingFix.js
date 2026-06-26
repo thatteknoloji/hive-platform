@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 
 export default function IndexingFix() {
@@ -7,7 +9,7 @@ export default function IndexingFix() {
   const [fixResult, setFixResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [site, setSite] = useState("https://www.balkutusu.com");
+  const [site, setSite] = useProjectSiteField();
 
   const loadAudit = useCallback(async () => {
     setError("");
@@ -67,14 +69,14 @@ export default function IndexingFix() {
     <div className="modul-sayfa" style={{ padding: "1.5rem" }}>
       <h2>🔍 Google İndeksleme Düzeltici</h2>
       <p style={{ color: "var(--text-muted)", marginBottom: "1rem" }}>
-        balkutusu.com — SSL, permalink, noindex, robots, IndexNow ve sitemap otomasyonu
+        Seçili proje — SSL, permalink, noindex, robots, IndexNow ve sitemap otomasyonu
       </p>
 
       <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem", flexWrap: "wrap" }}>
         <input
           value={site}
           onChange={(e) => setSite(e.target.value)}
-          placeholder="https://www.balkutusu.com"
+          placeholder="https://example.com"
           style={{ flex: 1, minWidth: 240, padding: "0.5rem" }}
         />
         <button onClick={loadAudit} disabled={loading}>🔄 Denetle</button>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import ProviderSelector from "../components/ProviderSelector";
 
 
@@ -24,18 +26,18 @@ export default function BacklinkSuite() {
   const [dashboard, setDashboard] = useState(null);
 
   const [competitors, setCompetitors] = useState("example.com,rakip.com");
-  const [ourDomain, setOurDomain] = useState("balkutusu.com");
+  const [ourDomain, setOurDomain] = useProjectDomainField();
   const [hunterResult, setHunterResult] = useState(null);
 
   const [rivalDomain, setRivalDomain] = useState("");
   const [hijackerResult, setHijackerResult] = useState(null);
 
-  const [lsUrl, setLsUrl] = useState("https://www.balkutusu.com");
+  const [lsUrl, setLsUrl] = useProjectSiteField();
   const [lsKeyword, setLsKeyword] = useState("");
   const [lsAdet, setLsAdet] = useState(10);
   const [lsResult, setLsResult] = useState(null);
 
-  const [dirSite, setDirSite] = useState("https://www.balkutusu.com");
+  const [dirSite, setDirSite] = useProjectSiteField();
   const [dirName, setDirName] = useState("Balkutusu");
   const [dirLimit, setDirLimit] = useState(20);
   const [dirResult, setDirResult] = useState(null);

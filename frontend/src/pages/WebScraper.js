@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 import {
   HiveShell,
   HiveAlert,
@@ -18,7 +20,7 @@ function apiError(e) {
 }
 
 export default function WebScraper() {
-  const [url, setUrl] = useState("https://balkutusu.com");
+  const [url, setUrl] = useProjectSiteField();
   const [derinlik, setDerinlik] = useState(1);
   const [maxPages, setMaxPages] = useState(8);
   const [health, setHealth] = useState(null);

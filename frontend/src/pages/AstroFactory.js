@@ -159,7 +159,7 @@ export default function AstroFactory({ onNavigateQualityGate }) {
     location: "Kuşadası",
     niche: "gece hayatı",
     language: "tr",
-    main_site_url: "https://www.balkutusu.com",
+    main_site_url: "",
     deploy_target: "cloudflare_pages",
     page_count: 10,
   });

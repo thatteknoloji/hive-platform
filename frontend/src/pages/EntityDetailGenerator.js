@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
+
 
 const STEPS = [
   { id: "source", num: 1, label: "Kaynak Job Seç" },
@@ -107,7 +109,7 @@ export default function EntityDetailGenerator() {
   const [sourceJobId, setSourceJobId] = useState("");
   const [jobId, setJobId] = useState("");
   const [job, setJob] = useState(null);
-  const [mainSiteUrl, setMainSiteUrl] = useState("https://www.balkutusu.com");
+  const [mainSiteUrl, setMainSiteUrl] = useProjectSiteField();
   const [threshold, setThreshold] = useState(70);
   const [astroProjectId, setAstroProjectId] = useState("");
   const [loading, setLoading] = useState(false);
