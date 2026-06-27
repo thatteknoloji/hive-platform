@@ -461,6 +461,15 @@ export function HiveIntegrationList({ items = [] }) {
   );
 }
 
+export function HiveTooltip({ content, children }) {
+  return (
+    <span className="hm-tooltip-wrap">
+      {children}
+      <span className="hm-tooltip-popup">{content}</span>
+    </span>
+  );
+}
+
 export function HiveToast({ message, onClose }) {
   if (!message) return null;
   return (
