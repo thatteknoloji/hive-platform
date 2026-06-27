@@ -256,3 +256,10 @@ def set_active_project_route(project_id: str, request: Request):
     if not result.get("success"):
         raise HTTPException(status_code=404, detail=result.get("error") or "Project not found")
     return {"success": True, "active_project_id": result.get("active_project_id", project_id)}
+
+
+@router.get("/phoenix/customer-journey")
+def phoenix_customer_journey(request: Request):
+    _current_user(request)
+    from app.moduller import phoenix_journey
+    return phoenix_journey.get_status()

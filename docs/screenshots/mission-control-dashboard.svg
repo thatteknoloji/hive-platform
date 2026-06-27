@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <rect x="16" y="16" width="768" height="48" rx="8" fill="#1e293b"/>
+  <text x="24" y="46" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="600">🚀 Mission Control Center</text>
+  <text x="280" y="46" fill="#94a3b8" font-family="system-ui" font-size="12">HIVE operasyon merkezi</text>
+  <rect x="16" y="80" width="768" height="120" rx="8" fill="#1e293b"/>
+  <text x="32" y="102" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Customer Journey</text>
+  <rect x="32" y="118" width="240" height="68" rx="8" fill="#334155"/>
+  <rect x="40" y="126" width="224" height="8" rx="4" fill="#3b82f6"/>
+  <rect x="40" y="126" width="168" height="8" rx="4" fill="#22c55e"/>
+  <text x="48" y="152" fill="#94a3b8" font-family="system-ui" font-size="10">Customer Journey Completion</text>
+  <text x="48" y="170" fill="#f1f5f9" font-family="system-ui" font-size="14" font-weight="700">65%</text>
+  <rect x="288" y="118" width="120" height="68" rx="8" fill="#334155"/>
+  <text x="300" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Active Projects</text>
+  <text x="300" y="168" fill="#f1f5f9" font-family="system-ui" font-size="18" font-weight="700">3</text>
+  <rect x="420" y="118" width="120" height="68" rx="8" fill="#334155"/>
+  <text x="432" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Active Domains</text>
+  <text x="432" y="168" fill="#f1f5f9" font-family="system-ui" font-size="18" font-weight="700">12</text>
+  <rect x="552" y="118" width="120" height="68" rx="8" fill="#334155"/>
+  <text x="564" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Alerts</text>
+  <text x="564" y="168" fill="#eab308" font-family="system-ui" font-size="18" font-weight="700">2</text>
+  <rect x="16" y="212" width="380" height="128" rx="8" fill="#1e293b"/>
+  <text x="32" y="234" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Next Best Actions</text>
+  <line x1="32" y1="246" x2="380" y2="246" stroke="#334155" stroke-width="1"/>
+  <text x="32" y="268" fill="#e2e8f0" font-family="system-ui" font-size="11">1. Authority Mesh — yeni plan oluşturun</text>
+  <text x="32" y="292" fill="#e2e8f0" font-family="system-ui" font-size="11">2. Talon — keyword araştırması yapın</text>
+  <text x="32" y="316" fill="#e2e8f0" font-family="system-ui" font-size="11">3. Publisher Hub — kuyruğu işleyin</text>
+  <rect x="408" y="212" width="376" height="128" rx="8" fill="#1e293b"/>
+  <text x="424" y="234" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">War Room</text>
+  <line x1="424" y1="246" x2="768" y2="246" stroke="#334155" stroke-width="1"/>
+  <rect x="440" y="260" width="160" height="32" rx="4" fill="#22c55e" opacity="0.15"/>
+  <text x="448" y="280" fill="#22c55e" font-family="system-ui" font-size="10">✅ Tüm sistemler çalışıyor</text>
+  <text x="440" y="310" fill="#94a3b8" font-family="system-ui" font-size="11">Son güncelleme: 2 dakika önce</text>
+  <rect x="16" y="352" width="768" height="112" rx="8" fill="#1e293b"/>
+  <text x="32" y="374" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Quick Actions</text>
+  <rect x="32" y="392" width="120" height="32" rx="6" fill="#3b82f6"/>
+  <text x="44" y="412" fill="#fff" font-family="system-ui" font-size="11">New Project</text>
+  <rect x="164" y="392" width="120" height="32" rx="6" fill="#8b5cf6"/>
+  <text x="176" y="412" fill="#fff" font-family="system-ui" font-size="11">Run Keyword Research</text>
+  <rect x="296" y="392" width="120" height="32" rx="6" fill="#22c55e"/>
+  <text x="308" y="412" fill="#fff" font-family="system-ui" font-size="11">Publish Queue</text>
+</svg>

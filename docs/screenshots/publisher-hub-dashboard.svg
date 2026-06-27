@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <rect x="16" y="16" width="768" height="48" rx="8" fill="#1e293b"/>
+  <text x="24" y="46" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="600">Publisher Hub</text>
+  <text x="200" y="46" fill="#94a3b8" font-family="system-ui" font-size="12">Authority siteleri için publisher channel yönetimi</text>
+  <rect x="16" y="72" width="768" height="32" rx="6" fill="#1e293b"/>
+  <text x="32" y="92" fill="#94a3b8" font-family="system-ui" font-size="11" font-weight="500">Dashboard  Sources  Channels  Drafts  Queue  Published  Schedule  Settings</text>
+  <rect x="16" y="112" width="380" height="180" rx="8" fill="#1e293b"/>
+  <text x="32" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Mission Board</text>
+  <rect x="32" y="150" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="44" y="170" fill="#94a3b8" font-family="system-ui" font-size="10">Sources</text>
+  <text x="44" y="192" fill="#f1f5f9" font-family="system-ui" font-size="18" font-weight="700">4</text>
+  <rect x="144" y="150" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="156" y="170" fill="#94a3b8" font-family="system-ui" font-size="10">Channels</text>
+  <text x="156" y="192" fill="#f1f5f9" font-family="system-ui" font-size="18" font-weight="700">6</text>
+  <rect x="256" y="150" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="268" y="170" fill="#94a3b8" font-family="system-ui" font-size="10">Queued</text>
+  <text x="268" y="192" fill="#eab308" font-family="system-ui" font-size="18" font-weight="700">23</text>
+  <rect x="32" y="218" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="44" y="238" fill="#94a3b8" font-family="system-ui" font-size="10">Published</text>
+  <text x="44" y="260" fill="#22c55e" font-family="system-ui" font-size="18" font-weight="700">147</text>
+  <rect x="144" y="218" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="156" y="238" fill="#94a3b8" font-family="system-ui" font-size="10">Failed</text>
+  <text x="156" y="260" fill="#ef4444" font-family="system-ui" font-size="18" font-weight="700">3</text>
+  <rect x="256" y="218" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="268" y="238" fill="#94a3b8" font-family="system-ui" font-size="10">Drafts</text>
+  <text x="268" y="260" fill="#3b82f6" font-family="system-ui" font-size="18" font-weight="700">8</text>
+  <rect x="408" y="112" width="376" height="180" rx="8" fill="#1e293b"/>
+  <text x="424" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Active Channels</text>
+  <line x1="424" y1="148" x2="768" y2="148" stroke="#334155" stroke-width="1"/>
+  <rect x="440" y="162" width="160" height="24" rx="4" fill="#22c55e" opacity="0.15"/>
+  <text x="448" y="178" fill="#22c55e" font-family="system-ui" font-size="10">✓ Blogger — OK</text>
+  <rect x="440" y="194" width="180" height="24" rx="4" fill="#22c55e" opacity="0.15"/>
+  <text x="448" y="210" fill="#22c55e" font-family="system-ui" font-size="10">✓ Tumblr — OK</text>
+  <rect x="440" y="226" width="140" height="24" rx="4" fill="#eab308" opacity="0.15"/>
+  <text x="448" y="242" fill="#eab308" font-family="system-ui" font-size="10">⚠ Dev.to — wait</text>
+  <rect x="440" y="258" width="170" height="24" rx="4" fill="#22c55e" opacity="0.15"/>
+  <text x="448" y="274" fill="#22c55e" font-family="system-ui" font-size="10">✓ WordPress — OK</text>
+  <rect x="16" y="304" width="768" height="160" rx="8" fill="#1e293b"/>
+  <text x="32" y="326" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Queue</text>
+  <line x1="32" y1="338" x2="768" y2="338" stroke="#334155" stroke-width="1"/>
+  <text x="32" y="356" fill="#94a3b8" font-family="system-ui" font-size="10">Item                    Channel     Status      Source</text>
+  <text x="32" y="380" fill="#e2e8f0" font-family="monospace" font-size="10">kuşadası-gece-rehberi    blogger     queued      authority_mesh</text>
+  <text x="32" y="404" fill="#e2e8f0" font-family="monospace" font-size="10">izmir-plaj-rehberi       tumblr      processing  authority_mesh</text>
+  <text x="32" y="428" fill="#e2e8f0" font-family="monospace" font-size="10">bodrum-oteller           wordpress   draft       campaign_engine</text>
+</svg>

@@ -1,0 +1,3927 @@
+{
+  "operation": "PHOENIX",
+  "module_count": 116,
+  "production_ready": 0,
+  "below_threshold_95": 116,
+  "threshold": 95,
+  "modules": [
+    {
+      "id": "openseo",
+      "name": "OpenSEO",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/openseo/keyword",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "serpbear",
+      "name": "SerpBear",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/serpbear/track",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "dataseo",
+      "name": "DataSEO",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/dataseo/backlinks",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "seoagent",
+      "name": "SEOAgent",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/seoagent/crawl",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "tumblr",
+      "name": "Tumblr Yöneticisi",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/tumblr",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "blogger",
+      "name": "Blogger Yöneticisi",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/blogger",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "seointel",
+      "name": "SEOIntel",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/seointel/ai-visibility",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress Site Manager",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/wordpress",
+      "scores": {
+        "code": 0,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 47.8,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "exposedkeyhunter",
+      "name": "Exposed Key Hunter",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/exposedkeyhunter",
+      "scores": {
+        "code": 0,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 56.1,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "storyforge",
+      "name": "StoryForge",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/storyforge",
+      "scores": {
+        "code": 0,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 56.1,
+      "production_ready": false,
+      "gaps": [
+        "backend_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": false,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "seoaudit",
+      "name": "SEO Audit",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/seoaudit",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "keywordresearch",
+      "name": "Keyword Research",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/keywordresearch",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "competitor",
+      "name": "Competitor Intel",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/competitor",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "maps",
+      "name": "Maps Saldırı Botu",
+      "group": "⚔️ Müdahale & Saldırı",
+      "endpoint": "/api/maps",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "yorum",
+      "name": "Yorum Botu",
+      "group": "⚔️ Müdahale & Saldırı",
+      "endpoint": "/api/yorum",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "phishing",
+      "name": "Phishing (Google Cloud)",
+      "group": "⚔️ Müdahale & Saldırı",
+      "endpoint": "/api/phishing",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "zeroday",
+      "name": "0-Day Exploit Avcısı",
+      "group": "⚔️ Müdahale & Saldırı",
+      "endpoint": "/api/zeroday",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "penalty",
+      "name": "Penalty Recovery Kit",
+      "group": "🛡️ Savunma & İtibar",
+      "endpoint": "/api/penalty",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "ddos",
+      "name": "DDoS Mitigation",
+      "group": "🛡️ Savunma & İtibar",
+      "endpoint": "/api/ddos",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "veri",
+      "name": "Veri Gizlilik Modülü",
+      "group": "🛡️ Savunma & İtibar",
+      "endpoint": "/api/veri",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "reputation",
+      "name": "Reputation Shield",
+      "group": "🛡️ Savunma & İtibar",
+      "endpoint": "/api/reputation",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "crisis",
+      "name": "Crisis Monitor",
+      "group": "🛡️ Savunma & İtibar",
+      "endpoint": "/api/crisis",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "topiccluster",
+      "name": "Topic Cluster Builder",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/topiccluster",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "internallink",
+      "name": "Internal Link Optimizer",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/internallink",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "hyperlocal",
+      "name": "Hyperlocal Hikaye Üretici",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/hyperlocal",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "indexing",
+      "name": "Indexing Accelerator",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/indexing",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "contentgen",
+      "name": "Content Generator",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/contentgen",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "autoblog",
+      "name": "Auto Blog",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/autoblog",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "spinner",
+      "name": "Content Spinner",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/spinner",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "translator",
+      "name": "Translator",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/translator",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "schemamarkup",
+      "name": "Schema Markup",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/schemamarkup",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "speedopt",
+      "name": "Speed Optimizer",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/speedopt",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "mobilecheck",
+      "name": "Mobile Checker",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/mobilecheck",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "sitemap",
+      "name": "Sitemap Generator",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/sitemap",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "robots",
+      "name": "Robots Manager",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/robots",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "redirect",
+      "name": "Redirect Manager",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/redirect",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "indexnow",
+      "name": "IndexNow",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/indexnow",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "linkbuilder",
+      "name": "Link Builder",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/linkbuilder",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "backlink_hunter",
+      "name": "Backlink Hunter",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/backlink_hunter",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "competitor_hijacker",
+      "name": "Competitor Backlink Hijacker",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/competitor_hijacker",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "linksprayer",
+      "name": "LinkSprayer",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/linksprayer",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "directory_submitter",
+      "name": "Directory Submitter",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/directory_submitter",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "internal_link_builder",
+      "name": "Internal Link Builder",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/internal_link_builder",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "seo_content_agent",
+      "name": "SEO Content Agent",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/seo_content_agent",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "hive_brain_engine",
+      "name": "HIVE Brain / Memory",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/hive-brain/health",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit Yöneticisi",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/reddit",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "brandmention",
+      "name": "Brand Mention Blaster",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/brandmention",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "brandmentions",
+      "name": "BrandMentions",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/brandmentions",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "messenger",
+      "name": "Messenger Operasyonu",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/messenger",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "socialmedia",
+      "name": "Social Media",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/socialmedia",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "emailblast",
+      "name": "E-posta Blast",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/emailblast",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "review",
+      "name": "Review Manager",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/review",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "citation",
+      "name": "Citation Builder",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/citation",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "localseo",
+      "name": "Local SEO",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/localseo",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "aiagent",
+      "name": "AI Agent Infiltrator",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/aiagent",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "ai_citation",
+      "name": "AI Citation Tracker",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/ai_citation",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "sentiment",
+      "name": "Sentiment AI",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/sentiment",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "trend",
+      "name": "Trend Analyzer",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/trend",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "forecast",
+      "name": "Forecast Engine",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/forecast",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "userbehavior",
+      "name": "User Behavior",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/userbehavior",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "funnel",
+      "name": "Funnel Analyzer",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/funnel",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "abtest",
+      "name": "A/B Test",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/abtest",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "heatmap",
+      "name": "Heatmap",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/heatmap",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics Hub",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/analytics",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "conversion",
+      "name": "Conversion Tracker",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/conversion",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "btk",
+      "name": "BTK Gargoyle",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/btk",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "alert",
+      "name": "Alert System",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/alert",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "notification",
+      "name": "Notification Center",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/notification",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "report",
+      "name": "Report Generator",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/report",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "schedule",
+      "name": "Schedule Manager",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/schedule",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "backup",
+      "name": "Backup Center",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/backup",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "restore",
+      "name": "Restore Manager",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/restore",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "log",
+      "name": "Log Viewer",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/log",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "monitor",
+      "name": "System Monitor",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/monitor",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "debug",
+      "name": "Debug Console",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/debug",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "blackops",
+      "name": "Full Black Ops",
+      "group": "💀 Black Ops",
+      "endpoint": "/api/blackops",
+      "scores": {
+        "code": 90,
+        "ui": 40,
+        "ux": 40,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 35
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 57.8,
+      "production_ready": false,
+      "gaps": [
+        "frontend_page_missing",
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": false,
+      "has_academy": true
+    },
+    {
+      "id": "rank_index_watcher",
+      "name": "Rank & Index Watcher",
+      "group": "📈 Analytics & SEO",
+      "endpoint": "/api/rank-watcher/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "entity_geo_graph",
+      "name": "Entity & GEO Graph",
+      "group": "📈 Analytics & SEO",
+      "endpoint": "/api/entity-geo-graph/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "kefen",
+      "name": "KEFEN (Catastrophe)",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/kefen",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "expireddomain",
+      "name": "Expired Domain Avcısı",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/expireddomain",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "ranktracker",
+      "name": "Rank Tracker",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/ranktracker",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "webscraper",
+      "name": "Web Scraper",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/webscraper",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "apihunter",
+      "name": "API Hunter Ultra",
+      "group": "🔍 Keşif & Analiz",
+      "endpoint": "/api/apihunter",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "zeus",
+      "name": "Zeus'un Yıldırımı",
+      "group": "⚔️ Müdahale & Saldırı",
+      "endpoint": "/api/zeus",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "backlinkhijacker",
+      "name": "Backlink Hijacker",
+      "group": "⚔️ Müdahale & Saldırı",
+      "endpoint": "/api/backlinkhijacker",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "spambacklink",
+      "name": "Spam Backlink Zehirleyici",
+      "group": "⚔️ Müdahale & Saldırı",
+      "endpoint": "/api/spambacklink",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "mystic",
+      "name": "Mystic Return",
+      "group": "🛡️ Savunma & İtibar",
+      "endpoint": "/api/mystic/tara",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "sss_automation",
+      "name": "SSS Otomatik Üretim Zinciri",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/sss_automation",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "astro_factory",
+      "name": "Astro Site Factory",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/astro_factory",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "astro_auto_publisher",
+      "name": "Astro Auto Publisher",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/astro-auto/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "content_refresh_engine",
+      "name": "Content Refresh Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/content-refresh/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "publisher_hub",
+      "name": "Publisher Hub",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/publisher_hub",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "support_network_engine",
+      "name": "Support Network Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/support_network_engine",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "serp_defense_engine",
+      "name": "SERP Defense Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/serp_defense_engine",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "opportunity_engine",
+      "name": "Opportunity Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/opportunity/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "citation_engine",
+      "name": "Citation Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/citation/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "executive_ai",
+      "name": "Executive AI",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/executive-ai/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "provider_control_center",
+      "name": "Provider Control Center",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/providers/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "hive_audit_engine",
+      "name": "HIVE Audit Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/hive-audit/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "campaign_engine",
+      "name": "Campaign Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/campaigns/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "crawl_gap_engine",
+      "name": "Crawl & Gap Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/crawl-gap/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "data_miner_engine",
+      "name": "Data Miner Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/data-miner/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "authority_mesh_engine",
+      "name": "Authority Mesh Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/authority-mesh/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "autonomous_seo_agent",
+      "name": "Autonomous SEO Agent",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/autonomous-agent/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "mission_control_center",
+      "name": "Mission Control Center",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/mission-control/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "question_intelligence_engine",
+      "name": "Question Intelligence Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/question-intelligence/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "seo_quality_gate",
+      "name": "SEO GEO AEO Quality Gate",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/seo_quality_gate",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "place_seo_pipeline",
+      "name": "Mekan SEO Content Pipeline",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/place-seo/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "entity_detail_generator",
+      "name": "Entity Detail Generator",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/entity-detail/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "site_replicator",
+      "name": "Site Replicator & Blueprint Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/site-replicator/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "network_replicator",
+      "name": "Network Replicator & Blueprint Engine",
+      "group": "📝 İçerik & SEO",
+      "endpoint": "/api/network-replicator/health",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "medium_bot",
+      "name": "Medium Bot",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/medium_bot",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "seo_poisoning",
+      "name": "SEO Poisoning",
+      "group": "📢 Sosyal & Marka",
+      "endpoint": "/api/seo_poisoning",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "leadscraper",
+      "name": "Lead Scraper",
+      "group": "🤖 AI & Veri",
+      "endpoint": "/api/leadscraper",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "replicator",
+      "name": "The Replicator V3",
+      "group": "⚙️ Altyapı & Yönetim",
+      "endpoint": "/api/replicator",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    },
+    {
+      "id": "ai_chat",
+      "name": "AI Chat (Llama 3.1)",
+      "group": "🤖 Yapay Zeka",
+      "endpoint": "/api/ai_chat",
+      "scores": {
+        "code": 90,
+        "ui": 85,
+        "ux": 70,
+        "api": 80,
+        "documentation": 30,
+        "performance": 70,
+        "security": 75,
+        "accessibility": 60,
+        "production": 80
+      },
+      "doc_breakdown": {
+        "documentation": 30,
+        "workflow": 80,
+        "api": 80,
+        "screenshot": 30,
+        "academy": 50
+      },
+      "total": 71.1,
+      "production_ready": false,
+      "gaps": [
+        "screenshot_missing",
+        "doc_auto_draft"
+      ],
+      "has_backend": true,
+      "has_frontend": true,
+      "has_academy": true
+    }
+  ],
+  "summary_gaps": {
+    "backend_missing": 10,
+    "frontend_page_missing": 74,
+    "screenshot_missing": 116,
+    "doc_auto_draft": 116
+  }
+}

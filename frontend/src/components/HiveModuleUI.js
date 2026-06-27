@@ -460,3 +460,25 @@ export function HiveIntegrationList({ items = [] }) {
     </ul>
   );
 }
+
+export function HiveToast({ message, onClose }) {
+  if (!message) return null;
+  return (
+    <div className="hm-toast" role="status">
+      <span>{message}</span>
+      {onClose && (
+        <button type="button" className="hm-toast-close" onClick={onClose} aria-label="Kapat">×</button>
+      )}
+    </div>
+  );
+}
+
+export function HiveSkeleton({ lines = 3 }) {
+  return (
+    <div className="hm-skeleton-wrap" aria-busy="true" aria-label="Yükleniyor">
+      {Array.from({ length: lines }).map((_, i) => (
+        <div key={i} className={`hm-skeleton ${i === 0 ? "hm-skeleton-lg" : ""}`} />
+      ))}
+    </div>
+  );
+}

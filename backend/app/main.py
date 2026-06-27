@@ -107,6 +107,7 @@ from app.moduller.subdomain_manager import subdomain_talondan_olustur, subdomain
 from app.wp_routes import router as wp_router
 from app.panel_routes import router as panel_router
 from app.v3_routes import router as v3_router
+from app.academy_routes import router as academy_router
 from app.moduller.hive_cloud_deploy import PUBLIC_ROOT as HIVE_PUBLIC_SITES_ROOT
 from app import panel_identity
 from app.moduller.tumblr_api import (
@@ -130,6 +131,7 @@ app = FastAPI(
 app.include_router(wp_router)
 app.include_router(panel_router)
 app.include_router(v3_router)
+app.include_router(academy_router)
 
 HIVE_PUBLIC_SITES_ROOT.mkdir(parents=True, exist_ok=True)
 app.mount(

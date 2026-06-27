@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
 import { useActiveProject } from "../context/ActiveProjectContext";
-import { HiveShell, HiveAlert, HiveBtn } from "../components/HiveModuleUI";
+import { HiveShell, HiveAlert, HiveBtn, HiveToast, HiveSkeleton } from "../components/HiveModuleUI";
+import CustomerJourneyCard from "../components/CustomerJourneyCard";
 import { HiveWarRoom } from "../components/HiveWarRoom";
 import { HiveStickyActionBar } from "../components/HiveStickyActionBar";
-import { NextBestActionsPanel } from "../components/HiveOSComponents";
+import { NextBestActionsPanel, ReleaseReadinessPanel } from "../components/HiveOSComponents";
 import HiveApiErrorCard from "../components/HiveApiErrorCard";
 import { formatMissionControlApiError } from "../utils/missionControlErrors";
 
@@ -17,6 +18,7 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+  const [journey, setJourney] = useState(null);
 
   const go = useCallback((link) => {
     if (link && onNavigate) onNavigate(link);
@@ -43,6 +45,17 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
   }, [activeProjectId]);
 
   useEffect(() => { refresh(false); }, [refresh, activeProjectId]);
+
+  const loadJourney = useCallback(async () => {
+    try {
+      const res = await API.get("/api/phoenix/customer-journey");
+      setJourney(res.data);
+    } catch {
+      setJourney(null);
+    }
+  }, []);
+
+  useEffect(() => { loadJourney(); }, [loadJourney, activeProjectId]);
 
   useEffect(() => {
     if (dash) {
@@ -88,6 +101,7 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
     <div className="hive-module hive-os-command-center hive-war-room-shell">
       {!projectLoading && !activeProjectId ? (
         <HiveShell title="Mission Control" subtitle="Aktif proje yok">
+          <CustomerJourneyCard journey={journey} onNavigate={go} />
           <HiveAlert type="info">
             Dashboard görmek için üst menüden bir proje seçin veya Projects ekranından yeni proje oluşturun.
           </HiveAlert>
@@ -105,8 +119,11 @@ export default function MissionControlCenter({ onNavigate, onOpenPalette }) {
       />
 
       <HiveShell title="" subtitle="">
+        {loading && !dash && <HiveSkeleton lines={6} />}
+        <CustomerJourneyCard journey={journey} onNavigate={go} />
+        <ReleaseReadinessPanel release={dash?.release_readiness} onNavigate={go} />
         {error && <HiveApiErrorCard errorInfo={error} />}
-        {message && <HiveAlert type="success">{message}</HiveAlert>}
+        <HiveToast message={message} onClose={() => setMessage("")} />
 
         <NextBestActionsPanel
           actions={dash?.next_best_actions}

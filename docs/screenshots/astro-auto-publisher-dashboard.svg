@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <rect x="16" y="16" width="768" height="48" rx="8" fill="#1e293b"/>
+  <text x="24" y="46" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="600">Astro Auto Publisher</text>
+  <text x="200" y="46" fill="#94a3b8" font-family="system-ui" font-size="12">İçerik kaynaklarından otomatik Astro publish pipeline</text>
+  <rect x="16" y="72" width="768" height="32" rx="6" fill="#1e293b"/>
+  <text x="32" y="92" fill="#94a3b8" font-family="system-ui" font-size="11" font-weight="500">Dashboard  Settings  Scan Missing  Queue  Process  Jobs  Reports</text>
+  <rect x="16" y="112" width="380" height="180" rx="8" fill="#1e293b"/>
+  <text x="32" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Dashboard</text>
+  <rect x="32" y="150" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="44" y="170" fill="#94a3b8" font-family="system-ui" font-size="10">Queue</text>
+  <text x="44" y="192" fill="#eab308" font-family="system-ui" font-size="18" font-weight="700">12</text>
+  <rect x="144" y="150" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="156" y="170" fill="#94a3b8" font-family="system-ui" font-size="10">Processed</text>
+  <text x="156" y="192" fill="#22c55e" font-family="system-ui" font-size="18" font-weight="700">89</text>
+  <rect x="256" y="150" width="100" height="56" rx="6" fill="#334155"/>
+  <text x="268" y="170" fill="#94a3b8" font-family="system-ui" font-size="10">Failed</text>
+  <text x="268" y="192" fill="#ef4444" font-family="system-ui" font-size="18" font-weight="700">2</text>
+  <rect x="32" y="220" width="340" height="56" rx="6" fill="#334155"/>
+  <text x="48" y="240" fill="#94a3b8" font-family="system-ui" font-size="10">Sources</text>
+  <text x="48" y="260" fill="#f1f5f9" font-family="system-ui" font-size="11">page_hub  |  sss_automation  |  place_seo_pipeline  |  listing_hub</text>
+  <rect x="408" y="112" width="376" height="180" rx="8" fill="#1e293b"/>
+  <text x="424" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Recent Jobs</text>
+  <line x1="424" y1="148" x2="768" y2="148" stroke="#334155" stroke-width="1"/>
+  <text x="424" y="172" fill="#94a3b8" font-family="system-ui" font-size="10">Job ID       Source          Status     Pages</text>
+  <text x="424" y="196" fill="#e2e8f0" font-family="monospace" font-size="10">job-045      page_hub        done       12</text>
+  <text x="424" y="220" fill="#e2e8f0" font-family="monospace" font-size="10">job-044      sss_automation  done       8</text>
+  <text x="424" y="244" fill="#e2e8f0" font-family="monospace" font-size="10">job-043      place_seo       processing  5</text>
+  <rect x="16" y="304" width="768" height="160" rx="8" fill="#1e293b"/>
+  <text x="32" y="326" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Queue</text>
+  <line x1="32" y1="338" x2="768" y2="338" stroke="#334155" stroke-width="1"/>
+  <rect x="32" y="352" width="340" height="32" rx="4" fill="#334155"/>
+  <text x="48" y="372" fill="#e2e8f0" font-family="system-ui" font-size="11">kuşadası-gece-hayatı-rehberi</text>
+  <text x="280" y="372" fill="#eab308" font-family="system-ui" font-size="10">queued</text>
+  <rect x="32" y="392" width="340" height="32" rx="4" fill="#334155"/>
+  <text x="48" y="412" fill="#e2e8f0" font-family="system-ui" font-size="11">izmir-sahil-rehberi</text>
+  <text x="280" y="412" fill="#22c55e" font-family="system-ui" font-size="10">processing</text>
+</svg>

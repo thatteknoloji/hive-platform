@@ -1,0 +1,23 @@
+@import "./academy-tokens.css";
+@import "./academy-layout.css";
+@import "./academy-hero.css";
+@import "./academy-sidebar.css";
+@import "./academy-dashboard.css";
+
+.academy-subpage {
+  padding: 24px 32px;
+  max-width: 1100px;
+}
+
+.academy-reader-toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--academy-border);
+  background: var(--academy-navy-mid);
+}
+
+.ha-reader-wrap {
+  background: var(--academy-navy);
+  min-height: 100%;
+}

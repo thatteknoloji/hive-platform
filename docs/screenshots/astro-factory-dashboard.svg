@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <rect x="16" y="16" width="768" height="48" rx="8" fill="#1e293b"/>
+  <text x="24" y="46" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="600">Astro Site Factory</text>
+  <text x="200" y="46" fill="#94a3b8" font-family="system-ui" font-size="12">Astro tabanlı site üretim ve deploy fabrikası</text>
+  <rect x="16" y="72" width="768" height="32" rx="6" fill="#1e293b"/>
+  <text x="32" y="92" fill="#94a3b8" font-family="system-ui" font-size="11" font-weight="500">Project  Plan  Build  Deploy  Export  Settings</text>
+  <rect x="16" y="112" width="380" height="200" rx="8" fill="#1e293b"/>
+  <text x="32" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Projects</text>
+  <rect x="32" y="150" width="340" height="40" rx="6" fill="#334155"/>
+  <text x="48" y="170" fill="#e2e8f0" font-family="system-ui" font-size="11">kuşadası-gece-hayatı</text>
+  <text x="300" y="170" fill="#22c55e" font-family="system-ui" font-size="11">deployed</text>
+  <rect x="32" y="198" width="340" height="40" rx="6" fill="#334155"/>
+  <text x="48" y="218" fill="#e2e8f0" font-family="system-ui" font-size="11">izmir-plaj-rehberi</text>
+  <text x="300" y="218" fill="#eab308" font-family="system-ui" font-size="11">built</text>
+  <rect x="32" y="246" width="340" height="40" rx="6" fill="#334155"/>
+  <text x="48" y="266" fill="#e2e8f0" font-family="system-ui" font-size="11">bodrum-oteller</text>
+  <text x="300" y="266" fill="#94a3b8" font-family="system-ui" font-size="11">planned</text>
+  <rect x="408" y="112" width="376" height="200" rx="8" fill="#1e293b"/>
+  <text x="424" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Build Pipeline</text>
+  <line x1="424" y1="148" x2="768" y2="148" stroke="#334155" stroke-width="1"/>
+  <text x="424" y="172" fill="#94a3b8" font-family="system-ui" font-size="11">Proje: kuşadası-gece-hayatı</text>
+  <text x="424" y="196" fill="#94a3b8" font-family="system-ui" font-size="11">Template: geo-hub</text>
+  <text x="424" y="220" fill="#e2e8f0" font-family="system-ui" font-size="11">Build Status: ✅ Tamamlandı</text>
+  <text x="424" y="244" fill="#e2e8f0" font-family="system-ui" font-size="11">Deploy Target: Cloudflare Pages</text>
+  <rect x="424" y="260" width="160" height="32" rx="6" fill="#3b82f6"/>
+  <text x="440" y="280" fill="#fff" font-family="system-ui" font-size="11" font-weight="500">Build & Deploy</text>
+  <rect x="16" y="324" width="768" height="140" rx="8" fill="#1e293b"/>
+  <text x="32" y="346" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Build Log</text>
+  <text x="32" y="370" fill="#94a3b8" font-family="monospace" font-size="10">$ npm run build</text>
+  <text x="32" y="390" fill="#22c55e" font-family="monospace" font-size="10">✓ Build completed in 12.3s</text>
+  <text x="32" y="410" fill="#94a3b8" font-family="monospace" font-size="10">✓ 14 pages generated</text>
+  <text x="32" y="430" fill="#3b82f6" font-family="monospace" font-size="10">→ Ready for deploy</text>
+</svg>

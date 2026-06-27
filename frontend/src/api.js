@@ -43,7 +43,8 @@ API.interceptors.response.use(
         import("./auth").then(({ clearStoredToken }) => {
           clearStoredToken();
           if (window.location.pathname !== "/login") {
-            window.location.replace("/login");
+            const next = encodeURIComponent(window.location.pathname + window.location.search);
+            window.location.replace(`/login?session=expired&next=${next}`);
           }
         });
       }

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a2e"/>
+  <rect x="40" y="40" width="1200" height="640" rx="12" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
+  <text x="640" y="160" text-anchor="middle" fill="#e94560" font-family="monospace" font-size="32" font-weight="bold">TALON HUB</text>
+  <text x="640" y="210" text-anchor="middle" fill="#8899aa" font-family="monospace" font-size="18">Keyword Research &amp; Orchestrator</text>
+  <rect x="80" y="260" width="540" height="80" rx="8" fill="#0f3460" opacity="0.6"/>
+  <text x="100" y="295" fill="#66d9ef" font-family="monospace" font-size="14">🔍 Provider Status: SearXNG ✓ Tavily ✓ Exa ✗</text>
+  <text x="100" y="320" fill="#8899aa" font-family="monospace" font-size="12">API: ok · V2 Stack: 2 active · Orchestrator: ready</text>
+  <rect x="660" y="260" width="540" height="80" rx="8" fill="#0f3460" opacity="0.6"/>
+  <text x="680" y="295" fill="#a6e22e" font-family="monospace" font-size="14">📊 Quick Stats</text>
+  <text x="680" y="320" fill="#66d9ef" font-family="monospace" font-size="12">Keywords: 142 · Clusters: 18 · GEO Coverage: 67%</text>
+  <rect x="80" y="370" width="1120" height="280" rx="8" fill="#0f3460" opacity="0.3"/>
+  <text x="640" y="510" text-anchor="middle" fill="#555" font-family="monospace" font-size="24">📸 Screenshot Placeholder</text>
+  <text x="640" y="540" text-anchor="middle" fill="#555" font-family="monospace" font-size="14">Arama sonuçlarını burada göreceksiniz</text>
+</svg>

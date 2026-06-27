@@ -85,7 +85,8 @@ import CampaignEngine from "./pages/CampaignEngine";
 import AutonomousSEOAgent from "./pages/AutonomousSEOAgent";
 import MissionControlCenter from "./pages/MissionControlCenter";
 import HiveBrain from "./pages/HiveBrain";
-import HiveAcademy from "./pages/HiveAcademy";
+import HiveAcademy from "./pages/HiveAcademy.jsx";
+import HiveAcademyLegacy from "./pages/HiveAcademyLegacy";
 import HiveMentor from "./pages/HiveMentor";
 import FirstRunWizard from "./pages/FirstRunWizard";
 import HiveSuccessPath from "./pages/HiveSuccessPath";
@@ -703,6 +704,7 @@ const MODULE_LABELS = {
   rank_index_watcher: "Rank & Index Watcher",
   astro_auto_publisher: "Astro Auto Publisher",
   hive_academy: "HIVE Academy",
+  hive_academy_legacy: "HIVE Academy — Modül Rehberi",
   hive_mentor: "HIVE Mentor",
   first_run_wizard: "First Run Wizard",
   hive_success_path: "Success Path",
@@ -1127,6 +1129,9 @@ function App({ onLogout, user }) {
         )}
         {gosterge === "hive_academy" && (
           <HiveAcademy onNavigate={navigateTo} />
+        )}
+        {gosterge === "hive_academy_legacy" && (
+          <HiveAcademyLegacy onNavigate={navigateTo} />
         )}
         {gosterge === "hive_mentor" && (
           <HiveMentor onNavigate={navigateTo} />
@@ -1565,7 +1570,7 @@ function App({ onLogout, user }) {
         )}
         {gosterge === "domain_manager" && (
           <div className="modul-card">
-            <DomainManager />
+            <DomainManager onNavigate={navigateTo} />
           </div>
         )}
         {gosterge === "users" && (

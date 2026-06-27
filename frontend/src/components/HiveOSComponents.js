@@ -309,6 +309,98 @@ export function LearningProgressPanel({ learning, onNavigate }) {
   );
 }
 
+function rrsTone(score) {
+  if (score >= 95) return "success";
+  if (score >= 80) return "warning";
+  return "danger";
+}
+
+function toneClass(score, invert = false) {
+  const n = Number(score) || 0;
+  if (invert) {
+    if (n >= 70) return "danger";
+    if (n >= 40) return "warning";
+    return "success";
+  }
+  if (n >= 75) return "success";
+  if (n >= 50) return "warning";
+  return "danger";
+}
+
+export function ReleaseReadinessPanel({ release, onNavigate }) {
+  if (!release) return null;
+  const { rrs, cjcr, academy_health, qa_score, production_readiness, documentation_health, components, steps_complete, steps_total, qa_gate, qa_gate_all_pass, bugs, current_version, release_ready } = release;
+  const rrsT = rrsTone(rrs);
+
+  return (
+    <HivePanel title="Release Readiness" className="hive-os-rr hive-os-enter">
+      <div className="hive-os-rr-hero">
+        <div className={`hive-os-rr-score tone-${rrsT}`}>
+          <span className="hive-os-rr-value">{rrs}</span>
+          <span className="hive-os-rr-unit">/100</span>
+        </div>
+        <div className="hive-os-rr-meta">
+          <HiveBadge tone={release_ready ? "success" : "warning"}>{release_ready ? "Release Ready" : "Not Ready"}</HiveBadge>
+          <span className="hive-os-rr-version">v{current_version}</span>
+          <span className="hive-os-rr-steps">{steps_complete}/{steps_total} CJ adımı</span>
+        </div>
+      </div>
+
+      <div className="hive-os-rr-components">
+        {[
+          { label: "CJCR", value: cjcr, tone: toneClass(cjcr) },
+          { label: "Academy", value: academy_health, tone: toneClass(academy_health) },
+          { label: "QA", value: qa_score, tone: toneClass(qa_score) },
+          { label: "Production", value: production_readiness, tone: toneClass(production_readiness) },
+          { label: "Docs", value: documentation_health, tone: toneClass(documentation_health) },
+        ].map((c) => (
+          <div key={c.label} className={`hive-os-rr-comp tone-${c.tone}`}>
+            <span className="hive-os-rr-comp-label">{c.label}</span>
+            <span className="hive-os-rr-comp-value">{c.value}<small>%</small></span>
+          </div>
+        ))}
+      </div>
+
+      <div className="hive-os-rr-gates">
+        <h4>QA Gate</h4>
+        <div className="hive-os-rr-gate-grid">
+          {Object.entries(qa_gate || {}).map(([key, pass]) => (
+            <div key={key} className={`hive-os-rr-gate ${pass ? "pass" : "fail"}`}>
+              <span className="hive-os-rr-gate-icon">{pass ? "✓" : "✗"}</span>
+              <span className="hive-os-rr-gate-label">{key.replace(/_/g, " ")}</span>
+            </div>
+          ))}
+        </div>
+        <HiveBadge tone={qa_gate_all_pass ? "success" : "danger"}>
+          {qa_gate_all_pass ? "All PASS" : "Some FAIL"}
+        </HiveBadge>
+      </div>
+
+      <div className="hive-os-rr-bugs">
+        <h4>Bug Tracker</h4>
+        <div className="hive-os-rr-bug-grid">
+          {[
+            { label: "Critical", value: bugs?.critical || 0, tone: Number(bugs?.critical) > 0 ? "danger" : "success" },
+            { label: "High", value: bugs?.high || 0, tone: Number(bugs?.high) > 0 ? "warning" : "success" },
+            { label: "Medium", value: bugs?.medium || 0, tone: Number(bugs?.medium) > 0 ? "info" : "success" },
+            { label: "Low", value: bugs?.low || 0, tone: "neutral" },
+          ].map((b) => (
+            <div key={b.label} className={`hive-os-rr-bug tone-${b.tone}`}>
+              <span className="hive-os-rr-bug-value">{b.value}</span>
+              <span className="hive-os-rr-bug-label">{b.label}</span>
+            </div>
+          ))}
+        </div>
+        {Number(bugs?.critical) > 0 && (
+          <HiveBtn variant="secondary" size="sm" onClick={() => onNavigate?.("hive_audit_engine")}>
+            Critical Bugs var — geliştirme durduruldu
+          </HiveBtn>
+        )}
+      </div>
+    </HivePanel>
+  );
+}
+
 export function OrchestratorStatusPanel({ orchestrator, onNavigate }) {
   if (!orchestrator) return null;
   const mcc = orchestrator.mission_control || orchestrator;

@@ -3,24 +3,28 @@ import API from "../api";
 import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
 
 import {
-  HiveShell,
   HiveAlert,
-  HiveTabs,
-  HivePanel,
-  HiveStatGrid,
-  HiveField,
-  HiveInput,
   HiveBtn,
-  HiveTable,
   HiveCard,
   HiveCheck,
   HiveCode,
-  HiveMissionBoard,
-  HiveSection,
+  HiveConceptTooltip,
+  HiveField,
+  HiveInput,
   HiveIntegrationList,
+  HiveLabelWithTip,
+  HiveMissionBoard,
+  HivePanel,
+  HiveSection,
+  HiveShell,
+  HiveSkeleton,
+  HiveStatGrid,
   HiveStatusBadge,
-  HiveWorkerHealthCard,
+  HiveTable,
+  HiveTabs,
   HiveTaskTimeline,
+  HiveToast,
+  HiveWorkerHealthCard,
 } from "../components/HiveModuleUI";
 import { HivePanelHero, AuthorityMeshInteractiveGraph } from "../components/HiveOSVisualizations";
 
@@ -386,9 +390,10 @@ export default function AuthorityMeshEngine({ onNavigate }) {
       />
     <HiveShell title="" subtitle="">
       {error && <HiveAlert type="error">{error}</HiveAlert>}
-      {message && <HiveAlert type="success">{message}</HiveAlert>}
+      <HiveToast message={message} onClose={() => setMessage("")} />
 
       <HiveTabs tabs={TABS} active={tab} onChange={setTab} />
+      {loading && !dash && <HiveSkeleton lines={6} />}
 
       {tab === "dashboard" && (
         <>

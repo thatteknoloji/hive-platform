@@ -1,5 +1,21 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import {
+  HiveShell,
+  HiveAlert,
+  HiveToast,
+  HiveSkeleton,
+  HivePanel,
+  HiveSection,
+  HiveStatGrid,
+  HiveBtn,
+  HiveField,
+  HiveInput,
+  HiveCheck,
+  HiveTable,
+  HiveTabs,
+  HiveEmptyState,
+} from "../components/HiveModuleUI";
 
 const DEPLOY_TARGETS = [
   { id: "cloudflare_pages", label: "Cloudflare Pages" },
@@ -428,7 +444,9 @@ export default function AstroFactory({ onNavigateQualityGate }) {
   ];
 
   return (
-    <div className="category-hub astro-factory">
+    <HiveShell title="Astro Site Factory" subtitle="Astro tabanlı site üretim ve deploy fabrikası">
+      {error && <HiveAlert type="error">{error}</HiveAlert>}
+      <HiveToast message={message} onClose={() => setMessage("")} />
       <header className="ch-header">
         <h2>🚀 Astro Site Factory</h2>
         <p className="ch-sub">
@@ -468,6 +486,8 @@ export default function AstroFactory({ onNavigateQualityGate }) {
           </button>
         ))}
       </div>
+
+      {loading && <HiveSkeleton lines={6} />}
 
       {tab === "project" && (
         <div className="ch-panel">
@@ -514,18 +534,18 @@ export default function AstroFactory({ onNavigateQualityGate }) {
               <input type="number" className="storyforge-input" min={5} max={30} value={form.page_count} onChange={(e) => setForm({ ...form, page_count: Number(e.target.value) })} />
             </div>
           </div>
-          <button type="button" className="btn btn-primary ch-btn-create" onClick={handleCreate} disabled={loading}>
+          <HiveBtn onClick={handleCreate} disabled={loading}>
             {loading ? "…" : "✅ Proje Oluştur (gerçek klasör)"}
-          </button>
+          </HiveBtn>
         </div>
       )}
 
       {tab === "plan" && (
         <div className="ch-panel">
           <h4>Site haritası</h4>
-          <button type="button" className="btn btn-primary" onClick={handlePlan} disabled={loading || !activeProject}>
+          <HiveBtn onClick={handlePlan} disabled={loading || !activeProject}>
             {loading ? "…" : "🗺 Plan Üret (Talon)"}
-          </button>
+          </HiveBtn>
           {plan && (
             <div className="ch-preview-box">
               <strong>{plan.site_name}</strong>
@@ -540,9 +560,9 @@ export default function AstroFactory({ onNavigateQualityGate }) {
         <div className="ch-panel">
           <h4>İçerik + Astro dosyaları</h4>
           <p className="sf-dim">pages.json, faqs.json, blog.json, robots, sitemap, schema — gerçek dosya yazımı</p>
-          <button type="button" className="btn btn-primary" onClick={handleGeneratePages} disabled={loading || !activeProject}>
+          <HiveBtn onClick={handleGeneratePages} disabled={loading || !activeProject}>
             {loading ? "Üretiliyor…" : "📁 Sayfaları Üret"}
-          </button>
+          </HiveBtn>
         </div>
       )}
 
@@ -550,28 +570,18 @@ export default function AstroFactory({ onNavigateQualityGate }) {
         <div className="ch-panel">
           <h4>Build & Export</h4>
           <div className="ch-create-actions">
-            <button type="button" className="btn btn-secondary" onClick={handleBuild} disabled={loading || !activeProject}>
+            <HiveBtn onClick={handleBuild} disabled={loading || !activeProject}>
               {loading ? "…" : "🔨 npm install && npm run build"}
-            </button>
-            <button type="button" className="btn btn-primary" onClick={handleExport} disabled={loading || !activeProject}>
+            </HiveBtn>
+            <HiveBtn onClick={handleExport} disabled={loading || !activeProject}>
               📦 ZIP Export
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={handleQualityGate}
-              disabled={loading || !activeProject}
-            >
+            </HiveBtn>
+            <HiveBtn onClick={handleQualityGate} disabled={loading || !activeProject}>
               🛡️ SEO GEO AEO Gate Analizi
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={handleAutoScan}
-              disabled={loading || !activeProject}
-            >
+            </HiveBtn>
+            <HiveBtn onClick={handleAutoScan} disabled={loading || !activeProject}>
               🤖 Auto Publisher ile eksikleri tara
-            </button>
+            </HiveBtn>
           </div>
           {qgReport && (
             <div className="ch-preview-box" style={{ marginTop: "0.75rem" }}>
@@ -586,13 +596,9 @@ export default function AstroFactory({ onNavigateQualityGate }) {
                 {qgReport.geo_deploy_allowed === false && " · GEO deploy kapalı"}
               </p>
               {onNavigateQualityGate && (
-                <button
-                  type="button"
-                  className="btn-link"
-                  onClick={() => onNavigateQualityGate(activeProject?.id)}
-                >
+                <HiveBtn onClick={() => onNavigateQualityGate(activeProject?.id)}>
                   Detaylı raporu aç →
-                </button>
+                </HiveBtn>
               )}
             </div>
           )}
@@ -641,22 +647,18 @@ export default function AstroFactory({ onNavigateQualityGate }) {
             </div>
           </div>
           <div className="ch-create-actions">
-            <button
-              type="button"
-              className="btn btn-secondary"
+            <HiveBtn
               onClick={handleCfCreate}
               disabled={loading || !activeProject || !cfStatus?.configured}
             >
               Create Pages Project
-            </button>
-            <button
-              type="button"
-              className="btn btn-primary"
+            </HiveBtn>
+            <HiveBtn
               onClick={handleCfDeploy}
               disabled={loading || !activeProject || !cfStatus?.configured || !activeProject?.dist_exists}
             >
               {loading ? "Deploy…" : "🚀 Deploy to Cloudflare Pages"}
-            </button>
+            </HiveBtn>
           </div>
           {cfDeployUrl && (
             <p className="storyforge-ok">
@@ -698,13 +700,13 @@ export default function AstroFactory({ onNavigateQualityGate }) {
           {!activeProject && <p className="ch-warn">Önce bir proje seçin (Projeler sekmesi)</p>}
 
           <div className="storyforge-meta-row" style={{ marginBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
-            <button type="button" className="btn btn-primary" disabled={loading || !activeProject} onClick={handleAutoSyncAll}>
+            <HiveBtn disabled={loading || !activeProject} onClick={handleAutoSyncAll}>
               {loading ? "…" : "🔄 Sync All"}
-            </button>
-            <button type="button" className="btn btn-outline" disabled={loading || !activeProject} onClick={handleAutoScan}>Scan Missing</button>
-            <button type="button" className="btn btn-outline" disabled={loading || !activeProject} onClick={handleAutoQueue}>Queue Missing</button>
-            <button type="button" className="btn btn-outline" disabled={loading || !activeProject} onClick={handleAutoProcess}>Process Queue</button>
-            <button type="button" className="btn btn-outline" disabled={loading || !activeProject} onClick={handleAutoDeploy}>Deploy CF</button>
+            </HiveBtn>
+            <HiveBtn disabled={loading || !activeProject} onClick={handleAutoScan}>Scan Missing</HiveBtn>
+            <HiveBtn disabled={loading || !activeProject} onClick={handleAutoQueue}>Queue Missing</HiveBtn>
+            <HiveBtn disabled={loading || !activeProject} onClick={handleAutoProcess}>Process Queue</HiveBtn>
+            <HiveBtn disabled={loading || !activeProject} onClick={handleAutoDeploy}>Deploy CF</HiveBtn>
           </div>
 
           {autoHealth && (
@@ -751,14 +753,14 @@ export default function AstroFactory({ onNavigateQualityGate }) {
           {autoQueue.length > 0 && (
             <div style={{ marginTop: "1rem", overflowX: "auto" }}>
               <strong>Kuyruk ({autoQueue.length})</strong>
-              <table style={{ width: "100%", fontSize: "0.8rem", marginTop: 8 }}>
+              <HiveTable>
                 <thead><tr><th>Kaynak</th><th>Başlık</th><th>Slug</th><th>Tip</th><th>Durum</th></tr></thead>
                 <tbody>
                   {autoQueue.slice(0, 20).map((q, i) => (
                     <tr key={i}><td>{q.source}</td><td>{q.title}</td><td>{q.slug}</td><td>{q.type}</td><td>{q.status}</td></tr>
                   ))}
                 </tbody>
-              </table>
+              </HiveTable>
             </div>
           )}
 
@@ -787,15 +789,13 @@ export default function AstroFactory({ onNavigateQualityGate }) {
               <li key={p.id}>
                 <button type="button" className="ch-link-btn" onClick={() => loadProject(p.id)}>{p.site_name}</button>
                 <span className="sf-dim"> · {STATUS_LABEL[p.status]} · dist:{p.dist_exists ? "✓" : "—"}</span>
-                <button type="button" className="btn btn-outline btn-small" onClick={() => handleDelete(p.id)}>Sil</button>
+                <HiveBtn onClick={() => handleDelete(p.id)}>Sil</HiveBtn>
               </li>
             ))}
           </ul>
         </div>
       )}
 
-      {error && <p className="storyforge-error">{error}</p>}
-      {message && <p className="storyforge-ok">{message}</p>}
-    </div>
+    </HiveShell>
   );
 }

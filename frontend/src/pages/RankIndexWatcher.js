@@ -1,6 +1,20 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
 import ProviderSelector from "../components/ProviderSelector";
+import {
+  HiveShell,
+  HiveAlert,
+  HiveToast,
+  HiveSkeleton,
+  HiveTabs,
+  HivePanel,
+  HiveStatGrid,
+  HiveBtn,
+  HiveTable,
+  HiveSection,
+  HiveEmptyState,
+  HiveStatusBadge,
+} from "../components/HiveModuleUI";
 
 const TABS = [
   { id: "projects", label: "Projects" },
@@ -253,11 +267,10 @@ export default function RankIndexWatcher() {
     : null;
 
   return (
-    <div className="storyforge-panel">
-      <header className="storyforge-header">
-        <h2>📈 Rank &amp; Index Watcher</h2>
-        <p className="storyforge-sub">Yayınlanan sayfalar — index, sıra, GSC, AI Overview</p>
-      </header>
+    <HiveShell title="Rank & Index Watcher" subtitle="Sıralama ve indeks takip modülü">
+      {error && <HiveAlert type="error">{error}</HiveAlert>}
+      <HiveToast message={message} onClose={() => setMessage("")} />
+      {loading && !projects && <HiveSkeleton lines={6} />}
 
       <div className="storyforge-stats">
         <span className={health?.search_console ? "sf-ok" : "sf-warn"}>
@@ -319,14 +332,14 @@ export default function RankIndexWatcher() {
         </div>
       </div>
 
-      <div className="storyforge-stats" style={{ flexWrap: "wrap", gap: "0.5rem", marginBottom: "1rem" }}>
-        <MetricCard label="Indexed URLs" value={indexedCount || "—"} />
-        <MetricCard label="Avg Position" value={avgPos || perf?.avg_position || "—"} />
-        <MetricCard label="CTR" value={perf?.ctr != null ? `${(perf.ctr * 100).toFixed(2)}%` : "—"} />
-        <MetricCard label="Impressions" value={perf?.impressions ?? "—"} />
-        <MetricCard label="Clicks" value={perf?.clicks ?? "—"} />
-        <MetricCard label="AI Overview" value={lastResult?.has_ai_overview != null ? (lastResult.has_ai_overview ? "Var" : "Yok") : "—"} />
-      </div>
+      <HiveStatGrid stats={[
+        ["Indexed URLs", indexedCount || "—"],
+        ["Avg Position", avgPos || perf?.avg_position || "—"],
+        ["CTR", perf?.ctr != null ? `${(perf.ctr * 100).toFixed(2)}%` : "—"],
+        ["Impressions", perf?.impressions ?? "—"],
+        ["Clicks", perf?.clicks ?? "—"],
+        ["AI Overview", lastResult?.has_ai_overview != null ? (lastResult.has_ai_overview ? "Var" : "Yok") : "—"],
+      ]} />
 
       {tab === "projects" && (
         <section>
@@ -452,8 +465,6 @@ export default function RankIndexWatcher() {
         </pre>
       )}
 
-      {error && <p className="storyforge-error">{error}</p>}
-      {message && <p className="storyforge-ok">{message}</p>}
-    </div>
+    </HiveShell>
   );
 }

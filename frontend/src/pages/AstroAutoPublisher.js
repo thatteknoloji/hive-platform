@@ -1,5 +1,21 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
+import {
+  HiveShell,
+  HiveAlert,
+  HiveToast,
+  HiveSkeleton,
+  HivePanel,
+  HiveSection,
+  HiveStatGrid,
+  HiveBtn,
+  HiveField,
+  HiveInput,
+  HiveCheck,
+  HiveTable,
+  HiveTabs,
+  HiveEmptyState,
+} from "../components/HiveModuleUI";
 
 const TABS = [
   { id: "dashboard", label: "Dashboard" },
@@ -207,13 +223,9 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
   const dash = health?.dashboard || {};
 
   return (
-    <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-      <div style={{ marginBottom: "1rem" }}>
-        <h2 style={{ margin: 0 }}>🤖 Astro Auto Publisher</h2>
-        <p className="ch-sub" style={{ margin: "0.35rem 0 0" }}>
-          Gerçek tarama · Quality Gate · Astro JSON yazımı · build · Cloudflare deploy
-        </p>
-      </div>
+    <HiveShell title="Astro Auto Publisher" subtitle="Gerçek tarama · Quality Gate · Astro JSON yazımı · build · Cloudflare deploy">
+      {error && <HiveAlert type="error">{error}</HiveAlert>}
+      <HiveToast message={message} onClose={() => setMessage("")} />
 
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: "1rem", alignItems: "center" }}>
         <select value={projectId} onChange={(e) => setProjectId(e.target.value)} style={{ minWidth: 220, padding: "0.4rem" }}>
@@ -222,14 +234,13 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
             <option key={p.id} value={p.id}>{p.site_name || p.slug} ({p.id})</option>
           ))}
         </select>
-        <button type="button" className="btn btn-primary" onClick={runSyncAll} disabled={loading || !projectId}>
+        <HiveBtn onClick={runSyncAll} disabled={loading || !projectId}>
           Sync All
-        </button>
-        <button type="button" className="btn btn-secondary" onClick={refresh} disabled={loading}>Yenile</button>
+        </HiveBtn>
+        <HiveBtn onClick={refresh} disabled={loading}>Yenile</HiveBtn>
       </div>
 
-      {message && <div className="ch-alert ok" style={{ marginBottom: "0.75rem" }}>{message}</div>}
-      {error && <div className="ch-alert err" style={{ marginBottom: "0.75rem" }}>{error}</div>}
+
 
       <div className="ch-tabs" style={{ marginBottom: "1rem" }}>
         {TABS.map((t) => (
@@ -243,6 +254,8 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
           </button>
         ))}
       </div>
+
+      {loading && <HiveSkeleton lines={6} />}
 
       {tab === "dashboard" && (
         <div className="ch-panel">
@@ -303,8 +316,8 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
 
       {tab === "scan" && (
         <div className="ch-panel">
-          <button type="button" className="btn btn-primary" onClick={runScan} disabled={loading || !projectId}>Eksikleri Tara</button>
-          <button type="button" className="btn btn-secondary" onClick={runQueue} disabled={loading || !projectId} style={{ marginLeft: 8 }}>Kuyruğa Al</button>
+          <HiveBtn onClick={runScan} disabled={loading || !projectId}>Eksikleri Tara</HiveBtn>
+          <HiveBtn onClick={runQueue} disabled={loading || !projectId}>Kuyruğa Al</HiveBtn>
           {scanResult && (
             <ul style={{ marginTop: "1rem" }}>
               <li>Eksik: {scanResult.missing?.length || 0}</li>
@@ -318,7 +331,7 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
 
       {tab === "queue" && (
         <div className="ch-panel" style={{ overflowX: "auto" }}>
-          <table className="ch-table" style={{ width: "100%", fontSize: "0.82rem" }}>
+          <HiveTable>
             <thead>
               <tr>
                 <th>Item</th><th>Source</th><th>Type</th><th>Score</th><th>Status</th><th>Action</th>
@@ -337,21 +350,21 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
                     <td>{q.status}</td>
                     <td>
                       {q.status === "quality_failed" && (
-                        <button type="button" className="btn-link" onClick={() => ignoreWarning(q.queue_id)}>Ignore warning</button>
+                        <HiveBtn onClick={() => ignoreWarning(q.queue_id)}>Ignore warning</HiveBtn>
                       )}
                     </td>
                   </tr>
                 );
               })}
             </tbody>
-          </table>
+          </HiveTable>
         </div>
       )}
 
       {tab === "process" && (
         <div className="ch-panel">
-          <button type="button" className="btn btn-primary" onClick={runProcess} disabled={loading || !projectId}>Kuyruğu İşle (Build)</button>
-          <button type="button" className="btn btn-secondary" onClick={runDeploy} disabled={loading || !projectId} style={{ marginLeft: 8 }}>Deploy</button>
+          <HiveBtn onClick={runProcess} disabled={loading || !projectId}>Kuyruğu İşle (Build)</HiveBtn>
+          <HiveBtn onClick={runDeploy} disabled={loading || !projectId}>Deploy</HiveBtn>
           <p className="sf-dim" style={{ marginTop: "0.75rem" }}>
             auto_deploy varsayılan kapalı — Settings’ten açılabilir. Quality Gate fail varsa deploy engellenir.
           </p>
@@ -360,7 +373,7 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
 
       {tab === "jobs" && (
         <div className="ch-panel" style={{ overflowX: "auto" }}>
-          <table className="ch-table" style={{ width: "100%", fontSize: "0.82rem" }}>
+          <HiveTable>
             <thead><tr><th>Job</th><th>Type</th><th>Status</th><th>Project</th><th>Summary</th></tr></thead>
             <tbody>
               {jobs.length === 0 && <tr><td colSpan={5}>Job yok</td></tr>}
@@ -374,16 +387,16 @@ export default function AstroAutoPublisher({ preselectedProjectId = "" }) {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </HiveTable>
         </div>
       )}
 
       {tab === "reports" && (
         <div className="ch-panel">
-          <button type="button" className="btn btn-primary" onClick={runExport} disabled={loading}>Export Report</button>
+          <HiveBtn onClick={runExport} disabled={loading}>Export Report</HiveBtn>
           {exportPath && <p style={{ marginTop: "0.75rem" }}><code>{exportPath}</code></p>}
         </div>
       )}
-    </div>
+    </HiveShell>
   );
 }

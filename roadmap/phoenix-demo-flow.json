@@ -1,0 +1,116 @@
+{
+  "operation": "PHOENIX_PHASE2",
+  "metric": "demo_success_rate",
+  "target_percent": 100,
+  "demo_flow_order": [
+    "group_a",
+    "group_b",
+    "group_c",
+    "group_d",
+    "group_e"
+  ],
+  "groups": {
+    "group_a": {
+      "label": "Foundation — Proje & Erişim",
+      "demo_steps": [
+        "Giriş yap",
+        "Projects'te demo proje oluştur / seç",
+        "Aktif proje olarak işaretle",
+        "Mission Control dashboard'u aç",
+        "Users & Roles ile ekip üyesi göster"
+      ],
+      "modules": [
+        { "label": "Project Manager", "id": "projects", "academy_slug": "ilk-firma-nasil-eklenir", "page": "ProjectsHub" },
+        { "label": "Project Context", "id": "active_project_context", "academy_slug": "active-project-context", "backend": "project_context.py" },
+        { "label": "Dashboard", "id": "mission_control_center", "academy_slug": "mission_control_center", "page": "MissionControlCenter" },
+        { "label": "Users", "id": "users", "academy_slug": "users-permissions", "page": "UsersRoles" },
+        { "label": "Permissions", "id": "permissions", "academy_slug": "users-permissions", "backend": "panel_identity.py" }
+      ]
+    },
+    "group_b": {
+      "label": "SEO Core",
+      "demo_steps": [
+        "Talon ile keyword araştır",
+        "Entity Graph incele",
+        "Quality Gate çalıştır",
+        "SEO Audit raporu al"
+      ],
+      "modules": [
+        { "label": "SEO", "id": "campaign_engine", "academy_slug": "seo-geo-aeo-nedir" },
+        { "label": "Keyword", "id": "talon", "academy_slug": "talon", "page": "Talon" },
+        { "label": "Entity", "id": "entity_geo_graph", "academy_slug": "entity_geo_graph", "page": "EntityGeoGraph" },
+        { "label": "Quality Gate", "id": "seo_quality_gate", "academy_slug": "quality-gate-nedir", "page": "SEOQualityGate" },
+        { "label": "Entity Graph", "id": "entity_geo_graph", "academy_slug": "entity_geo_graph" },
+        { "label": "SEO Audit", "id": "seoaudit", "academy_slug": "seoaudit" }
+      ]
+    },
+    "group_c": {
+      "label": "Authority & Publish",
+      "demo_steps": [
+        "Authority Factory planı",
+        "Citation Engine analiz",
+        "Publisher Hub yayın",
+        "Authority Mesh ağ görünümü"
+      ],
+      "modules": [
+        { "label": "Authority", "id": "authority_factory", "academy_slug": "authority-factory-nedir", "page": "AuthorityFactory" },
+        { "label": "Authority Factory", "id": "authority_factory", "academy_slug": "authority-factory-nedir" },
+        { "label": "Citation", "id": "citation_engine", "academy_slug": "citation_engine", "page": "CitationEngine" },
+        { "label": "Publisher", "id": "publisher_hub", "academy_slug": "publisher-hub-nedir", "page": "PublisherHub" },
+        { "label": "Publisher Hub", "id": "publisher_hub", "academy_slug": "publisher-hub-nedir" },
+        { "label": "Authority Mesh", "id": "authority_mesh_engine", "academy_slug": "authority_mesh_engine", "page": "AuthorityMeshEngine" }
+      ]
+    },
+    "group_d": {
+      "label": "Publishing & Deploy",
+      "demo_steps": [
+        "Astro Factory site üret",
+        "Auto Publisher deploy",
+        "WordPress bağlantı",
+        "GitHub Pages mesh"
+      ],
+      "modules": [
+        { "label": "Astro", "id": "astro_factory", "academy_slug": "astro_factory", "page": "AstroFactory" },
+        { "label": "Site Factory", "id": "astro_factory", "academy_slug": "astro_factory" },
+        { "label": "Deploy", "id": "astro_auto_publisher", "academy_slug": "ilk-publish", "page": "AstroAutoPublisher" },
+        { "label": "Cloudflare", "id": "astro_auto_publisher", "academy_slug": "astro_auto_publisher" },
+        { "label": "Github", "id": "authority_mesh_engine", "academy_slug": "authority_mesh_engine", "mesh_tab": "github_pages" },
+        { "label": "WordPress", "id": "wordpress", "academy_slug": "wordpress", "page": "WPManager" }
+      ]
+    },
+    "group_e": {
+      "label": "Monitoring",
+      "demo_steps": [
+        "Rank & Index Watcher",
+        "SERP Defense",
+        "Provider / performance",
+        "Log inceleme"
+      ],
+      "modules": [
+        { "label": "Rank Watcher", "id": "rank_index_watcher", "academy_slug": "rank_index_watcher", "page": "RankTracker" },
+        { "label": "Index Watcher", "id": "rank_index_watcher", "academy_slug": "rank_index_watcher" },
+        { "label": "SERP", "id": "serp_defense_engine", "academy_slug": "serp_defense_engine", "page": "SerpDefenseEngine" },
+        { "label": "Performance", "id": "provider_control_center", "academy_slug": "provider_control_center", "page": "ProviderControlCenter" },
+        { "label": "Logs", "id": "log", "academy_slug": "log" }
+      ]
+    }
+  },
+  "checklist": [
+    "production_works",
+    "ui_complete",
+    "api_complete",
+    "error_handling",
+    "loading",
+    "toast",
+    "empty_state",
+    "tooltip",
+    "academy_doc",
+    "screenshot",
+    "workflow",
+    "api_docs",
+    "troubleshooting",
+    "changelog",
+    "tested",
+    "demo_scenario"
+  ]
+}

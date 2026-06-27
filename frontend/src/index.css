@@ -2988,6 +2988,51 @@ body {
   line-height: 1.45;
 }
 
+.hm-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: var(--hive-radius-sm);
+  background: rgba(34, 80, 50, 0.95);
+  border: 1px solid var(--hive-success, #4ade80);
+  color: #bbf7d0;
+  font-size: 0.875rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hm-toast-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.hm-skeleton-wrap { padding: 0.5rem 0; }
+
+.hm-skeleton {
+  height: 0.875rem;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.06) 75%);
+  background-size: 200% 100%;
+  animation: hm-shimmer 1.2s infinite;
+}
+
+.hm-skeleton-lg { height: 1.5rem; width: 55%; }
+
+@keyframes hm-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* Alert pulse */
 .hm-alert-pulse {
   animation: hive-pulse-soft 2.5s ease-in-out infinite;
@@ -6210,6 +6255,20 @@ body {
   color: #ff8a8a;
   font-size: 0.8rem;
 }
+.hive-login-warn {
+  background: rgba(255, 193, 7, 0.12);
+  color: #ffc107;
+}
+.hive-login-footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.78rem;
+}
+.hive-login-footer a {
+  color: #8b949e;
+  text-decoration: none;
+}
+.hive-login-footer a:hover { color: #c9a227; }
 .hive-topbar-user {
   font-size: 0.72rem;
   opacity: 0.65;
@@ -6247,6 +6306,126 @@ body {
   border-color: rgba(99, 179, 237, 0.45);
   transform: translateY(-1px);
 }
+
+.hive-project-card--active {
+  border-color: rgba(201, 162, 39, 0.65);
+  box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.25);
+}
+
+.hive-project-active-pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #c9a227;
+  background: rgba(201, 162, 39, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.hive-project-demo-banner {
+  margin-bottom: 12px;
+  border-color: rgba(201, 162, 39, 0.35);
+}
+
+.hive-domain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 900px) {
+  .hive-domain-grid { grid-template-columns: 1fr; }
+}
+.hive-domain-hint {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin: 0 0 12px;
+}
+.hive-domain-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  margin: 12px 0;
+  cursor: pointer;
+}
+.hive-domain-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+.hive-domain-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.88rem;
+}
+.hive-domain-status-label { opacity: 0.7; }
+.hive-domain-status-value.ok { color: #3ecf8e; }
+.hive-domain-status-value.warn { color: #d29922; }
+.hive-domain-journey-note { margin-top: 8px; opacity: 0.9; }
+
+.cj-card { margin-bottom: 16px; }
+.cj-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.cj-metric { display: flex; align-items: baseline; gap: 8px; }
+.cj-metric-label { font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; }
+.cj-metric-value { font-size: 1.75rem; font-weight: 700; color: #c9a227; }
+.cj-metric-target { font-size: 0.8rem; opacity: 0.65; }
+.cj-demo-badge {
+  font-size: 0.82rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  background: rgba(201, 162, 39, 0.12);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+}
+.cj-demo-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3ecf8e;
+  margin-right: 6px;
+}
+.cj-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.cj-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+}
+.cj-step-num { font-size: 0.7rem; opacity: 0.6; }
+.cj-step-label { font-size: 0.85rem; font-weight: 600; }
+.cj-step-status { font-size: 0.72rem; opacity: 0.75; }
+.cj-step--completed { border-color: rgba(62, 207, 142, 0.45); }
+.cj-step--progress { border-color: rgba(201, 162, 39, 0.5); }
+.cj-step--pending { opacity: 0.85; }
+.cj-step--blocked { border-color: rgba(255, 107, 107, 0.45); }
+.cj-card-foot { display: flex; gap: 8px; flex-wrap: wrap; }
 
 .hive-project-card-head {
   display: flex;

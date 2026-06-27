@@ -3,6 +3,9 @@ import API from "../api";
 import {
   HiveShell,
   HiveAlert,
+  HiveToast,
+  HiveSkeleton,
+  HiveEmptyState,
   HiveTabs,
   HivePanel,
   HiveStatGrid,
@@ -283,7 +286,7 @@ export default function SerpDefenseEngine({ preselectedProjectId = "" }) {
         subtitle="Keyword fortress — baskı tespiti, risk haritası ve savunma planı"
       />
     <HiveShell title="" subtitle="">
-      {message && <HiveAlert tone="ok" onClose={() => setMessage("")}>{message}</HiveAlert>}
+      <HiveToast message={message} onClose={() => setMessage("")} />
       {error && <HiveAlert tone="danger" onClose={() => setError("")}>{error}</HiveAlert>}
 
       <HiveContextBar>
@@ -299,6 +302,7 @@ export default function SerpDefenseEngine({ preselectedProjectId = "" }) {
       </HiveContextBar>
 
       <HiveTabs tabs={TABS} active={tab} onChange={setTab} />
+      {loading && !dash && <HiveSkeleton lines={6} />}
 
       {tab === "dashboard" && (
         <>

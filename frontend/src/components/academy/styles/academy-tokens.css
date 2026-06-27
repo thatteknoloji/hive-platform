@@ -1,0 +1,20 @@
+/* HIVE Academy Enterprise — Design Tokens */
+.academy-enterprise {
+  --academy-gold: #d4a853;
+  --academy-gold-light: #f0d78c;
+  --academy-gold-dim: rgba(212, 168, 83, 0.15);
+  --academy-gold-glow: rgba(212, 168, 83, 0.35);
+  --academy-navy: #0a0e1a;
+  --academy-navy-mid: #0f1628;
+  --academy-navy-light: #151d32;
+  --academy-black: #050608;
+  --academy-text: rgba(255, 255, 255, 0.92);
+  --academy-text-muted: rgba(255, 255, 255, 0.55);
+  --academy-border: rgba(255, 255, 255, 0.08);
+  --academy-glass: rgba(15, 22, 40, 0.72);
+  --academy-glass-border: rgba(255, 255, 255, 0.1);
+  --academy-radius: 14px;
+  --academy-radius-sm: 8px;
+  --academy-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --academy-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

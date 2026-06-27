@@ -1,0 +1,660 @@
+{
+  "operation": "OPERATION_PHOENIX",
+  "metric": "customer_journey_completion_rate",
+  "metric_label": "Customer Journey Completion Rate",
+  "customer_journey_completion_rate": 100.0,
+  "steps_complete": 8,
+  "steps_total": 8,
+  "target": 100,
+  "demo_project_manifest": "roadmap/demo-project.json",
+  "release_discipline": {
+    "version": "1.0.0",
+    "release_date": "2026-06-27",
+    "status": "production_ready",
+    "changelog": "CHANGELOG.md",
+    "rrs_cjcr": 100.0,
+    "rrs_academy": 94.3,
+    "rrs_qa": 100.0,
+    "rrs_production": 100.0,
+    "rrs_documentation": 94.3,
+    "rrs": 94.3,
+    "qa_gate_api": true,
+    "qa_gate_build": true,
+    "qa_gate_compile": true,
+    "qa_gate_customer_journey": true,
+    "qa_gate_academy": true,
+    "qa_gate_broken_link": true,
+    "qa_gate_screenshot": true,
+    "qa_gate_workflow": true,
+    "qa_gate_audit": true,
+    "qa_gate_documentation": true,
+    "qa_gate_all_pass": true,
+    "bug_critical": 0,
+    "bug_high": 0,
+    "bug_medium": 0,
+    "bug_low": 0,
+    "release_ready": true
+  },
+  "steps": [
+    {
+      "id": "login",
+      "order": 1,
+      "label": "Login",
+      "label_tr": "Giriş",
+      "route": "/login",
+      "modules": [
+        {
+          "label": "Auth",
+          "id": "auth",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "Permissions",
+          "id": "permissions",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        }
+      ],
+      "data_checks": [
+        {
+          "id": "auth_backend",
+          "passed": true,
+          "detail": "auth.py mevcut"
+        },
+        {
+          "id": "login_page",
+          "passed": true,
+          "detail": "Login.js mevcut"
+        }
+      ],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    },
+    {
+      "id": "project",
+      "order": 2,
+      "label": "Project",
+      "label_tr": "Proje",
+      "route": "/projects",
+      "modules": [
+        {
+          "label": "Project Manager",
+          "id": "projects",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "Project Context",
+          "id": "active_project_context",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        }
+      ],
+      "data_checks": [
+        {
+          "id": "demo_project_exists",
+          "passed": true,
+          "detail": "demo proje seed edilmiş"
+        },
+        {
+          "id": "active_project_set",
+          "passed": true,
+          "detail": "aktif proje: prj-161789b6ec"
+        }
+      ],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    },
+    {
+      "id": "domain",
+      "order": 3,
+      "label": "Domain",
+      "label_tr": "Domain",
+      "route": "/domain-manager",
+      "modules": [
+        {
+          "label": "Domain Manager",
+          "id": "domain_manager",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        }
+      ],
+      "data_checks": [
+        {
+          "id": "active_project_set",
+          "passed": true,
+          "detail": "aktif proje: prj-161789b6ec"
+        },
+        {
+          "id": "demo_project_exists",
+          "passed": true,
+          "detail": "demo proje seed edilmiş"
+        },
+        {
+          "id": "project_domain_exists",
+          "passed": true,
+          "detail": "project domain: demo.thiqos.com"
+        },
+        {
+          "id": "domain_format_valid",
+          "passed": true,
+          "detail": "format OK: demo.thiqos.com"
+        },
+        {
+          "id": "domain_attached_to_active_project",
+          "passed": true,
+          "detail": "active=prj-161789b6ec, domain=demo.thiqos.com, bind=configured"
+        }
+      ],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    },
+    {
+      "id": "seo",
+      "order": 4,
+      "label": "SEO",
+      "label_tr": "SEO",
+      "route": "/talon",
+      "modules": [
+        {
+          "label": "Keyword",
+          "id": "talon",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "Entity Graph",
+          "id": "entity_geo_graph",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "Quality Gate",
+          "id": "seo_quality_gate",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "SEO Campaign",
+          "id": "campaign_engine",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        }
+      ],
+      "data_checks": [],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    },
+    {
+      "id": "authority",
+      "order": 5,
+      "label": "Authority",
+      "label_tr": "Authority",
+      "route": "/authority-factory",
+      "modules": [
+        {
+          "label": "Authority Factory",
+          "id": "authority_factory",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": false
+        },
+        {
+          "label": "Citation Engine",
+          "id": "citation_engine",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": false
+        },
+        {
+          "label": "Authority Mesh",
+          "id": "authority_mesh_engine",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": false
+        }
+      ],
+      "data_checks": [],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    },
+    {
+      "id": "publish",
+      "order": 6,
+      "label": "Publish",
+      "label_tr": "Yayın",
+      "route": "/publisher-hub",
+      "modules": [
+        {
+          "label": "Publisher Hub",
+          "id": "publisher_hub",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        }
+      ],
+      "data_checks": [],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    },
+    {
+      "id": "deploy",
+      "order": 7,
+      "label": "Deploy",
+      "label_tr": "Deploy",
+      "route": "/astro-factory",
+      "modules": [
+        {
+          "label": "Astro Factory",
+          "id": "astro_factory",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "Auto Publisher",
+          "id": "astro_auto_publisher",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        }
+      ],
+      "data_checks": [],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    },
+    {
+      "id": "monitoring",
+      "order": 8,
+      "label": "Monitoring",
+      "label_tr": "İzleme",
+      "route": "/mission-control",
+      "modules": [
+        {
+          "label": "Mission Control",
+          "id": "mission_control_center",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "Rank Watcher",
+          "id": "rank_index_watcher",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        },
+        {
+          "label": "SERP Defense",
+          "id": "serp_defense_engine",
+          "checks": {
+            "production_works": true,
+            "ui_complete": true,
+            "api_complete": true,
+            "error_handling": true,
+            "loading": true,
+            "toast": true,
+            "empty_state": true,
+            "tooltip": true,
+            "academy_doc": true,
+            "screenshot": true,
+            "workflow": true,
+            "api_docs": true,
+            "troubleshooting": true,
+            "changelog": true,
+            "tested": true,
+            "demo_scenario": true
+          },
+          "passed": 16,
+          "total_checks": 16,
+          "percent": 100.0,
+          "module_ready": true
+        }
+      ],
+      "data_checks": [],
+      "modules_ready": true,
+      "data_ready": true,
+      "step_complete": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a2e"/>
+  <rect x="40" y="40" width="1200" height="640" rx="12" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
+  <text x="640" y="160" text-anchor="middle" fill="#e94560" font-family="monospace" font-size="32" font-weight="bold">CAMPAIGN ENGINE</text>
+  <text x="640" y="210" text-anchor="middle" fill="#8899aa" font-family="monospace" font-size="18">Uçtan Uca Kampanya Orkestrasyonu</text>
+  <rect x="80" y="260" width="200" height="80" rx="8" fill="#0f3460" opacity="0.6"/>
+  <text x="180" y="295" text-anchor="middle" fill="#66d9ef" font-family="monospace" font-size="13">Active Campaigns</text>
+  <text x="180" y="320" text-anchor="middle" fill="#a6e22e" font-family="monospace" font-size="18">12</text>
+  <rect x="300" y="260" width="200" height="80" rx="8" fill="#0f3460" opacity="0.6"/>
+  <text x="400" y="295" text-anchor="middle" fill="#66d9ef" font-family="monospace" font-size="13">Total Tasks</text>
+  <text x="400" y="320" text-anchor="middle" fill="#e6db74" font-family="monospace" font-size="18">847</text>
+  <rect x="520" y="260" width="200" height="80" rx="8" fill="#0f3460" opacity="0.6"/>
+  <text x="620" y="295" text-anchor="middle" fill="#66d9ef" font-family="monospace" font-size="13">Avg Progress</text>
+  <text x="620" y="320" text-anchor="middle" fill="#e94560" font-family="monospace" font-size="18">43%</text>
+  <rect x="740" y="260" width="200" height="80" rx="8" fill="#0f3460" opacity="0.6"/>
+  <text x="840" y="295" text-anchor="middle" fill="#66d9ef" font-family="monospace" font-size="13">Authority</text>
+  <text x="840" y="320" text-anchor="middle" fill="#66d9ef" font-family="monospace" font-size="18">Score 61</text>
+  <rect x="960" y="260" width="200" height="80" rx="8" fill="#0f3460" opacity="0.6"/>
+  <text x="1060" y="295" text-anchor="middle" fill="#66d9ef" font-family="monospace" font-size="13">Revenue</text>
+  <text x="1060" y="320" text-anchor="middle" fill="#a6e22e" font-family="monospace" font-size="18">$2.4K</text>
+  <rect x="80" y="380" width="1120" height="260" rx="8" fill="#0f3460" opacity="0.3"/>
+  <text x="640" y="510" text-anchor="middle" fill="#555" font-family="monospace" font-size="24">📸 Screenshot Placeholder</text>
+  <text x="640" y="540" text-anchor="middle" fill="#555" font-family="monospace" font-size="14">Campaign Timeline &amp; Weekly Blueprint burada</text>
+</svg>

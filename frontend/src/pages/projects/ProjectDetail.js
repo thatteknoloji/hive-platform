@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import API from "../../api";
+import { useActiveProject } from "../../context/ActiveProjectContext";
 import {
   HiveShell,
   HiveAlert,
@@ -8,6 +9,7 @@ import {
   HiveBtn,
   HiveStatusBadge,
   HiveTable,
+  HiveToast,
 } from "../../components/HiveModuleUI";
 import { sectorLabel, deployLabel } from "../../config/projectSectors";
 import {
@@ -121,10 +123,12 @@ function PagePreviewModal({ page, onClose }) {
 }
 
 export default function ProjectDetail({ projectId, onNavigate }) {
+  const { activeProjectId, refresh: refreshActive } = useActiveProject();
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [actionMsg, setActionMsg] = useState("");
+  const [toast, setToast] = useState("");
   const [busy, setBusy] = useState("");
   const [previewPage, setPreviewPage] = useState(null);
   const [validationResult, setValidationResult] = useState(null);
@@ -156,6 +160,27 @@ export default function ProjectDetail({ projectId, onNavigate }) {
   useEffect(() => {
     load();
   }, [load]);
+
+  useEffect(() => {
+    if (!toast) return undefined;
+    const t = setTimeout(() => setToast(""), 3500);
+    return () => clearTimeout(t);
+  }, [toast]);
+
+  const setAsActive = async () => {
+    setBusy("active");
+    setError("");
+    try {
+      await API.post(`/api/v3/projects/${projectId}/set-active`);
+      window.dispatchEvent(new CustomEvent("hive-active-project-changed"));
+      await refreshActive();
+      setToast(`"${project?.name || "Proje"}" aktif proje olarak seçildi.`);
+    } catch (e) {
+      setError(apiError(e));
+    } finally {
+      setBusy("");
+    }
+  };
 
   const runValidateBuild = async () => {
     setBusy("validate");
@@ -394,6 +419,19 @@ export default function ProjectDetail({ projectId, onNavigate }) {
       actions={(
         <>
           <HiveStatusBadge status={project.status} />
+          {activeProjectId !== projectId && (
+            <HiveBtn
+              variant="primary"
+              disabled={!!busy}
+              title="Bu projeyi aktif proje yap"
+              onClick={setAsActive}
+            >
+              {busy === "active" ? "Seçiliyor…" : "Aktif Proje Yap"}
+            </HiveBtn>
+          )}
+          {activeProjectId === projectId && (
+            <span className="hive-project-active-pill" title="Şu an aktif proje">Aktif proje</span>
+          )}
           {!hasSite && (
             <HiveBtn disabled={!!busy} onClick={() => runAction("retro", () => API.post(`/api/v3/projects/${projectId}/retro-seed`))}>
               Skeleton Oluştur
@@ -418,6 +456,7 @@ export default function ProjectDetail({ projectId, onNavigate }) {
     >
       {error && <HiveAlert type="error">{error}</HiveAlert>}
       {actionMsg && <HiveAlert type="ok">{actionMsg}</HiveAlert>}
+      {toast && <HiveToast message={toast} onClose={() => setToast("")} />}
 
       <HiveStatGrid stats={stats} />
 

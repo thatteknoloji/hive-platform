@@ -1,0 +1,1522 @@
+{
+  "title": "HIVE Academy",
+  "version": "2.0.0",
+  "last_updated": "2026-06-27",
+  "module_encyclopedia_count": 116,
+  "sections": [
+    {
+      "title": "Başlangıç",
+      "slug": "baslangic",
+      "items": [
+        {
+          "title": "HIVE Nedir?",
+          "slug": "hive-nedir",
+          "path": "00-baslangic/001-hive-nedir.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "HIVE Ne Değildir?",
+          "slug": "hive-ne-degildir",
+          "path": "00-baslangic/002-hive-ne-degildir.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "SEO, GEO ve AEO Nedir?",
+          "slug": "seo-geo-aeo-nedir",
+          "path": "00-baslangic/003-seo-geo-aeo-nedir.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "HIVE Mantığı",
+          "slug": "hive-mantigi",
+          "path": "00-baslangic/004-hive-mantigi.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        }
+      ]
+    },
+    {
+      "title": "İlk Gün",
+      "slug": "ilk-gun",
+      "items": [
+        {
+          "title": "İlk Giriş",
+          "slug": "ilk-giris",
+          "path": "01-ilk-gun/001-ilk-giris.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "Paneli Tanıyalım",
+          "slug": "paneli-taniyalim",
+          "path": "01-ilk-gun/002-paneli-taniyalim.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "İlk Firma Nasıl Eklenir?",
+          "slug": "ilk-firma-nasil-eklenir",
+          "path": "01-ilk-gun/003-ilk-firma-nasil-eklenir.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "İlk Domain Nasıl Eklenir?",
+          "slug": "ilk-domain-nasil-eklenir",
+          "path": "01-ilk-gun/004-ilk-domain-nasil-eklenir.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "İlk SEO Analizi",
+          "slug": "ilk-seo-analizi",
+          "path": "01-ilk-gun/005-ilk-seo-analizi.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        },
+        {
+          "title": "İlk Publish",
+          "slug": "ilk-publish",
+          "path": "01-ilk-gun/006-ilk-publish.md",
+          "level": "Beginner",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Beginner"
+        }
+      ]
+    },
+    {
+      "title": "Firma & Proje Yönetimi",
+      "slug": "firma-proje",
+      "items": [
+        {
+          "title": "Project Nedir?",
+          "slug": "project-nedir",
+          "path": "02-firma-proje-yonetimi/001-project-nedir.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Intermediate"
+        },
+        {
+          "title": "Active Project Context Nedir?",
+          "slug": "active-project-context",
+          "path": "02-firma-proje-yonetimi/002-active-project-context.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Intermediate"
+        },
+        {
+          "title": "Users & Permissions",
+          "slug": "users-permissions",
+          "path": "02-firma-proje-yonetimi/003-users-permissions.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "8",
+          "difficulty": "Orta"
+        }
+      ]
+    },
+    {
+      "title": "SEO / GEO / AEO",
+      "slug": "seo-geo-aeo",
+      "items": [
+        {
+          "title": "Talon Nedir?",
+          "slug": "talon-nedir",
+          "path": "03-seo-geo-aeo/001-talon.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Intermediate"
+        },
+        {
+          "title": "Entity & GEO Graph Nedir?",
+          "slug": "entity-geo-graph-nedir",
+          "path": "03-seo-geo-aeo/002-entity-geo-graph.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Intermediate"
+        },
+        {
+          "title": "Campaign Engine Nedir?",
+          "slug": "campaign-engine-nedir",
+          "path": "03-seo-geo-aeo/003-campaign-engine.md",
+          "level": "Advanced",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Advanced"
+        },
+        {
+          "title": "Quality Gate Nedir?",
+          "slug": "quality-gate-nedir",
+          "path": "03-seo-geo-aeo/005-quality-gate.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Intermediate"
+        }
+      ]
+    },
+    {
+      "title": "Authority",
+      "slug": "authority",
+      "items": [
+        {
+          "title": "Authority Factory Nedir?",
+          "slug": "authority-factory-nedir",
+          "path": "04-authority/002-authority-factory.md",
+          "level": "Advanced",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Advanced"
+        },
+        {
+          "title": "Citation Engine Nedir?",
+          "slug": "citation-engine-nedir",
+          "path": "04-authority/002-citation-engine.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Intermediate"
+        },
+        {
+          "title": "Authority Mesh Engine Nedir?",
+          "slug": "authority-mesh-engine-nedir",
+          "path": "04-authority/003-authority-mesh-engine.md",
+          "level": "Advanced",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Advanced"
+        },
+        {
+          "title": "Publisher Hub Nedir?",
+          "slug": "publisher-hub-nedir",
+          "path": "04-authority/004-publisher-hub.md",
+          "level": "Intermediate",
+          "status": "published",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Intermediate"
+        },
+        {
+          "title": "Astro Factory Nedir?",
+          "slug": "astro-factory-nedir",
+          "path": "04-authority/005-astro-factory.md",
+          "level": "Advanced",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Advanced"
+        },
+        {
+          "title": "Rank & Index Watcher Nedir?",
+          "slug": "rank-index-watcher-nedir",
+          "path": "04-authority/007-rank-index-watcher.md",
+          "level": "Advanced",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Advanced"
+        },
+        {
+          "title": "SERP Defense Engine Nedir?",
+          "slug": "serp-defense-engine-nedir",
+          "path": "04-authority/008-serp-defense-engine.md",
+          "level": "Advanced",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Advanced"
+        }
+      ]
+    },
+    {
+      "title": "Modül Ansiklopedisi",
+      "slug": "modul-ansiklopedisi",
+      "items": [
+        {
+          "title": "Modül Ansiklopedisi",
+          "slug": "modul-ansiklopedisi",
+          "path": "06-modul-ansiklopedisi/README.md",
+          "level": "Reference",
+          "status": "published",
+          "last_updated": "2026-06-26"
+        },
+        {
+          "title": "A/B Test",
+          "slug": "abtest",
+          "path": "06-modul-ansiklopedisi/abtest.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "AI Chat (Llama 3.1)",
+          "slug": "ai_chat",
+          "path": "06-modul-ansiklopedisi/ai_chat.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "AI Citation Tracker",
+          "slug": "ai_citation",
+          "path": "06-modul-ansiklopedisi/ai_citation.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "AI Agent Infiltrator",
+          "slug": "aiagent",
+          "path": "06-modul-ansiklopedisi/aiagent.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Alert System",
+          "slug": "alert",
+          "path": "06-modul-ansiklopedisi/alert.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Analytics Hub",
+          "slug": "analytics",
+          "path": "06-modul-ansiklopedisi/analytics.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "API Hunter Ultra",
+          "slug": "apihunter",
+          "path": "06-modul-ansiklopedisi/apihunter.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Astro Auto Publisher",
+          "slug": "astro_auto_publisher",
+          "path": "06-modul-ansiklopedisi/astro_auto_publisher.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Astro Site Factory",
+          "slug": "astro_factory",
+          "path": "06-modul-ansiklopedisi/astro_factory.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Authority Mesh Engine",
+          "slug": "authority_mesh_engine",
+          "path": "06-modul-ansiklopedisi/authority_mesh_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Auto Blog",
+          "slug": "autoblog",
+          "path": "06-modul-ansiklopedisi/autoblog.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Autonomous SEO Agent",
+          "slug": "autonomous_seo_agent",
+          "path": "06-modul-ansiklopedisi/autonomous_seo_agent.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Backlink Hunter",
+          "slug": "backlink_hunter",
+          "path": "06-modul-ansiklopedisi/backlink_hunter.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Backlink Hijacker",
+          "slug": "backlinkhijacker",
+          "path": "06-modul-ansiklopedisi/backlinkhijacker.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Backup Center",
+          "slug": "backup",
+          "path": "06-modul-ansiklopedisi/backup.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Full Black Ops",
+          "slug": "blackops",
+          "path": "06-modul-ansiklopedisi/blackops.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Blogger Yöneticisi",
+          "slug": "blogger",
+          "path": "06-modul-ansiklopedisi/blogger.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Brand Mention Blaster",
+          "slug": "brandmention",
+          "path": "06-modul-ansiklopedisi/brandmention.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "BrandMentions",
+          "slug": "brandmentions",
+          "path": "06-modul-ansiklopedisi/brandmentions.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "BTK Gargoyle",
+          "slug": "btk",
+          "path": "06-modul-ansiklopedisi/btk.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Campaign Engine",
+          "slug": "campaign_engine",
+          "path": "06-modul-ansiklopedisi/campaign_engine.md",
+          "level": "Reference",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Citation Builder",
+          "slug": "citation",
+          "path": "06-modul-ansiklopedisi/citation.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Citation Engine",
+          "slug": "citation_engine",
+          "path": "06-modul-ansiklopedisi/citation_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Competitor Intel",
+          "slug": "competitor",
+          "path": "06-modul-ansiklopedisi/competitor.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Competitor Backlink Hijacker",
+          "slug": "competitor_hijacker",
+          "path": "06-modul-ansiklopedisi/competitor_hijacker.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Content Refresh Engine",
+          "slug": "content_refresh_engine",
+          "path": "06-modul-ansiklopedisi/content_refresh_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Content Generator",
+          "slug": "contentgen",
+          "path": "06-modul-ansiklopedisi/contentgen.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Conversion Tracker",
+          "slug": "conversion",
+          "path": "06-modul-ansiklopedisi/conversion.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Crawl & Gap Engine",
+          "slug": "crawl_gap_engine",
+          "path": "06-modul-ansiklopedisi/crawl_gap_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Crisis Monitor",
+          "slug": "crisis",
+          "path": "06-modul-ansiklopedisi/crisis.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Data Miner Engine",
+          "slug": "data_miner_engine",
+          "path": "06-modul-ansiklopedisi/data_miner_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "DataSEO",
+          "slug": "dataseo",
+          "path": "06-modul-ansiklopedisi/dataseo.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "DDoS Mitigation",
+          "slug": "ddos",
+          "path": "06-modul-ansiklopedisi/ddos.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Debug Console",
+          "slug": "debug",
+          "path": "06-modul-ansiklopedisi/debug.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Directory Submitter",
+          "slug": "directory_submitter",
+          "path": "06-modul-ansiklopedisi/directory_submitter.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "E-posta Blast",
+          "slug": "emailblast",
+          "path": "06-modul-ansiklopedisi/emailblast.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Entity Detail Generator",
+          "slug": "entity_detail_generator",
+          "path": "06-modul-ansiklopedisi/entity_detail_generator.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Entity & GEO Graph",
+          "slug": "entity_geo_graph",
+          "path": "06-modul-ansiklopedisi/entity_geo_graph.md",
+          "level": "Reference",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Executive AI",
+          "slug": "executive_ai",
+          "path": "06-modul-ansiklopedisi/executive_ai.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Expired Domain Avcısı",
+          "slug": "expireddomain",
+          "path": "06-modul-ansiklopedisi/expireddomain.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Exposed Key Hunter",
+          "slug": "exposedkeyhunter",
+          "path": "06-modul-ansiklopedisi/exposedkeyhunter.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Forecast Engine",
+          "slug": "forecast",
+          "path": "06-modul-ansiklopedisi/forecast.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Funnel Analyzer",
+          "slug": "funnel",
+          "path": "06-modul-ansiklopedisi/funnel.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Heatmap",
+          "slug": "heatmap",
+          "path": "06-modul-ansiklopedisi/heatmap.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "HIVE Audit Engine",
+          "slug": "hive_audit_engine",
+          "path": "06-modul-ansiklopedisi/hive_audit_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "HIVE Brain / Memory",
+          "slug": "hive_brain_engine",
+          "path": "06-modul-ansiklopedisi/hive_brain_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Hyperlocal Hikaye Üretici",
+          "slug": "hyperlocal",
+          "path": "06-modul-ansiklopedisi/hyperlocal.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Indexing Accelerator",
+          "slug": "indexing",
+          "path": "06-modul-ansiklopedisi/indexing.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "IndexNow",
+          "slug": "indexnow",
+          "path": "06-modul-ansiklopedisi/indexnow.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Internal Link Builder",
+          "slug": "internal_link_builder",
+          "path": "06-modul-ansiklopedisi/internal_link_builder.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Internal Link Optimizer",
+          "slug": "internallink",
+          "path": "06-modul-ansiklopedisi/internallink.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "KEFEN (Catastrophe)",
+          "slug": "kefen",
+          "path": "06-modul-ansiklopedisi/kefen.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Keyword Research",
+          "slug": "keywordresearch",
+          "path": "06-modul-ansiklopedisi/keywordresearch.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Lead Scraper",
+          "slug": "leadscraper",
+          "path": "06-modul-ansiklopedisi/leadscraper.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Link Builder",
+          "slug": "linkbuilder",
+          "path": "06-modul-ansiklopedisi/linkbuilder.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "LinkSprayer",
+          "slug": "linksprayer",
+          "path": "06-modul-ansiklopedisi/linksprayer.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Local SEO",
+          "slug": "localseo",
+          "path": "06-modul-ansiklopedisi/localseo.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Log Viewer",
+          "slug": "log",
+          "path": "06-modul-ansiklopedisi/log.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Maps Saldırı Botu",
+          "slug": "maps",
+          "path": "06-modul-ansiklopedisi/maps.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Medium Bot",
+          "slug": "medium_bot",
+          "path": "06-modul-ansiklopedisi/medium_bot.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Messenger Operasyonu",
+          "slug": "messenger",
+          "path": "06-modul-ansiklopedisi/messenger.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Mission Control Center",
+          "slug": "mission_control_center",
+          "path": "06-modul-ansiklopedisi/mission_control_center.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Mobile Checker",
+          "slug": "mobilecheck",
+          "path": "06-modul-ansiklopedisi/mobilecheck.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "System Monitor",
+          "slug": "monitor",
+          "path": "06-modul-ansiklopedisi/monitor.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Mystic Return",
+          "slug": "mystic",
+          "path": "06-modul-ansiklopedisi/mystic.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Network Replicator & Blueprint Engine",
+          "slug": "network_replicator",
+          "path": "06-modul-ansiklopedisi/network_replicator.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Notification Center",
+          "slug": "notification",
+          "path": "06-modul-ansiklopedisi/notification.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "OpenSEO",
+          "slug": "openseo",
+          "path": "06-modul-ansiklopedisi/openseo.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Opportunity Engine",
+          "slug": "opportunity_engine",
+          "path": "06-modul-ansiklopedisi/opportunity_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Penalty Recovery Kit",
+          "slug": "penalty",
+          "path": "06-modul-ansiklopedisi/penalty.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Phishing (Google Cloud)",
+          "slug": "phishing",
+          "path": "06-modul-ansiklopedisi/phishing.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Mekan SEO Content Pipeline",
+          "slug": "place_seo_pipeline",
+          "path": "06-modul-ansiklopedisi/place_seo_pipeline.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Provider Control Center",
+          "slug": "provider_control_center",
+          "path": "06-modul-ansiklopedisi/provider_control_center.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Publisher Hub",
+          "slug": "publisher_hub",
+          "path": "06-modul-ansiklopedisi/publisher_hub.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Question Intelligence Engine",
+          "slug": "question_intelligence_engine",
+          "path": "06-modul-ansiklopedisi/question_intelligence_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Rank & Index Watcher",
+          "slug": "rank_index_watcher",
+          "path": "06-modul-ansiklopedisi/rank_index_watcher.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Rank Tracker",
+          "slug": "ranktracker",
+          "path": "06-modul-ansiklopedisi/ranktracker.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Reddit Yöneticisi",
+          "slug": "reddit",
+          "path": "06-modul-ansiklopedisi/reddit.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Redirect Manager",
+          "slug": "redirect",
+          "path": "06-modul-ansiklopedisi/redirect.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "The Replicator V3",
+          "slug": "replicator",
+          "path": "06-modul-ansiklopedisi/replicator.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Report Generator",
+          "slug": "report",
+          "path": "06-modul-ansiklopedisi/report.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Reputation Shield",
+          "slug": "reputation",
+          "path": "06-modul-ansiklopedisi/reputation.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Restore Manager",
+          "slug": "restore",
+          "path": "06-modul-ansiklopedisi/restore.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Review Manager",
+          "slug": "review",
+          "path": "06-modul-ansiklopedisi/review.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Robots Manager",
+          "slug": "robots",
+          "path": "06-modul-ansiklopedisi/robots.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Schedule Manager",
+          "slug": "schedule",
+          "path": "06-modul-ansiklopedisi/schedule.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Schema Markup",
+          "slug": "schemamarkup",
+          "path": "06-modul-ansiklopedisi/schemamarkup.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Sentiment AI",
+          "slug": "sentiment",
+          "path": "06-modul-ansiklopedisi/sentiment.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SEO Content Agent",
+          "slug": "seo_content_agent",
+          "path": "06-modul-ansiklopedisi/seo_content_agent.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SEO Poisoning",
+          "slug": "seo_poisoning",
+          "path": "06-modul-ansiklopedisi/seo_poisoning.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SEO GEO AEO Quality Gate",
+          "slug": "seo_quality_gate",
+          "path": "06-modul-ansiklopedisi/seo_quality_gate.md",
+          "level": "Reference",
+          "status": "published",
+          "last_updated": "2026-06-27",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SEOAgent",
+          "slug": "seoagent",
+          "path": "06-modul-ansiklopedisi/seoagent.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SEO Audit",
+          "slug": "seoaudit",
+          "path": "06-modul-ansiklopedisi/seoaudit.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SEOIntel",
+          "slug": "seointel",
+          "path": "06-modul-ansiklopedisi/seointel.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SERP Defense Engine",
+          "slug": "serp_defense_engine",
+          "path": "06-modul-ansiklopedisi/serp_defense_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SerpBear",
+          "slug": "serpbear",
+          "path": "06-modul-ansiklopedisi/serpbear.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Site Replicator & Blueprint Engine",
+          "slug": "site_replicator",
+          "path": "06-modul-ansiklopedisi/site_replicator.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Sitemap Generator",
+          "slug": "sitemap",
+          "path": "06-modul-ansiklopedisi/sitemap.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Social Media",
+          "slug": "socialmedia",
+          "path": "06-modul-ansiklopedisi/socialmedia.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Spam Backlink Zehirleyici",
+          "slug": "spambacklink",
+          "path": "06-modul-ansiklopedisi/spambacklink.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Speed Optimizer",
+          "slug": "speedopt",
+          "path": "06-modul-ansiklopedisi/speedopt.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Content Spinner",
+          "slug": "spinner",
+          "path": "06-modul-ansiklopedisi/spinner.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "SSS Otomatik Üretim Zinciri",
+          "slug": "sss_automation",
+          "path": "06-modul-ansiklopedisi/sss_automation.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "StoryForge",
+          "slug": "storyforge",
+          "path": "06-modul-ansiklopedisi/storyforge.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Support Network Engine",
+          "slug": "support_network_engine",
+          "path": "06-modul-ansiklopedisi/support_network_engine.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Topic Cluster Builder",
+          "slug": "topiccluster",
+          "path": "06-modul-ansiklopedisi/topiccluster.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Translator",
+          "slug": "translator",
+          "path": "06-modul-ansiklopedisi/translator.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Trend Analyzer",
+          "slug": "trend",
+          "path": "06-modul-ansiklopedisi/trend.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Tumblr Yöneticisi",
+          "slug": "tumblr",
+          "path": "06-modul-ansiklopedisi/tumblr.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "User Behavior",
+          "slug": "userbehavior",
+          "path": "06-modul-ansiklopedisi/userbehavior.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Veri Gizlilik Modülü",
+          "slug": "veri",
+          "path": "06-modul-ansiklopedisi/veri.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Web Scraper",
+          "slug": "webscraper",
+          "path": "06-modul-ansiklopedisi/webscraper.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "WordPress Site Manager",
+          "slug": "wordpress",
+          "path": "06-modul-ansiklopedisi/wordpress.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Yorum Botu",
+          "slug": "yorum",
+          "path": "06-modul-ansiklopedisi/yorum.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "0-Day Exploit Avcısı",
+          "slug": "zeroday",
+          "path": "06-modul-ansiklopedisi/zeroday.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        },
+        {
+          "title": "Zeus'un Yıldırımı",
+          "slug": "zeus",
+          "path": "06-modul-ansiklopedisi/zeus.md",
+          "level": "Reference",
+          "status": "auto-draft",
+          "last_updated": "2026-06-26",
+          "reading_time_minutes": "",
+          "difficulty": "Reference"
+        }
+      ]
+    },
+    {
+      "title": "API",
+      "slug": "api",
+      "items": [
+        {
+          "title": "API Referansı",
+          "slug": "api-readme",
+          "path": "07-api/README.md",
+          "level": "Reference",
+          "status": "draft",
+          "last_updated": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "title": "Deploy",
+      "slug": "deploy",
+      "items": [
+        {
+          "title": "Deploy Rehberi",
+          "slug": "deploy-readme",
+          "path": "08-deploy/README.md",
+          "level": "Reference",
+          "status": "draft",
+          "last_updated": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "title": "Sorun Giderme",
+      "slug": "troubleshooting",
+      "items": [
+        {
+          "title": "Sorun Giderme",
+          "slug": "troubleshooting-readme",
+          "path": "09-troubleshooting/README.md",
+          "level": "Reference",
+          "status": "draft",
+          "last_updated": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "title": "Sözlük",
+      "slug": "glossary",
+      "items": [
+        {
+          "title": "Sözlük",
+          "slug": "glossary-readme",
+          "path": "10-glossary/README.md",
+          "level": "Reference",
+          "status": "draft",
+          "last_updated": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "title": "Academy Certification",
+      "slug": "certification",
+      "items": [
+        {
+          "title": "Academy Certification",
+          "slug": "academy-certification",
+          "path": "11-certification/README.md",
+          "level": "Advanced",
+          "status": "draft",
+          "last_updated": "2026-06-26"
+        }
+      ]
+    }
+  ]
+}

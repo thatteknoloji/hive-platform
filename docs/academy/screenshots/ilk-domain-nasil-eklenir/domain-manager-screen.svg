@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <text x="48" y="56" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="22">Domain Manager</text>
+  <text x="48" y="82" fill="#8b949e" font-family="system-ui,sans-serif" font-size="13">Customer Journey — Phoenix Demo — Thiqos Turizm</text>
+  <rect x="48" y="100" width="864" height="72" rx="10" fill="#161b22" stroke="#c9a227"/>
+  <text x="68" y="132" fill="#c9a227" font-family="system-ui,sans-serif" font-size="14">Phoenix Demo — demo.thiqos.com</text>
+  <rect x="48" y="190" width="420" height="280" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="68" y="222" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="15">Proje Domain</text>
+  <rect x="68" y="240" width="380" height="36" rx="6" fill="#0d1117" stroke="#484f58"/>
+  <text x="80" y="263" fill="#e6edf3" font-family="monospace" font-size="14">demo.thiqos.com</text>
+  <rect x="68" y="300" width="140" height="36" rx="6" fill="#c9a227"/>
+  <text x="88" y="323" fill="#0d1117" font-family="system-ui,sans-serif" font-size="13">Kaydet &amp; Bağla</text>
+  <rect x="492" y="190" width="420" height="280" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="512" y="222" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="15">DNS / SSL / Health</text>
+  <text x="512" y="260" fill="#8b949e" font-family="system-ui,sans-serif" font-size="12">Bind: configured</text>
+  <text x="512" y="286" fill="#8b949e" font-family="system-ui,sans-serif" font-size="12">SSL: pending</text>
+  <text x="512" y="312" fill="#8b949e" font-family="system-ui,sans-serif" font-size="12">Target: hive_cloud</text>
+</svg>

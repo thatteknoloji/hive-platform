@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <rect x="16" y="16" width="768" height="48" rx="8" fill="#1e293b"/>
+  <text x="24" y="46" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="600">🏭 Authority Factory</text>
+  <text x="200" y="46" fill="#94a3b8" font-family="system-ui" font-size="12">Authority Mesh planlarını kontrollü üretim batch'lerine çevirir</text>
+  <rect x="16" y="72" width="768" height="32" rx="6" fill="#1e293b"/>
+  <text x="32" y="92" fill="#94a3b8" font-family="system-ui" font-size="11" font-weight="500">Dashboard  Create From Campaign  Create From Dataset  Domain Candidates  Provider Mix  Create Batch  Batches  Items  Provider Status  Reports  Settings</text>
+  <rect x="16" y="112" width="768" height="120" rx="8" fill="#1e293b"/>
+  <rect x="32" y="128" width="140" height="80" rx="6" fill="#334155"/>
+  <text x="56" y="150" fill="#94a3b8" font-family="system-ui" font-size="11">Modül</text>
+  <text x="56" y="180" fill="#22c55e" font-family="system-ui" font-size="18" font-weight="700">Aktif</text>
+  <rect x="184" y="128" width="140" height="80" rx="6" fill="#334155"/>
+  <text x="208" y="150" fill="#94a3b8" font-family="system-ui" font-size="11">V2 Batches</text>
+  <text x="208" y="180" fill="#f1f5f9" font-family="system-ui" font-size="18" font-weight="700">12</text>
+  <rect x="336" y="128" width="140" height="80" rx="6" fill="#334155"/>
+  <text x="360" y="150" fill="#94a3b8" font-family="system-ui" font-size="11">Published</text>
+  <text x="360" y="180" fill="#22c55e" font-family="system-ui" font-size="18" font-weight="700">47</text>
+  <rect x="488" y="128" width="140" height="80" rx="6" fill="#334155"/>
+  <text x="512" y="150" fill="#94a3b8" font-family="system-ui" font-size="11">Login Required</text>
+  <text x="512" y="180" fill="#eab308" font-family="system-ui" font-size="18" font-weight="700">3</text>
+  <rect x="640" y="128" width="128" height="80" rx="6" fill="#334155"/>
+  <text x="658" y="150" fill="#94a3b8" font-family="system-ui" font-size="11">Failed</text>
+  <text x="658" y="180" fill="#ef4444" font-family="system-ui" font-size="18" font-weight="700">1</text>
+  <rect x="16" y="244" width="380" height="220" rx="8" fill="#1e293b"/>
+  <text x="32" y="268" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Son Batch'ler</text>
+  <line x1="32" y1="280" x2="380" y2="280" stroke="#334155" stroke-width="1"/>
+  <text x="32" y="298" fill="#94a3b8" font-family="system-ui" font-size="10">Batch ID        Ad           Status        Items</text>
+  <text x="32" y="318" fill="#e2e8f0" font-family="monospace" font-size="10">af-batch-023    kuşadası     published     5</text>
+  <text x="32" y="338" fill="#e2e8f0" font-family="monospace" font-size="10">af-batch-022    izmir         processing    3</text>
+  <text x="32" y="358" fill="#e2e8f0" font-family="monospace" font-size="10">af-batch-021    bodrum        queued        4</text>
+  <rect x="408" y="244" width="376" height="220" rx="8" fill="#1e293b"/>
+  <text x="424" y="268" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">V2 Operasyon Kartları</text>
+  <line x1="424" y1="280" x2="768" y2="280" stroke="#334155" stroke-width="1"/>
+  <rect x="440" y="295" width="100" height="56" rx="6" fill="#3b82f6"/>
+  <text x="456" y="318" fill="#bfdbfe" font-family="system-ui" font-size="10">Dataset Driven</text>
+  <text x="456" y="340" fill="#fff" font-family="system-ui" font-size="16" font-weight="700">5</text>
+  <rect x="552" y="295" width="100" height="56" rx="6" fill="#8b5cf6"/>
+  <text x="568" y="318" fill="#ddd6fe" font-family="system-ui" font-size="10">Domain Driven</text>
+  <text x="568" y="340" fill="#fff" font-family="system-ui" font-size="16" font-weight="700">4</text>
+  <rect x="664" y="295" width="100" height="56" rx="6" fill="#22c55e"/>
+  <text x="680" y="318" fill="#bbf7d0" font-family="system-ui" font-size="10">Campaign Driven</text>
+  <text x="680" y="340" fill="#fff" font-family="system-ui" font-size="16" font-weight="700">3</text>
+</svg>

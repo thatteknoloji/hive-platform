@@ -1,0 +1,22 @@
+{
+  "authority-factory-nedir": [
+    {"type": "doc", "slug": "entity_geo_graph", "label": "Entity Graph"},
+    {"type": "module", "id": "authority_mesh_engine", "label": "Authority Mesh"},
+    {"type": "doc", "slug": "publisher-hub-nedir", "label": "Publisher Hub"},
+    {"type": "doc", "slug": "quality-gate-nedir", "label": "Quality Gate"},
+    {"type": "type", "id": "workflow", "label": "Workflow"},
+    {"type": "type", "id": "api", "label": "API"},
+    {"type": "doc", "slug": "troubleshooting-readme", "label": "Troubleshooting"},
+    {"type": "type", "id": "video", "label": "Video"}
+  ],
+  "hive-nedir": [
+    {"type": "doc", "slug": "hive-mantigi", "label": "HIVE Mantığı"},
+    {"type": "doc", "slug": "paneli-taniyalim", "label": "Paneli Tanıyalım"},
+    {"type": "module", "id": "mission_control_center", "label": "Mission Control"}
+  ],
+  "publisher-hub-nedir": [
+    {"type": "doc", "slug": "quality-gate-nedir", "label": "Quality Gate"},
+    {"type": "doc", "slug": "ilk-publish", "label": "İlk Publish"},
+    {"type": "module", "id": "publisher_hub", "label": "Publisher Hub"}
+  ]
+}

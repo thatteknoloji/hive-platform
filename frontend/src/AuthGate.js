@@ -42,6 +42,11 @@ export default function AuthGate() {
     }
     clearStoredToken();
     setUser(null);
+    try {
+      sessionStorage.removeItem("hive_mesh_tab");
+    } catch {
+      /* ignore */
+    }
     window.location.replace("/login");
   }, []);
 

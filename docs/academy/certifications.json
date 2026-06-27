@@ -1,0 +1,7 @@
+[
+  {"id": "cert_operator", "title": "HIVE Certified Operator", "status": "placeholder", "description": "Temel HIVE OS operasyonları"},
+  {"id": "cert_seo", "title": "HIVE Certified SEO Expert", "status": "placeholder", "description": "SEO, Quality Gate ve indexing"},
+  {"id": "cert_geo", "title": "HIVE Certified GEO Expert", "status": "placeholder", "description": "GEO ve entity graph"},
+  {"id": "cert_authority", "title": "HIVE Certified Authority Engineer", "status": "placeholder", "description": "Authority Factory ve mesh"},
+  {"id": "cert_partner", "title": "HIVE Certified Enterprise Partner", "status": "placeholder", "description": "Partner Academy — yakında"}
+]

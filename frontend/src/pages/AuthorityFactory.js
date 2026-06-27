@@ -3,18 +3,21 @@ import API from "../api";
 import { useProjectSiteField, useProjectDomainField, useProjectIdField } from "../hooks/useProjectSiteField";
 
 import {
-  HiveShell,
   HiveAlert,
-  HiveTabs,
-  HivePanel,
-  HiveStatGrid,
+  HiveBtn,
+  HiveCheck,
   HiveField,
   HiveInput,
-  HiveBtn,
-  HiveTable,
-  HiveCheck,
-  HiveStatusBadge,
+  HiveLabelWithTip,
+  HivePanel,
   HiveSection,
+  HiveShell,
+  HiveSkeleton,
+  HiveStatGrid,
+  HiveStatusBadge,
+  HiveTable,
+  HiveTabs,
+  HiveToast,
 } from "../components/HiveModuleUI";
 
 const API_PREFIX = "/api/authority-factory";
@@ -341,9 +344,10 @@ export default function AuthorityFactory() {
       loading={loading}
     >
       {error && <HiveAlert type="error">{error}</HiveAlert>}
-      {message && <HiveAlert type="success">{message}</HiveAlert>}
+      <HiveToast message={message} onClose={() => setMessage("")} />
 
       <HiveTabs tabs={TABS} active={tab} onChange={setTab} />
+      {loading && !dash && <HiveSkeleton lines={6} />}
 
       {tab === "dashboard" && (
         <HivePanel>

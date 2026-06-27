@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <rect x="16" y="16" width="768" height="48" rx="8" fill="#1e293b"/>
+  <text x="24" y="46" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="600">Rank & Index Watcher</text>
+  <text x="280" y="46" fill="#94a3b8" font-family="system-ui" font-size="12">Sıralama ve indeks takip modülü</text>
+  <rect x="16" y="72" width="768" height="32" rx="6" fill="#1e293b"/>
+  <text x="32" y="92" fill="#94a3b8" font-family="system-ui" font-size="11" font-weight="500">Projects  Index Status  Rankings  Search Console  AI Overview  Alerts  Opportunities</text>
+  <rect x="16" y="112" width="380" height="180" rx="8" fill="#1e293b"/>
+  <text x="32" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Projects</text>
+  <rect x="32" y="150" width="340" height="40" rx="6" fill="#334155"/>
+  <text x="48" y="170" fill="#e2e8f0" font-family="system-ui" font-size="11">kuşadası-gece-hayatı</text>
+  <text x="48" y="182" fill="#94a3b8" font-family="system-ui" font-size="9">Index: 89%  |  Rank: #4  |  AI: 62%</text>
+  <rect x="32" y="198" width="340" height="40" rx="6" fill="#334155"/>
+  <text x="48" y="218" fill="#e2e8f0" font-family="system-ui" font-size="11">izmir-plaj-rehberi</text>
+  <text x="48" y="230" fill="#94a3b8" font-family="system-ui" font-size="9">Index: 72%  |  Rank: #8  |  AI: 45%</text>
+  <rect x="32" y="246" width="340" height="40" rx="6" fill="#334155"/>
+  <text x="48" y="266" fill="#e2e8f0" font-family="system-ui" font-size="11">bodrum-oteller</text>
+  <text x="48" y="278" fill="#94a3b8" font-family="system-ui" font-size="9">Index: 45%  |  Rank: #12  |  AI: 30%</text>
+  <rect x="408" y="112" width="376" height="180" rx="8" fill="#1e293b"/>
+  <text x="424" y="134" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Index Status</text>
+  <line x1="424" y1="148" x2="768" y2="148" stroke="#334155" stroke-width="1"/>
+  <rect x="440" y="162" width="160" height="56" rx="6" fill="#334155"/>
+  <text x="452" y="182" fill="#94a3b8" font-family="system-ui" font-size="10">Indexed</text>
+  <text x="452" y="204" fill="#22c55e" font-family="system-ui" font-size="16" font-weight="700">142</text>
+  <rect x="612" y="162" width="160" height="56" rx="6" fill="#334155"/>
+  <text x="624" y="182" fill="#94a3b8" font-family="system-ui" font-size="10">Not Indexed</text>
+  <text x="624" y="204" fill="#ef4444" font-family="system-ui" font-size="16" font-weight="700">18</text>
+  <rect x="440" y="230" width="160" height="48" rx="6" fill="#334155"/>
+  <text x="452" y="250" fill="#94a3b8" font-family="system-ui" font-size="10">Index Coverage</text>
+  <text x="452" y="268" fill="#f1f5f9" font-family="system-ui" font-size="14">88.7%</text>
+  <rect x="16" y="304" width="768" height="160" rx="8" fill="#1e293b"/>
+  <text x="32" y="326" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Rankings</text>
+  <line x1="32" y1="338" x2="768" y2="338" stroke="#334155" stroke-width="1"/>
+  <text x="32" y="358" fill="#94a3b8" font-family="system-ui" font-size="10">Keyword                 Rank    Change      Volume      Project</text>
+  <text x="32" y="382" fill="#e2e8f0" font-family="monospace" font-size="10">kuşadası gece hayatı    #4      +2 ↑       2.400       kuşadası-gece</text>
+  <text x="32" y="406" fill="#e2e8f0" font-family="monospace" font-size="10">izmir sahil rehberi     #8      -1 ↓       1.800       izmir-plaj</text>
+  <text x="32" y="430" fill="#e2e8f0" font-family="monospace" font-size="10">bodrum otelleri         #12     +5 ↑       3.200       bodrum-oteller</text>
+</svg>

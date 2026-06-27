@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a2e"/>
+  <rect x="40" y="40" width="1200" height="640" rx="12" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
+  <text x="640" y="160" text-anchor="middle" fill="#e94560" font-family="monospace" font-size="32" font-weight="bold">ENTITY &amp; GEO GRAPH</text>
+  <text x="640" y="210" text-anchor="middle" fill="#8899aa" font-family="monospace" font-size="18">Entity Relationship &amp; GEO Coverage Visualization</text>
+  <circle cx="400" cy="380" r="120" fill="none" stroke="#66d9ef" stroke-width="2" opacity="0.4"/>
+  <circle cx="640" cy="340" r="100" fill="none" stroke="#a6e22e" stroke-width="2" opacity="0.4"/>
+  <circle cx="880" cy="380" r="110" fill="none" stroke="#e6db74" stroke-width="2" opacity="0.4"/>
+  <text x="640" y="510" text-anchor="middle" fill="#555" font-family="monospace" font-size="24">📸 Screenshot Placeholder</text>
+  <text x="640" y="540" text-anchor="middle" fill="#555" font-family="monospace" font-size="14">Graph visualization will appear here</text>
+</svg>

@@ -1,0 +1,101 @@
+{
+  "hive-nedir": {
+    "title": "HIVE Nedir? — Görevler",
+    "badge_reward": "first_project",
+    "related_slugs": ["hive-mantigi", "paneli-taniyalim", "mission_control_center"],
+    "missions": [
+      {
+        "id": "open_dashboard",
+        "title": "HIVE Dashboard'u aç",
+        "description": "Mission Control veya ana dashboard'u ziyaret et.",
+        "navigate_to": "mission_control_center",
+        "order": 1
+      },
+      {
+        "id": "read_complete",
+        "title": "Bu konuyu tamamla",
+        "description": "Checklist'i tamamla ve quiz'i geç.",
+        "order": 2
+      }
+    ]
+  },
+  "ilk-firma-nasil-eklenir": {
+    "title": "İlk Firma — Görevler",
+    "badge_reward": "first_project",
+    "related_slugs": ["project-nedir", "active-project-context", "ilk-domain-nasil-eklenir"],
+    "missions": [
+      {
+        "id": "create_project",
+        "title": "İlk projeyi oluştur",
+        "description": "Projects → Yeni Proje sihirbazını aç.",
+        "navigate_to": "projects",
+        "order": 1
+      },
+      {
+        "id": "set_active",
+        "title": "Projeyi aktif yap",
+        "description": "Üst bardan aktif proje seç.",
+        "order": 2
+      }
+    ]
+  },
+  "authority-factory-nedir": {
+    "title": "Authority Factory — Görevler",
+    "badge_reward": "first_authority",
+    "related_slugs": ["publisher-hub-nedir", "quality-gate-nedir", "authority_mesh_engine"],
+    "missions": [
+      {
+        "id": "open_factory",
+        "title": "Authority Factory ekranını aç",
+        "description": "NETWORK → Authority Factory",
+        "navigate_to": "authority_factory",
+        "order": 1
+      },
+      {
+        "id": "review_mesh",
+        "title": "Authority Mesh planını incele",
+        "description": "Authority Mesh ile plan oluştur veya mevcut planı gör.",
+        "navigate_to": "authority_mesh_engine",
+        "order": 2
+      }
+    ]
+  },
+  "publisher-hub-nedir": {
+    "title": "Publisher Hub — Görevler",
+    "badge_reward": "publisher_expert",
+    "related_slugs": ["quality-gate-nedir", "ilk-publish", "authority-factory-nedir"],
+    "missions": [
+      {
+        "id": "open_publisher",
+        "title": "Publisher Hub'ı aç",
+        "navigate_to": "publisher_hub",
+        "order": 1
+      }
+    ]
+  },
+  "quality-gate-nedir": {
+    "title": "Quality Gate — Görevler",
+    "related_slugs": ["seo-geo-aeo-nedir", "publisher-hub-nedir", "ilk-publish"],
+    "missions": [
+      {
+        "id": "open_diagnostics",
+        "title": "Diagnostics (Quality Gate) aç",
+        "navigate_to": "seo_quality_gate",
+        "order": 1
+      }
+    ]
+  },
+  "ilk-publish": {
+    "title": "İlk Publish — Görevler",
+    "badge_reward": "first_publish",
+    "related_slugs": ["publisher-hub-nedir", "quality-gate-nedir"],
+    "missions": [
+      {
+        "id": "run_publish",
+        "title": "İlk yayını planla",
+        "navigate_to": "publisher_hub",
+        "order": 1
+      }
+    ]
+  }
+}

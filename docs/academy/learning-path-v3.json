@@ -1,0 +1,16 @@
+[
+  {"id": "baslangic", "label": "Başlangıç", "section_slugs": ["baslangic", "ilk-gun"]},
+  {"id": "firma", "label": "Firma", "section_slugs": ["firma-proje", "ilk-gun"]},
+  {"id": "domain", "label": "Domain", "section_slugs": ["firma-proje", "ilk-gun"]},
+  {"id": "seo", "label": "SEO", "section_slugs": ["seo-geo-aeo", "ilk-gun"]},
+  {"id": "geo", "label": "GEO", "section_slugs": ["seo-geo-aeo"]},
+  {"id": "entity", "label": "Entity", "section_slugs": ["seo-geo-aeo", "modul-ansiklopedisi"]},
+  {"id": "authority", "label": "Authority", "section_slugs": ["authority"]},
+  {"id": "publisher", "label": "Publisher", "section_slugs": ["authority", "publish-pipeline"]},
+  {"id": "deploy", "label": "Deploy", "section_slugs": ["deploy"]},
+  {"id": "advanced", "label": "Advanced", "section_slugs": ["modul-ansiklopedisi"]},
+  {"id": "developer", "label": "Developer", "section_slugs": ["api"]},
+  {"id": "automation", "label": "Automation", "section_slugs": ["modul-ansiklopedisi"]},
+  {"id": "blackops", "label": "BlackOps", "section_slugs": ["modul-ansiklopedisi"]},
+  {"id": "enterprise", "label": "Enterprise", "section_slugs": ["certification"]}
+]

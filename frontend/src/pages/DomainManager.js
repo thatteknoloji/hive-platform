@@ -1,393 +1,279 @@
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import API from "../api";
+import { useActiveProject } from "../context/ActiveProjectContext";
+import {
+  HiveShell,
+  HivePanel,
+  HiveField,
+  HiveInput,
+  HiveBtn,
+  HiveAlert,
+  HiveEmptyState,
+  HiveToast,
+  HiveSkeleton,
+  HiveStatusBadge,
+} from "../components/HiveModuleUI";
+import HiveApiErrorCard from "../components/HiveApiErrorCard";
+import { formatHiveApiError } from "../utils/hiveApiErrors";
 
+const API_PREFIX = "/api/v3/projects";
 
-export default function DomainManager() {
-  const [connection, setConnection] = useState({
-    url: "",
-    username: "",
-    password: "",
-  });
-  const [connected, setConnected] = useState(false);
-  const [connectionInfo, setConnectionInfo] = useState(null);
-  const [sites, setSites] = useState([]);
+function normalizeDomain(raw) {
+  return (raw || "")
+    .trim()
+    .toLowerCase()
+    .replace(/^https?:\/\//, "")
+    .replace(/\/.*$/, "")
+    .replace(/\.$/, "");
+}
+
+function isValidDomain(domain) {
+  const d = normalizeDomain(domain);
+  if (!d || d.length > 253) return false;
+  return /^([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}$/i.test(d);
+}
+
+function StatusRow({ label, value, tone }) {
+  return (
+    <div className="hive-domain-status-row">
+      <span className="hive-domain-status-label" title={label}>{label}</span>
+      <span className={`hive-domain-status-value hive-val-badge ${tone || ""}`}>{value || "—"}</span>
+    </div>
+  );
+}
+
+export default function DomainManager({ onNavigate }) {
+  const { activeProjectId, project, loading: ctxLoading, refresh: refreshActive } = useActiveProject();
+  const [domainInput, setDomainInput] = useState("");
+  const [includeWww, setIncludeWww] = useState(true);
+  const [domainStatus, setDomainStatus] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+  const [statusLoading, setStatusLoading] = useState(false);
+  const [errorInfo, setErrorInfo] = useState(null);
+  const [toast, setToast] = useState("");
+  const [validationError, setValidationError] = useState("");
 
-  const [newSite, setNewSite] = useState({
-    domain: "",
-    title: "",
-    email: "",
-    path: "/",
-  });
+  const isPhoenixDemo = Boolean(
+    project?.metadata?.phoenix_demo || project?.metadata?.customer_journey_demo,
+  );
 
-  const [bulkSites, setBulkSites] = useState("");
-  const [showBulk, setShowBulk] = useState(false);
-
-  useEffect(() => {
-    checkConnection();
+  const loadStatus = useCallback(async (pid) => {
+    if (!pid) return;
+    setStatusLoading(true);
+    try {
+      const res = await API.get(`${API_PREFIX}/${pid}/domain/status`);
+      setDomainStatus(res.data);
+    } catch {
+      setDomainStatus(null);
+    } finally {
+      setStatusLoading(false);
+    }
   }, []);
 
-  const checkConnection = async () => {
-    try {
-      const res = await API.get("/api/wp/status");
-      if (res.data.connected) {
-        setConnected(true);
-        setConnectionInfo(res.data);
-        loadSites();
-      }
-    } catch (err) {
-      // Not connected
+  useEffect(() => {
+    if (project?.domain) {
+      setDomainInput(project.domain);
+      } else {
+      setDomainInput("");
     }
-  };
+    if (activeProjectId) loadStatus(activeProjectId);
+  }, [project?.domain, activeProjectId, loadStatus]);
 
-  const loadSites = async () => {
+  useEffect(() => {
+    if (!toast) return undefined;
+    const t = setTimeout(() => setToast(""), 3500);
+    return () => clearTimeout(t);
+  }, [toast]);
+
+  const domainValid = useMemo(() => isValidDomain(domainInput), [domainInput]);
+
+  const saveDomain = async () => {
+    setValidationError("");
+    setErrorInfo(null);
+    const clean = normalizeDomain(domainInput);
+    if (!clean) {
+      setValidationError("Domain alanı boş olamaz.");
+      return;
+    }
+    if (!isValidDomain(clean)) {
+      setValidationError("Geçerli bir domain girin (ör. demo.thiqos.com).");
+      return;
+    }
     setLoading(true);
     try {
-      const res = await API.get("/api/wp/sites");
-      if (res.data.success) {
-        setSites(res.data.sites || []);
-      } else {
-        setError(res.data.error || "Site listesi yüklenemedi");
-      }
-    } catch (err) {
-      setError("Bağlantı hatası: " + err.message);
+      await API.patch(`${API_PREFIX}/${activeProjectId}`, { domain: clean });
+      await API.post(`${API_PREFIX}/${activeProjectId}/domain/bind`, {
+        domain: clean,
+        include_www: includeWww,
+      });
+      window.dispatchEvent(new CustomEvent("hive-active-project-changed"));
+      await refreshActive();
+      await loadStatus(activeProjectId);
+      setToast(`Domain kaydedildi: ${clean}`);
+    } catch (e) {
+      setErrorInfo(formatHiveApiError(e, `${API_PREFIX}/${activeProjectId}/domain/bind`));
     } finally {
       setLoading(false);
     }
   };
 
-  const handleConnect = async () => {
-    setError("");
-    setSuccess("");
+  const verifyDomain = async () => {
+    setErrorInfo(null);
+    if (!activeProjectId) return;
     setLoading(true);
-
     try {
-      const res = await API.post("/api/wp/connect", connection);
-      if (res.data.success) {
-        setConnected(true);
-        setConnectionInfo(res.data);
-        setSuccess("Bağlantı başarılı!");
-        loadSites();
+      await loadStatus(activeProjectId);
+      const res = await API.get(`${API_PREFIX}/${activeProjectId}`);
+      const p = res.data?.project;
+      const bound = p?.metadata?.domain_binding;
+      if (bound?.domain) {
+        setToast(`Doğrulama: ${bound.domain} — ${bound.status || "configured"} / SSL: ${bound.ssl_status || "pending"}`);
+      } else if (p?.domain) {
+        setToast(`Proje domain: ${p.domain} — bind için Kaydet & Bağla kullanın.`);
       } else {
-        setError(res.data.error || "Bağlantı hatası");
+        setToast("Henüz domain bağlanmamış.");
       }
-    } catch (err) {
-      setError("Bağlantı hatası: " + err.message);
+    } catch (e) {
+      setErrorInfo(formatHiveApiError(e, `${API_PREFIX}/${activeProjectId}/domain/status`));
     } finally {
       setLoading(false);
     }
   };
 
-  const handleDisconnect = async () => {
-    try {
-      await API.post("/api/wp/disconnect", {});
-      setConnected(false);
-      setConnectionInfo(null);
-      setSites([]);
-      setSuccess("Bağlantı kesildi");
-    } catch (err) {
-      setError("Bağlantı kesilemedi: " + err.message);
-    }
-  };
-
-  const handleCreateSite = async () => {
-    setError("");
-    setSuccess("");
-    setLoading(true);
-
-    try {
-      const res = await API.post("/api/wp/sites", newSite);
-      if (res.data.success) {
-        setSuccess(`Site oluşturuldu: ${res.data.domain}`);
-        setNewSite({ domain: "", title: "", email: "", path: "/" });
-        loadSites();
-      } else {
-        setError(res.data.error || "Site oluşturulamadı");
-      }
-    } catch (err) {
-      setError("Hata: " + err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleDeleteSite = async (blogId, domain) => {
-    if (!window.confirm(`${domain} silinecek. Emin misiniz?`)) return;
-
-    setError("");
-    setSuccess("");
-    setLoading(true);
-
-    try {
-      const res = await API.delete(`/api/wp/sites/${blogId}`);
-      if (res.data.success) {
-        setSuccess(`Site silindi: ${domain}`);
-        loadSites();
-      } else {
-        setError(res.data.error || "Site silinemedi");
-      }
-    } catch (err) {
-      setError("Hata: " + err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleBulkCreate = async () => {
-    setError("");
-    setSuccess("");
-    setLoading(true);
-
-    const lines = bulkSites.split("\n").filter((l) => l.trim());
-    const sitesList = lines.map((line) => {
-      const parts = line.split(",").map((p) => p.trim());
-      return {
-        domain: parts[0] || "",
-        title: parts[1] || parts[0] || "",
-        email: parts[2] || `admin@${parts[0]}`,
-        path: "/",
-      };
-    });
-
-    try {
-      const res = await API.post("/api/wp/sites/bulk", { sites: sitesList });
-      if (res.data.success) {
-        setSuccess(
-          `${res.data.success_count} site oluşturuldu, ${res.data.error_count} hata`
-        );
-        setBulkSites("");
-        setShowBulk(false);
-        loadSites();
-      } else {
-        setError(res.data.error || "Toplu oluşturma hatası");
-      }
-    } catch (err) {
-      setError("Hata: " + err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (!connected) {
+  if (ctxLoading) {
     return (
-      <div className="domain-manager">
-        <h2>🌐 Domain & Subdomain Yöneticisi</h2>
-        <div className="connection-form">
-          <h3>WordPress Multisite Bağlantısı</h3>
-          <div className="form-group">
-            <label>WordPress URL</label>
-            <input
-              type="text"
-              value={connection.url}
-              onChange={(e) =>
-                setConnection({ ...connection, url: e.target.value })
-              }
-              placeholder="https://example.com"
-            />
-          </div>
-          <div className="form-group">
-            <label>Kullanıcı Adı</label>
-            <input
-              type="text"
-              value={connection.username}
-              onChange={(e) =>
-                setConnection({ ...connection, username: e.target.value })
-              }
-              placeholder="admin"
-            />
-          </div>
-          <div className="form-group">
-            <label>Application Password</label>
-            <input
-              type="password"
-              value={connection.password}
-              onChange={(e) =>
-                setConnection({ ...connection, password: e.target.value })
-              }
-              placeholder="xxxx xxxx xxxx xxxx"
-            />
-          </div>
-          <button onClick={handleConnect} disabled={loading}>
-            {loading ? "Bağlanıyor..." : "Bağlan"}
-          </button>
-          {error && <div className="error">{error}</div>}
-          <div className="info-box">
-            <p>
-              <strong>Not:</strong> WordPress'e{" "}
-              <strong>HIVE Multisite Bridge</strong> plugin'ini kurun ve aktif
-              edin. Ardından Users → Profile → Application Passwords bölümünden
-              yeni bir password oluşturun.
-            </p>
-          </div>
-        </div>
-      </div>
+      <HiveShell title="Domain Manager" subtitle="Aktif proje domain bağlama">
+        <HiveSkeleton lines={6} />
+      </HiveShell>
     );
   }
 
+  if (!activeProjectId) {
+    return (
+      <HiveShell
+        title="Domain Manager"
+        subtitle="Customer Journey — Adım 3: Domain"
+        actions={(
+          <HiveBtn variant="secondary" size="sm" title="Academy domain rehberi" onClick={() => window.open("/academy", "_blank")}>
+            Academy
+          </HiveBtn>
+        )}
+      >
+        <HiveEmptyState
+          icon="🌐"
+          title="Aktif proje seçilmedi"
+          description="Domain bağlamak için önce bir proje seçin. Phoenix demo için Projects ekranından demo projeyi aktif yapın."
+          actionLabel="Projects'e git"
+          onAction={() => onNavigate?.("projects")}
+          navigateLabel="Academy Rehberi"
+          onNavigate={() => window.open("/academy", "_blank")}
+        />
+      </HiveShell>
+    );
+  }
+
+  const binding = domainStatus || project?.metadata?.domain_binding || {};
+
   return (
-    <div className="domain-manager">
-      <h2>🌐 Domain & Subdomain Yöneticisi</h2>
+    <HiveShell
+      title="Domain Manager"
+      subtitle={`Customer Journey — ${project?.name || activeProjectId}`}
+      actions={(
+        <>
+          <HiveBtn variant="secondary" size="sm" title="Domain Academy rehberi" onClick={() => window.open("/academy", "_blank")}>
+            Academy
+          </HiveBtn>
+          <HiveBtn variant="secondary" size="sm" disabled={statusLoading} onClick={() => loadStatus(activeProjectId)} title="Durumu yenile">
+            Yenile
+          </HiveBtn>
+        </>
+      )}
+    >
+      {errorInfo && <HiveApiErrorCard errorInfo={errorInfo} />}
+      {toast && <HiveToast message={toast} onClose={() => setToast("")} />}
 
-      <div className="connection-status">
-        <div className="status-info">
-          <span className="status-dot connected"></span>
-          <strong>Bağlı:</strong> {connectionInfo?.url}
-          {connectionInfo?.is_multisite && (
-            <span className="badge">Multisite</span>
-          )}
-          <span className="site-count">{sites.length} site</span>
-        </div>
-        <button onClick={handleDisconnect} className="btn-disconnect">
-          Bağlantıyı Kes
-        </button>
-      </div>
-
-      <div className="sites-section">
-        <div className="section-header">
-          <h3>Mevcut Siteler ({sites.length})</h3>
-          <div className="actions">
-            <button onClick={loadSites} disabled={loading}>
-              🔄 Yenile
-            </button>
-            <button onClick={() => setShowBulk(!showBulk)}>
-              {showBulk ? "Tekli Ekle" : "Toplu Ekle"}
-            </button>
-          </div>
-        </div>
-
-        {loading && sites.length === 0 && <div className="loading">Yükleniyor...</div>}
-
-        {sites.length > 0 && (
-          <table className="sites-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Domain</th>
-                <th>Başlık</th>
-                <th>Yazı</th>
-                <th>Durum</th>
-                <th>İşlem</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sites.map((site) => (
-                <tr key={site.id}>
-                  <td>{site.id}</td>
-                  <td>
-                    <a
-                      href={`https://${site.domain}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {site.domain}
-                    </a>
-                  </td>
-                  <td>{site.title}</td>
-                  <td>{site.post_count}</td>
-                  <td>
-                    <span
-                      className={`status-badge ${site.public ? "public" : "private"}`}
-                    >
-                      {site.public ? "Açık" : "Gizli"}
-                    </span>
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => handleDeleteSite(site.id, site.domain)}
-                      className="btn-delete"
-                    >
-                      🗑️ Sil
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
-
-        {sites.length === 0 && !loading && (
-          <div className="empty-state">Henüz site yok. Yeni site ekleyin.</div>
-        )}
-      </div>
-
-      {showBulk ? (
-        <div className="bulk-create-section">
-          <h3>Toplu Site Oluştur</h3>
-          <p>Her satıra bir site: domain, başlık, email (opsiyonel)</p>
-          <textarea
-            value={bulkSites}
-            onChange={(e) => setBulkSites(e.target.value)}
-            placeholder={`sub.example.com, Site Adı, admin@example.com\nsub2.example.com, İkinci Site`}
-            rows={8}
-          />
-          <button onClick={handleBulkCreate} disabled={loading || !bulkSites.trim()}>
-            {loading ? "Oluşturuluyor..." : "Toplu Oluştur"}
-          </button>
-        </div>
-      ) : (
-        <div className="create-site-section">
-          <h3>Yeni Site Oluştur</h3>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Subdomain</label>
-              <input
-                type="text"
-                value={newSite.domain}
-                onChange={(e) =>
-                  setNewSite({ ...newSite, domain: e.target.value })
-                }
-                placeholder="sub.example.com"
-              />
-            </div>
-            <div className="form-group">
-              <label>Başlık</label>
-              <input
-                type="text"
-                value={newSite.title}
-                onChange={(e) =>
-                  setNewSite({ ...newSite, title: e.target.value })
-                }
-                placeholder="VIP Model Escort"
-              />
-            </div>
-          </div>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Email</label>
-              <input
-                type="email"
-                value={newSite.email}
-                onChange={(e) =>
-                  setNewSite({ ...newSite, email: e.target.value })
-                }
-                placeholder="admin@example.com"
-              />
-            </div>
-            <div className="form-group">
-              <label>Path</label>
-              <input
-                type="text"
-                value={newSite.path}
-                onChange={(e) =>
-                  setNewSite({ ...newSite, path: e.target.value })
-                }
-                placeholder="/"
-              />
-            </div>
-          </div>
-          <button
-            onClick={handleCreateSite}
-            disabled={loading || !newSite.domain || !newSite.title}
-          >
-            {loading ? "Oluşturuluyor..." : "Site Oluştur"}
-          </button>
-        </div>
+      {isPhoenixDemo && (
+        <HivePanel title="Phoenix Demo" className="hive-project-demo-banner">
+          <p style={{ margin: "0 0 8px" }}>
+            <strong>{project?.name}</strong>
+            {project?.domain ? ` · ${project.domain}` : ""}
+          </p>
+          <HiveStatusBadge status="active" />
+          <p className="hive-domain-hint" style={{ marginTop: 8, marginBottom: 0 }}>
+            Customer Journey demo domain: <code>demo.thiqos.com</code> — SEO, Authority ve Publish modülleri bu domain&apos;i kullanır.
+          </p>
+        </HivePanel>
       )}
 
-      {success && <div className="success">{success}</div>}
-      {error && <div className="error">{error}</div>}
+      <div className="hive-domain-grid">
+        <HivePanel title="Proje Domain">
+          <p className="hive-domain-hint">
+            Domain aktif projeye kaydedilir; Talon, Rank Watcher ve Publisher Hub otomatik olarak bu adresi okur.
+          </p>
+          <HiveField label="Üretim domain">
+            <HiveInput
+              value={domainInput}
+              onChange={(e) => {
+                setDomainInput(e.target.value);
+                setValidationError("");
+              }}
+              placeholder="demo.thiqos.com"
+              title="Örn. demo.thiqos.com — http/https yazmayın"
+              disabled={loading}
+            />
+          </HiveField>
+          {validationError && <HiveAlert type="error">{validationError}</HiveAlert>}
+          <label className="hive-domain-checkbox" title="www alt domain nginx bind'e dahil edilsin">
+              <input
+              type="checkbox"
+              checked={includeWww}
+              onChange={(e) => setIncludeWww(e.target.checked)}
+              disabled={loading}
+            />
+            www dahil et
+          </label>
+          <div className="hive-domain-actions">
+            <HiveBtn
+              variant="primary"
+              disabled={loading || !domainValid}
+              onClick={saveDomain}
+              title="Domain kaydet ve bind et"
+            >
+              {loading ? "Kaydediliyor…" : "Kaydet & Bağla"}
+            </HiveBtn>
+            <HiveBtn disabled={loading} onClick={verifyDomain} title="DNS / SSL / bind durumunu kontrol et">
+              Domain Doğrula
+            </HiveBtn>
+          </div>
+        </HivePanel>
+
+        <HivePanel title="DNS / SSL / Health">
+          {statusLoading ? (
+            <HiveSkeleton lines={4} />
+          ) : (
+            <>
+              <StatusRow label="Domain" value={binding.domain || project?.domain} tone="ok" />
+              <StatusRow label="WWW" value={binding.www_domain || (includeWww && project?.domain ? `www.${normalizeDomain(project.domain)}` : "—")} />
+              <StatusRow label="Bind durumu" value={binding.status || "not_configured"} tone={binding.status === "configured" ? "ok" : "warn"} />
+              <StatusRow label="SSL" value={binding.ssl_status || "pending"} tone={binding.ssl_status === "active" ? "ok" : "warn"} />
+              <StatusRow label="Target" value={binding.target_type || "hive_cloud"} />
+              <StatusRow label="Proje ID" value={activeProjectId} />
+              {!binding.domain && !project?.domain && (
+                <HiveEmptyState
+                  title="Domain henüz bağlı değil"
+                  description="Sol panelden domain girin ve Kaydet & Bağla ile bağlayın."
+                />
+              )}
+            </>
+          )}
+        </HivePanel>
     </div>
+
+      <HivePanel title="Customer Journey notu" className="hive-domain-journey-note">
+        <p style={{ margin: 0, fontSize: 13, opacity: 0.85 }}>
+          Adım 3 tamamlandığında domain aktif projede görünür, Mission Control CJCR güncellenir ve sonraki modüller (SEO → Authority → Publish) aynı domain bağlamını kullanır.
+        </p>
+      </HivePanel>
+    </HiveShell>
   );
 }

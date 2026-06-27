@@ -1,18 +1,22 @@
 import React, { useState, useEffect, useCallback } from "react";
 import API from "../api";
 import {
-  HiveShell,
   HiveAlert,
-  HiveTabs,
-  HivePanel,
-  HiveStatGrid,
+  HiveBtn,
+  HiveCheck,
+  HiveConceptTooltip,
   HiveField,
   HiveInput,
-  HiveBtn,
-  HiveTable,
-  HiveCheck,
-  HiveStatusBadge,
+  HiveLabelWithTip,
+  HivePanel,
   HiveSection,
+  HiveShell,
+  HiveSkeleton,
+  HiveStatGrid,
+  HiveStatusBadge,
+  HiveTable,
+  HiveTabs,
+  HiveToast,
 } from "../components/HiveModuleUI";
 
 const API_PREFIX = "/api/citation";
@@ -213,9 +217,10 @@ export default function CitationEngine() {
       loading={loading}
     >
       {error && <HiveAlert tone="error">{error}</HiveAlert>}
-      {message && <HiveAlert tone="ok">{message}</HiveAlert>}
+      <HiveToast message={message} onClose={() => setMessage("")} />
 
       <HiveTabs tabs={TABS} active={tab} onChange={setTab} />
+      {loading && !dash && <HiveSkeleton lines={6} />}
 
       {tab === "dashboard" && (
         <>

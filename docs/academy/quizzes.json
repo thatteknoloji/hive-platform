@@ -1,0 +1,81 @@
+{
+  "hive-nedir": {
+    "title": "HIVE Nedir? — Quiz",
+    "questions": [
+      {
+        "q": "HIVE nedir?",
+        "options": ["CRM yazılımı", "SEO Operating System (modüler komuta paneli)", "Hosting paneli", "E-posta pazarlama aracı"],
+        "correct": 1,
+        "explain": "HIVE bir SEO OS'tur — keşif, içerik, yayın ve izleme modüllerini tek panelde birleştirir."
+      },
+      {
+        "q": "HIVE'da 'firma' kavramı kodda nasıl temsil edilir?",
+        "options": ["company tablosu", "project (proje)", "tenant", "workspace"],
+        "correct": 1,
+        "explain": "Her müşteri/site bir V3 projesidir."
+      },
+      {
+        "q": "Canlı HIVE panel adresi hangisidir?",
+        "options": ["hive.google.com", "hive.thiqos.com", "hive.io", "panel.hive.dev"],
+        "correct": 1,
+        "explain": "Production panel https://hive.thiqos.com üzerinde çalışır."
+      }
+    ]
+  },
+  "authority-factory-nedir": {
+    "title": "Authority Factory — Quiz",
+    "questions": [
+      {
+        "q": "Authority Factory ne yapar?",
+        "options": ["Sadece rapor üretir", "Mesh planlarını üretim batch'ine çevirir", "Domain satın alır", "CRM yönetir"],
+        "correct": 1,
+        "explain": "Factory, Authority Mesh planını GitHub Pages / Google Sites worker görevlerine böler."
+      },
+      {
+        "q": "Authority Factory hangi modülle birlikte kullanılır?",
+        "options": ["Rank Tracker", "Authority Mesh Engine", "Heatmap", "BTK Gargoyle"],
+        "correct": 1,
+        "explain": "Mesh planlar, Factory üretir."
+      }
+    ]
+  },
+  "publisher-hub-nedir": {
+    "title": "Publisher Hub — Quiz",
+    "questions": [
+      {
+        "q": "Publisher Hub'ın temel işlevi nedir?",
+        "options": ["Keyword araştırması", "Çok kanallı merkezi yayın kuyruğu", "DDoS koruması", "Domain WHOIS"],
+        "correct": 1,
+        "explain": "WP, Tumblr, Dev.to, Ghost vb. tek kuyruktan yönetilir."
+      },
+      {
+        "q": "Quality Gate fail olursa Auto Publisher ne yapar?",
+        "options": ["Yine de deploy eder", "Deploy'u engeller", "Şifreyi sıfırlar", "DNS değiştirir"],
+        "correct": 1,
+        "explain": "Kalite kapısı başarısız içeriği canlıya çıkmaz."
+      }
+    ]
+  },
+  "quality-gate-nedir": {
+    "title": "Quality Gate — Quiz",
+    "questions": [
+      {
+        "q": "Quality Gate hangi alanları skorlar?",
+        "options": ["Sadece SEO", "SEO, GEO, AEO ve entity coverage", "Sadece backlink", "Sadece hız"],
+        "correct": 1,
+        "explain": "Diagnostics modülü üçlü kalite kontrolü yapar."
+      }
+    ]
+  },
+  "ilk-firma-nasil-eklenir": {
+    "title": "İlk Firma — Quiz",
+    "questions": [
+      {
+        "q": "Yeni firma (proje) oluşturmak için hangi alan zorunludur?",
+        "options": ["domain", "name ve sector", "deploy_mode", "theme"],
+        "correct": 1,
+        "explain": "name ve sector zorunlu; domain önerilir."
+      }
+    ]
+  }
+}

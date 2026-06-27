@@ -15,6 +15,8 @@ import {
   HiveMissionBoard,
   HiveContextBar,
   HiveSection,
+  HiveSkeleton,
+  HiveToast,
   HiveEmptyState,
   HiveConceptTooltip,
 } from "../components/HiveModuleUI";
@@ -215,7 +217,7 @@ export default function PublisherHub({ onNavigate }) {
         subtitle="WordPress · Ghost · Medium · LinkedIn — kaynak → taslak → kuyruk → yayın"
       />
     <HiveShell title="" subtitle="">
-      <HiveAlert type="ok">{message}</HiveAlert>
+      <HiveToast message={message} onClose={() => setMessage("")} />
       <HiveAlert type="err">{error}</HiveAlert>
 
       <HiveContextBar>
@@ -226,6 +228,7 @@ export default function PublisherHub({ onNavigate }) {
       </HiveContextBar>
 
       <HiveTabs tabs={TABS} active={tab} onChange={setTab} />
+      {loading && !dash && <HiveSkeleton lines={6} />}
 
       {tab === "dashboard" && (
         <>

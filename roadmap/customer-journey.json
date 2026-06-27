@@ -1,0 +1,236 @@
+{
+  "operation": "OPERATION_PHOENIX",
+  "version": "2.0.0",
+  "metric": "customer_journey_completion_rate",
+  "metric_label": "Customer Journey Completion Rate",
+  "target_percent": 100,
+  "demo_project_key": "phoenix_demo",
+  "journey_order": [
+    "login",
+    "project",
+    "domain",
+    "seo",
+    "authority",
+    "publish",
+    "deploy",
+    "monitoring"
+  ],
+  "steps": {
+    "login": {
+      "order": 1,
+      "label": "Login",
+      "label_tr": "Giriş",
+      "user_action": "Yeni kullanıcı e-posta/şifre ile giriş yapar; token alır ve panele yönlendirilir.",
+      "route": "/login",
+      "data_checks": ["auth_backend", "login_page"],
+      "modules": [
+        {
+          "label": "Auth",
+          "id": "auth",
+          "academy_slug": "ilk-giris",
+          "backend": "auth.py",
+          "page": "Login"
+        },
+        {
+          "label": "Permissions",
+          "id": "permissions",
+          "academy_slug": "users-permissions",
+          "backend": "panel_identity.py"
+        }
+      ]
+    },
+    "project": {
+      "order": 2,
+      "label": "Project",
+      "label_tr": "Proje",
+      "user_action": "Demo proje seçilir veya oluşturulur; aktif proje olarak işaretlenir.",
+      "route": "/projects",
+      "data_checks": ["demo_project_exists", "active_project_set"],
+      "modules": [
+        {
+          "label": "Project Manager",
+          "id": "projects",
+          "academy_slug": "ilk-firma-nasil-eklenir",
+          "backend": "project_engine.py",
+          "page": "ProjectsHub"
+        },
+        {
+          "label": "Project Context",
+          "id": "active_project_context",
+          "academy_slug": "active-project-context",
+          "backend": "project_context.py"
+        }
+      ]
+    },
+    "domain": {
+      "order": 3,
+      "label": "Domain",
+      "label_tr": "Domain",
+      "user_action": "Projeye üretim domain'i bağlanır (ör. demo.thiqos.com).",
+      "route": "/domain-manager",
+      "data_checks": [
+        "active_project_set",
+        "demo_project_exists",
+        "project_domain_exists",
+        "domain_format_valid",
+        "domain_attached_to_active_project"
+      ],
+      "modules": [
+        {
+          "label": "Domain Manager",
+          "id": "domain_manager",
+          "academy_slug": "ilk-domain-nasil-eklenir",
+          "backend": "domain_manager.py",
+          "page": "DomainManager"
+        }
+      ]
+    },
+    "seo": {
+      "order": 4,
+      "label": "SEO",
+      "label_tr": "SEO",
+      "user_action": "Keyword araştırması, entity graph, quality gate ve kampanya planı tamamlanır.",
+      "route": "/talon",
+      "data_checks": [],
+      "modules": [
+        {
+          "label": "Keyword",
+          "id": "talon",
+          "academy_slug": "talon",
+          "page": "Talon"
+        },
+        {
+          "label": "Entity Graph",
+          "id": "entity_geo_graph",
+          "academy_slug": "entity_geo_graph",
+          "page": "EntityGeoGraph"
+        },
+        {
+          "label": "Quality Gate",
+          "id": "seo_quality_gate",
+          "academy_slug": "quality-gate-nedir",
+          "page": "SEOQualityGate"
+        },
+        {
+          "label": "SEO Campaign",
+          "id": "campaign_engine",
+          "academy_slug": "seo-geo-aeo-nedir",
+          "page": "CampaignEngine"
+        }
+      ]
+    },
+    "authority": {
+      "order": 5,
+      "label": "Authority",
+      "label_tr": "Authority",
+      "user_action": "Authority planı, citation analizi ve mesh ağı oluşturulur.",
+      "route": "/authority-factory",
+      "data_checks": [],
+      "modules": [
+        {
+          "label": "Authority Factory",
+          "id": "authority_factory",
+          "academy_slug": "authority-factory-nedir",
+          "page": "AuthorityFactory"
+        },
+        {
+          "label": "Citation Engine",
+          "id": "citation_engine",
+          "academy_slug": "citation_engine",
+          "page": "CitationEngine"
+        },
+        {
+          "label": "Authority Mesh",
+          "id": "authority_mesh_engine",
+          "academy_slug": "authority_mesh_engine",
+          "page": "AuthorityMeshEngine"
+        }
+      ]
+    },
+    "publish": {
+      "order": 6,
+      "label": "Publish",
+      "label_tr": "Yayın",
+      "user_action": "İçerik Publisher Hub üzerinden yayına hazırlanır.",
+      "route": "/publisher-hub",
+      "data_checks": [],
+      "modules": [
+        {
+          "label": "Publisher Hub",
+          "id": "publisher_hub",
+          "academy_slug": "publisher-hub-nedir",
+          "page": "PublisherHub"
+        }
+      ]
+    },
+    "deploy": {
+      "order": 7,
+      "label": "Deploy",
+      "label_tr": "Deploy",
+      "user_action": "Astro site üretilir ve canlıya deploy edilir.",
+      "route": "/astro-factory",
+      "data_checks": [],
+      "modules": [
+        {
+          "label": "Astro Factory",
+          "id": "astro_factory",
+          "academy_slug": "astro_factory",
+          "page": "AstroFactory"
+        },
+        {
+          "label": "Auto Publisher",
+          "id": "astro_auto_publisher",
+          "academy_slug": "ilk-publish",
+          "page": "AstroAutoPublisher"
+        }
+      ]
+    },
+    "monitoring": {
+      "order": 8,
+      "label": "Monitoring",
+      "label_tr": "İzleme",
+      "user_action": "Rank, index ve SERP izleme dashboard'ları açılır; Mission Control özet görünür.",
+      "route": "/mission-control",
+      "data_checks": [],
+      "modules": [
+        {
+          "label": "Mission Control",
+          "id": "mission_control_center",
+          "academy_slug": "mission_control_center",
+          "page": "MissionControlCenter"
+        },
+        {
+          "label": "Rank Watcher",
+          "id": "rank_index_watcher",
+          "academy_slug": "rank_index_watcher",
+          "page": "RankTracker"
+        },
+        {
+          "label": "SERP Defense",
+          "id": "serp_defense_engine",
+          "academy_slug": "serp_defense_engine",
+          "page": "SerpDefenseEngine"
+        }
+      ]
+    }
+  },
+  "checklist": [
+    "production_works",
+    "ui_complete",
+    "api_complete",
+    "error_handling",
+    "loading",
+    "toast",
+    "empty_state",
+    "tooltip",
+    "academy_doc",
+    "screenshot",
+    "workflow",
+    "api_docs",
+    "troubleshooting",
+    "changelog",
+    "tested",
+    "demo_scenario"
+  ],
+  "out_of_scope_note": "Journey dışı modüller sprint dışında kalır. Bkz. roadmap/icebox.md"
+}

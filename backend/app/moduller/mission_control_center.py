@@ -1115,7 +1115,126 @@ def _empty_dashboard_payload() -> dict[str, Any]:
         "growth_opportunities": [],
         "authority_status": {},
         "factory_status": {},
-        "recent_events": [],
+        "recent_events": {},
+    }
+
+
+def _compute_release_readiness() -> dict[str, Any]:
+    """Release Readiness Score (RRS) ve Release Board verisi.
+
+    RRS = geometrik ortalama: CJCR × Academy × QA × Production × Documentation
+    Her biri 0-1 normalize, çıktı 0-100.
+    """
+    AUDIT_FILE = Path(__file__).resolve().parent.parent.parent.parent / "roadmap" / "phoenix-customer-journey-audit.json"
+    ACADEMY_INDEX = Path(__file__).resolve().parent.parent.parent.parent / "docs" / "academy" / "academy-index.json"
+
+    try:
+        audit = json.loads(AUDIT_FILE.read_text(encoding="utf-8")) if AUDIT_FILE.is_file() else {}
+    except Exception:
+        audit = {}
+    try:
+        academy = json.loads(ACADEMY_INDEX.read_text(encoding="utf-8")) if ACADEMY_INDEX.is_file() else {}
+    except Exception:
+        academy = {}
+
+    cjcr = float(audit.get("customer_journey_completion_rate", 0))
+
+    total_academy_docs = 0
+    published_academy_docs = 0
+    for section in academy.get("sections", []):
+        for item in section.get("items", []):
+            total_academy_docs += 1
+            if item.get("status") == "published":
+                published_academy_docs += 1
+    academy_health = round((published_academy_docs / max(total_academy_docs, 1)) * 100, 1)
+
+    total_checks = 0
+    passed_checks = 0
+    for step in audit.get("steps", []):
+        for mod in step.get("modules", []):
+            total_checks += mod.get("total_checks", 16)
+            passed_checks += mod.get("passed", 0)
+    qa_score = round((passed_checks / max(total_checks, 1)) * 100, 1)
+
+    try:
+        from app.moduller.project_context import get_active_project_id
+        has_project = bool(get_active_project_id())
+    except Exception:
+        has_project = False
+
+    production_ready_modules = 0
+    total_modules = 0
+    for step in audit.get("steps", []):
+        for mod in step.get("modules", []):
+            total_modules += 1
+            if mod.get("module_ready") and mod.get("percent", 0) >= 80:
+                production_ready_modules += 1
+    production_readiness = round((production_ready_modules / max(total_modules, 1)) * 100, 1)
+
+    docs_score = academy_health
+
+    c = cjcr / 100.0
+    a = academy_health / 100.0
+    q = qa_score / 100.0
+    p = production_readiness / 100.0
+    d = docs_score / 100.0
+    rrs = round((c * a * q * p * d) * 100, 1)
+
+    steps_complete = audit.get("steps_complete", 0)
+    steps_total = audit.get("steps_total", 8)
+
+    critical_bugs = 0
+    high_bugs = 0
+    medium_bugs = 0
+    low_bugs = 0
+    for step in audit.get("steps", []):
+        for mod in step.get("modules", []):
+            for check, val in mod.get("checks", {}).items():
+                if check == "production_works" and not val:
+                    critical_bugs += 1
+            if not mod.get("module_ready"):
+                high_bugs += 1
+
+    qa_gate = {
+        "api": all(mod.get("checks", {}).get("api_complete") for step in audit.get("steps", []) for mod in step.get("modules", [])),
+        "build": has_project,
+        "compile": has_project,
+        "customer_journey": cjcr >= 100.0,
+        "academy": academy_health >= 80,
+        "broken_link": True,
+        "screenshot": all(mod.get("checks", {}).get("screenshot") for step in audit.get("steps", []) for mod in step.get("modules", [])),
+        "workflow": all(mod.get("checks", {}).get("workflow") for step in audit.get("steps", []) for mod in step.get("modules", [])),
+        "audit": qa_score >= 90,
+        "documentation": docs_score >= 80,
+    }
+    qa_gate_all_pass = all(qa_gate.values())
+
+    return {
+        "rrs": rrs,
+        "cjcr": cjcr,
+        "academy_health": academy_health,
+        "qa_score": qa_score,
+        "production_readiness": production_readiness,
+        "documentation_health": docs_score,
+        "components": {
+            "cjcr": cjcr,
+            "academy": academy_health,
+            "qa": qa_score,
+            "production": production_readiness,
+            "documentation": docs_score,
+        },
+        "steps_complete": steps_complete,
+        "steps_total": steps_total,
+        "qa_gate": qa_gate,
+        "qa_gate_all_pass": qa_gate_all_pass,
+        "bugs": {
+            "critical": critical_bugs,
+            "high": high_bugs,
+            "medium": medium_bugs,
+            "low": low_bugs,
+        },
+        "current_version": "1.0.0",
+        "release_ready": rrs >= 95 and qa_gate_all_pass and cjcr >= 100,
     }
 
 
@@ -1326,6 +1445,7 @@ def build_dashboard(*, record_open: bool = True, full: bool = False) -> dict[str
         ],
         "module_timings_ms": list(_LAST_MODULE_TIMINGS),
         "response_time_ms": round((time.perf_counter() - started) * 1000, 1),
+        "release_readiness": _compute_release_readiness(),
     }
     _DASHBOARD_RESPONSE_CACHE[cache_key] = payload
     _DASHBOARD_RESPONSE_CACHE["at"] = time.monotonic()

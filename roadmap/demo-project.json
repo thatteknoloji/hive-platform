@@ -1,0 +1,601 @@
+{
+  "operation": "OPERATION_PHOENIX",
+  "customer_journey": "customer_journey_completion_rate",
+  "action": "updated",
+  "seeded_at": "2026-06-26 20:49:47 UTC",
+  "project_id": "prj-161789b6ec",
+  "active_project_id": "prj-161789b6ec",
+  "name": "Phoenix Demo — Thiqos Turizm",
+  "sector": "tourism",
+  "domain": "demo.thiqos.com",
+  "status": "active",
+  "journey_steps": [
+    "login",
+    "project",
+    "domain",
+    "seo",
+    "authority",
+    "publish",
+    "deploy",
+    "monitoring"
+  ],
+  "project": {
+    "id": "prj-161789b6ec",
+    "name": "Phoenix Demo — Thiqos Turizm",
+    "sector": "tourism",
+    "domain": "demo.thiqos.com",
+    "business_brief": "Antalya merkezli kültür ve doğa tur operatörü. Hedef: Avrupa ve Türkiye içi organik trafik. Ana kelimeler: antalya kültür turu, kapadokya balon turu, türkiye özel tur, antalya çıkışlı turlar. Çok dilli site (TR/EN/DE), yerel entity graph ve authority mesh ile SERP savunması.",
+    "design": {},
+    "site": {
+      "site_id": "site-d5f3768d70",
+      "engine": "astro",
+      "status": "draft",
+      "language": "tr",
+      "pages_count": 5
+    },
+    "pages": [
+      {
+        "id": "page-c61e832dc0",
+        "title": "Ana Sayfa",
+        "slug": "",
+        "type": "homepage",
+        "status": "draft",
+        "sections": [
+          {
+            "id": "sec-d95607d8ab",
+            "type": "hero",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-b6d267f3c4",
+                "type": "hero",
+                "status": "draft",
+                "content": {
+                  "eyebrow": "An'da özel bir deneyim",
+                  "title": "Phoenix Demo — Thiqos Turizm ile profesyonel dijital deneyim",
+                  "subtitle": "Antalya merkezli kültür ve doğa tur operatörü",
+                  "primary_cta": "Detayları İncele",
+                  "secondary_cta": "İletişime Geç"
+                },
+                "settings": {
+                  "layout": "full_bleed",
+                  "visual_style": "standard",
+                  "media_type": "image"
+                },
+                "seo": {
+                  "target_keyword": "an hizmet",
+                  "intent": "commercial"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_hero",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "sec-fad036b563",
+            "type": "cta",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-37be65b53d",
+                "type": "cta",
+                "status": "draft",
+                "content": {
+                  "title": "Hemen başlayın",
+                  "body": "Antalya merkezli kültür ve doğa tur operatörü",
+                  "primary_cta": "Detayları İncele",
+                  "secondary_cta": "Daha Fazla Bilgi"
+                },
+                "settings": {
+                  "layout": "band",
+                  "visual_style": "standard"
+                },
+                "seo": {
+                  "target_keyword": "an hizmet",
+                  "intent": "commercial"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_cta",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "sec-ecc68629b1",
+            "type": "faq_preview",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-143c6c7be0",
+                "type": "faq_preview",
+                "status": "draft",
+                "content": {
+                  "title": "Sık sorulan sorular",
+                  "items": [
+                    {
+                      "question": "Phoenix Demo — Thiqos Turizm nasıl rezervasyon yapılır?",
+                      "answer": "Antalya merkezli kültür ve doğa tur operatörü"
+                    },
+                    {
+                      "question": "İletişim bilgilerine nasıl ulaşırım?",
+                      "answer": "İletişim sayfamızdan form doldurarak veya doğrudan arayarak bize ulaşabilirsiniz."
+                    }
+                  ]
+                },
+                "settings": {
+                  "layout": "accordion",
+                  "max_items": 3
+                },
+                "seo": {
+                  "target_keyword": "an sss",
+                  "intent": "informational"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_faq_preview",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          }
+        ],
+        "seo": {
+          "title": "Phoenix Demo — Thiqos Turizm",
+          "description": "Phoenix Demo — Thiqos Turizm — Antalya merkezli kültür ve doğa tur operatörü",
+          "index": true,
+          "target_keyword": "an hizmet",
+          "intent": "commercial",
+          "schema_type": "Organization"
+        },
+        "geo": {
+          "entity_type": "Organization",
+          "location_hint": "An",
+          "topic_cluster": "tourism_homepage",
+          "support_network_needed": false
+        }
+      },
+      {
+        "id": "page-649390db58",
+        "title": "Hakkımızda",
+        "slug": "hakkimizda",
+        "type": "about",
+        "status": "draft",
+        "sections": [
+          {
+            "id": "sec-72803914f5",
+            "type": "hero",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-6466fb4705",
+                "type": "hero",
+                "status": "draft",
+                "content": {
+                  "eyebrow": "An'da özel bir deneyim",
+                  "title": "Hakkımızda — Phoenix Demo — Thiqos Turizm",
+                  "subtitle": "Antalya merkezli kültür ve doğa tur operatörü",
+                  "primary_cta": "Detayları İncele",
+                  "secondary_cta": "İletişime Geç"
+                },
+                "settings": {
+                  "layout": "contained",
+                  "visual_style": "standard",
+                  "media_type": "image"
+                },
+                "seo": {
+                  "target_keyword": "an hakkımızda",
+                  "intent": "commercial"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_hero",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "sec-4c9896a581",
+            "type": "content",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-e41de6c5a1",
+                "type": "content",
+                "status": "draft",
+                "content": {
+                  "title": "Hakkımızda",
+                  "body": "Antalya merkezli kültür ve doğa tur operatörü"
+                },
+                "settings": {
+                  "layout": "prose",
+                  "visual_style": "standard"
+                },
+                "seo": {
+                  "target_keyword": "an hakkımızda",
+                  "intent": "informational"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_content",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          }
+        ],
+        "seo": {
+          "title": "Hakkımızda | Phoenix Demo — Thiqos Turizm",
+          "description": "Phoenix Demo — Thiqos Turizm — Antalya merkezli kültür ve doğa tur operatörü",
+          "index": true,
+          "target_keyword": "an hakkımızda",
+          "intent": "informational",
+          "schema_type": "Organization"
+        },
+        "geo": {
+          "entity_type": "Organization",
+          "location_hint": "An",
+          "topic_cluster": "tourism_about",
+          "support_network_needed": false
+        }
+      },
+      {
+        "id": "page-c725336cff",
+        "title": "Blog",
+        "slug": "blog",
+        "type": "blog",
+        "status": "draft",
+        "sections": [
+          {
+            "id": "sec-7388c9dc7b",
+            "type": "hero",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-605afa32a2",
+                "type": "hero",
+                "status": "draft",
+                "content": {
+                  "eyebrow": "An'da özel bir deneyim",
+                  "title": "Blog — Phoenix Demo — Thiqos Turizm",
+                  "subtitle": "Antalya merkezli kültür ve doğa tur operatörü",
+                  "primary_cta": "Detayları İncele",
+                  "secondary_cta": "İletişime Geç"
+                },
+                "settings": {
+                  "layout": "contained",
+                  "visual_style": "standard",
+                  "media_type": "image"
+                },
+                "seo": {
+                  "target_keyword": "an blog",
+                  "intent": "commercial"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_hero",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "sec-4b6b89e150",
+            "type": "blog_list",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-ecd29a782b",
+                "type": "blog_list",
+                "status": "draft",
+                "content": {
+                  "title": "Son yazılar",
+                  "empty_message": "Yakında yeni içerikler eklenecek."
+                },
+                "settings": {
+                  "layout": "grid",
+                  "columns": 3
+                },
+                "seo": {
+                  "target_keyword": "an blog",
+                  "intent": "informational"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_blog_list",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          }
+        ],
+        "seo": {
+          "title": "Blog | Phoenix Demo — Thiqos Turizm",
+          "description": "Phoenix Demo — Thiqos Turizm — Antalya merkezli kültür ve doğa tur operatörü",
+          "index": true,
+          "target_keyword": "an blog",
+          "intent": "informational",
+          "schema_type": "BlogPosting"
+        },
+        "geo": {
+          "entity_type": "Organization",
+          "location_hint": "An",
+          "topic_cluster": "tourism_blog",
+          "support_network_needed": false
+        }
+      },
+      {
+        "id": "page-7df9beaeda",
+        "title": "SSS",
+        "slug": "sss",
+        "type": "faq",
+        "status": "draft",
+        "sections": [
+          {
+            "id": "sec-62983ad685",
+            "type": "hero",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-c68333aeba",
+                "type": "hero",
+                "status": "draft",
+                "content": {
+                  "eyebrow": "An'da özel bir deneyim",
+                  "title": "SSS — Phoenix Demo — Thiqos Turizm",
+                  "subtitle": "Antalya merkezli kültür ve doğa tur operatörü",
+                  "primary_cta": "Detayları İncele",
+                  "secondary_cta": "İletişime Geç"
+                },
+                "settings": {
+                  "layout": "contained",
+                  "visual_style": "standard",
+                  "media_type": "image"
+                },
+                "seo": {
+                  "target_keyword": "an sss",
+                  "intent": "commercial"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_hero",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "sec-5b749d4cd7",
+            "type": "faq",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-665d6f22ce",
+                "type": "faq",
+                "status": "draft",
+                "content": {
+                  "title": "Sık sorulan sorular",
+                  "items": [
+                    {
+                      "question": "Phoenix Demo — Thiqos Turizm nedir?",
+                      "answer": "Antalya merkezli kültür ve doğa tur operatörü"
+                    },
+                    {
+                      "question": "Nasıl iletişime geçebilirim?",
+                      "answer": "İletişim sayfamızdan form doldurarak veya CTA butonlarından bize ulaşabilirsiniz."
+                    },
+                    {
+                      "question": "Hangi hizmet hizmetleri sunuluyor?",
+                      "answer": "Profesyonel dijital deneyim."
+                    }
+                  ]
+                },
+                "settings": {
+                  "layout": "accordion"
+                },
+                "seo": {
+                  "target_keyword": "an sss",
+                  "intent": "informational"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_faq",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          }
+        ],
+        "seo": {
+          "title": "SSS | Phoenix Demo — Thiqos Turizm",
+          "description": "Phoenix Demo — Thiqos Turizm — Antalya merkezli kültür ve doğa tur operatörü",
+          "index": true,
+          "target_keyword": "an sss",
+          "intent": "informational",
+          "schema_type": "FAQPage"
+        },
+        "geo": {
+          "entity_type": "Organization",
+          "location_hint": "An",
+          "topic_cluster": "tourism_faq",
+          "support_network_needed": false
+        }
+      },
+      {
+        "id": "page-4a9975711a",
+        "title": "İletişim",
+        "slug": "iletisim",
+        "type": "contact",
+        "status": "draft",
+        "sections": [
+          {
+            "id": "sec-291f04cc55",
+            "type": "hero",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-42cc7508f6",
+                "type": "hero",
+                "status": "draft",
+                "content": {
+                  "eyebrow": "An'da özel bir deneyim",
+                  "title": "İletişim — Phoenix Demo — Thiqos Turizm",
+                  "subtitle": "Antalya merkezli kültür ve doğa tur operatörü",
+                  "primary_cta": "Detayları İncele",
+                  "secondary_cta": "İletişime Geç"
+                },
+                "settings": {
+                  "layout": "contained",
+                  "visual_style": "standard",
+                  "media_type": "image"
+                },
+                "seo": {
+                  "target_keyword": "an i̇letişim",
+                  "intent": "commercial"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_hero",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "sec-0a1e40c0ad",
+            "type": "form",
+            "status": "draft",
+            "blocks": [
+              {
+                "id": "block-51c11ebfa7",
+                "type": "contact_form",
+                "status": "draft",
+                "content": {
+                  "title": "Bize ulaşın",
+                  "fields": [
+                    "name",
+                    "email",
+                    "phone",
+                    "message"
+                  ],
+                  "submit_label": "Detayları İncele"
+                },
+                "settings": {
+                  "layout": "split",
+                  "visual_style": "standard"
+                },
+                "seo": {
+                  "target_keyword": "an iletisim",
+                  "intent": "navigational"
+                },
+                "geo": {
+                  "entity_type": "Organization",
+                  "location_hint": "An",
+                  "topic_cluster": "tourism_contact_form",
+                  "support_network_needed": false
+                }
+              }
+            ]
+          }
+        ],
+        "seo": {
+          "title": "İletişim | Phoenix Demo — Thiqos Turizm",
+          "description": "Phoenix Demo — Thiqos Turizm — Antalya merkezli kültür ve doğa tur operatörü",
+          "index": true,
+          "target_keyword": "an i̇letişim",
+          "intent": "navigational",
+          "schema_type": "ContactPage"
+        },
+        "geo": {
+          "entity_type": "Organization",
+          "location_hint": "An",
+          "topic_cluster": "tourism_contact",
+          "support_network_needed": false
+        }
+      }
+    ],
+    "theme": {
+      "design_dna": "",
+      "color_identity": "",
+      "custom_color": "",
+      "brand_personality": [],
+      "conversion_goal": "",
+      "font_style": "sans",
+      "radius": "standard",
+      "spacing": "comfortable"
+    },
+    "navigation": [
+      {
+        "label": "Ana Sayfa",
+        "href": "/"
+      },
+      {
+        "label": "Hakkımızda",
+        "href": "/hakkimizda"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "SSS",
+        "href": "/sss"
+      },
+      {
+        "label": "İletişim",
+        "href": "/iletisim"
+      }
+    ],
+    "deploy_mode": "hive_cloud",
+    "status": "active",
+    "seo_score": 67,
+    "geo_score": 60,
+    "pages_count": 5,
+    "content_count": 11,
+    "metadata": {
+      "phoenix_demo": true,
+      "customer_journey_demo": true,
+      "journey_version": "2.0.0",
+      "scenario": "thiqos_tourism",
+      "seeded_at": "2026-06-26 20:49:47 UTC",
+      "keywords": [
+        "antalya kültür turu",
+        "kapadokya balon turu",
+        "türkiye özel tur",
+        "antalya çıkışlı turlar"
+      ],
+      "locales": [
+        "tr",
+        "en",
+        "de"
+      ],
+      "domain_binding": {
+        "domain": "demo.thiqos.com",
+        "www_domain": "www.demo.thiqos.com",
+        "target_type": "hive_cloud",
+        "status": "configured",
+        "ssl_status": "pending",
+        "created_at": "2026-06-26 20:49:47 UTC"
+      }
+    },
+    "publishers_count": 0,
+    "integrations_count": 0,
+    "created_at": "2026-06-26 18:33:20 UTC",
+    "updated_at": "2026-06-26 20:49:47 UTC"
+  }
+}

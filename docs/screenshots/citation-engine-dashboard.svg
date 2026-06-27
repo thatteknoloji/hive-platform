@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a"/>
+  <rect x="16" y="16" width="768" height="48" rx="8" fill="#1e293b"/>
+  <text x="24" y="46" fill="#f1f5f9" font-family="system-ui" font-size="16" font-weight="600">Citation Engine</text>
+  <text x="200" y="46" fill="#94a3b8" font-family="system-ui" font-size="12">AI citation uygunluğu, görünürlük ve entity güven analizi</text>
+  <rect x="16" y="72" width="768" height="32" rx="6" fill="#1e293b"/>
+  <text x="32" y="92" fill="#94a3b8" font-family="system-ui" font-size="11" font-weight="500">Dashboard  Pages  Entities  Visibility  Competitors  Opportunities  Revenue Impact  Reports  Settings</text>
+  <rect x="16" y="112" width="768" height="96" rx="8" fill="#1e293b"/>
+  <rect x="32" y="124" width="120" height="72" rx="6" fill="#334155"/>
+  <text x="48" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Citation Health</text>
+  <text x="48" y="172" fill="#22c55e" font-family="system-ui" font-size="20" font-weight="700">74</text>
+  <rect x="164" y="124" width="120" height="72" rx="6" fill="#334155"/>
+  <text x="180" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Sayfa</text>
+  <text x="180" y="172" fill="#f1f5f9" font-family="system-ui" font-size="20" font-weight="700">143</text>
+  <rect x="296" y="124" width="120" height="72" rx="6" fill="#334155"/>
+  <text x="312" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Citation Ready</text>
+  <text x="312" y="172" fill="#22c55e" font-family="system-ui" font-size="20" font-weight="700">89</text>
+  <rect x="428" y="124" width="120" height="72" rx="6" fill="#334155"/>
+  <text x="444" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">AI Visibility Ø</text>
+  <text x="444" y="172" fill="#3b82f6" font-family="system-ui" font-size="20" font-weight="700">62%</text>
+  <rect x="560" y="124" width="108" height="72" rx="6" fill="#334155"/>
+  <text x="576" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Fırsat</text>
+  <text x="576" y="172" fill="#eab308" font-family="system-ui" font-size="20" font-weight="700">12</text>
+  <rect x="680" y="124" width="88" height="72" rx="6" fill="#334155"/>
+  <text x="692" y="144" fill="#94a3b8" font-family="system-ui" font-size="10">Düşük Skor</text>
+  <text x="692" y="172" fill="#ef4444" font-family="system-ui" font-size="20" font-weight="700">8</text>
+  <rect x="16" y="220" width="380" height="120" rx="8" fill="#1e293b"/>
+  <text x="32" y="242" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Sayfa Analizi</text>
+  <rect x="32" y="256" width="340" height="28" rx="4" fill="#334155"/>
+  <text x="40" y="274" fill="#94a3b8" font-family="system-ui" font-size="11">https://ornek.com/kusadasi-gece-hayati</text>
+  <rect x="32" y="290" width="90" height="28" rx="4" fill="#3b82f6"/>
+  <text x="44" y="308" fill="#fff" font-family="system-ui" font-size="11" font-weight="500">Analyze Page</text>
+  <rect x="130" y="290" width="100" height="28" rx="4" fill="#334155"/>
+  <text x="140" y="308" fill="#f1f5f9" font-family="system-ui" font-size="11">Analyze Project</text>
+  <rect x="408" y="220" width="376" height="120" rx="8" fill="#1e293b"/>
+  <text x="424" y="242" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">Son Analiz</text>
+  <text x="424" y="265" fill="#e2e8f0" font-family="system-ui" font-size="12">Kuşadası Gece Hayatı Rehberi — skor 82</text>
+  <text x="424" y="285" fill="#94a3b8" font-family="system-ui" font-size="11">Citation ready: Evet</text>
+  <rect x="424" y="300" width="340" height="24" rx="4" fill="#eab308" opacity="0.15"/>
+  <text x="432" y="316" fill="#eab308" font-family="system-ui" font-size="10">Eksik: schema_org, faq_section</text>
+  <rect x="16" y="352" width="768" height="112" rx="8" fill="#1e293b"/>
+  <text x="32" y="374" fill="#f1f5f9" font-family="system-ui" font-size="13" font-weight="600">AI Targets</text>
+  <text x="32" y="394" fill="#94a3b8" font-family="system-ui" font-size="11">Google AI Overview: heuristic · Diğerleri: provider_missing</text>
+  <rect x="32" y="410" width="130" height="24" rx="4" fill="#22c55e"/>
+  <text x="40" y="426" fill="#fff" font-family="system-ui" font-size="10">✓ Google AI Overview</text>
+  <rect x="172" y="410" width="80" height="24" rx="4" fill="#64748b"/>
+  <text x="178" y="426" fill="#fff" font-family="system-ui" font-size="10">ChatGPT</text>
+  <rect x="260" y="410" width="90" height="24" rx="4" fill="#64748b"/>
+  <text x="266" y="426" fill="#fff" font-family="system-ui" font-size="10">Perplexity</text>
+</svg>
